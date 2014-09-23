@@ -1,4 +1,4 @@
-AnnotateLife.Routers.Journals = Backbone.Router.extend({
+AnnotateLife.Routers.AppRouter = Backbone.Router.extend({
   initialize: function(options) {
     this.collection = AnnotateLife.journals,
     this.$rootEl = options.$rootEl
@@ -9,7 +9,7 @@ AnnotateLife.Routers.Journals = Backbone.Router.extend({
   },
   
   index: function() {
-    var indexView = new AnnotateLife.Views.JournalIndex({
+    var indexView = new AnnotateLife.Views.JournalsIndex({
       collection: this.collection
     })
     

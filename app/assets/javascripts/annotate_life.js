@@ -4,7 +4,10 @@ window.AnnotateLife = {
   Views: {},
   Routers: {},
   initialize: function() {
-    $rootEl: $("#main")
+    new AnnotateLife.Routers.AppRouter({
+      $rootEl: $("#main")
+    });
+    Backbone.history.start();
   }
 };
 

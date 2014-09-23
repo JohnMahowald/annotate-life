@@ -5,6 +5,8 @@ class User < ActiveRecord::Base
   validates :password, length: { minimum: 6, allow_nil: true }
   validates :email, uniqueness: true
   
+  has_many :journals
+  
   attr_reader :password
   
   def self.generate_session_token
