@@ -1,5 +1,23 @@
-<h1>Sign In</h1>
+<div class="minimal-wrapper">
+  <div class="bar-header"></div>
+  
+  <div class="minimal-brand-frame">
+    <div class="branding">
+      <h1>Annotate</h1>
+      
+      <%= image_tag(("feather.svg"), class: "brand-image") %>
+      <h2>Sign in</h2>
+    </div>
+  </div>
 
-<%= render "shared/login", action: session_url, button: "Sign In"%>
-
-<%= link_to "Sign Up", new_user_url %>
+  <div class="minimal-login-wrapper">
+    <div class="signin">
+      <%= render "shared/login", action: session_url, button: "Sign In"%>
+    </div>
+  </div>
+  
+  <div class="content-switch">
+    <p>Don't have an account?</p>
+    <%= link_to "Create an account", new_user_url %>
+  </div>
+</div>

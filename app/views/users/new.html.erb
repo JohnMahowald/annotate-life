@@ -1,5 +1,25 @@
-<h1>Create User</h1>
+<div class="minimal-wrapper">
+  <div class="bar-header"></div>
+  
+  <div class="minimal-brand-frame">
+    <div class="branding">
+      <h1>Annotate</h1>
+      
+      <%= image_tag(("feather.svg"), class: "brand-image") %>
+      <h2>Create User</h2>
+    </div>
+  </div>
 
-<%= render "shared/login", action: users_url, button: "Create User"%>
+  <div class="minimal-login-wrapper">
+    <div class="signin">
+      <%= render "shared/login", action: users_url, button: "Create User"%>
+    </div>
+  </div>
+  
+  <div class="content-switch">
+    <p>Already have an account?</p>
+      <%= link_to "Sign In", new_session_url %>
+  </div>
+</div>
 
-<%= link_to "Sign In", new_session_url %>
+

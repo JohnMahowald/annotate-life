@@ -1,11 +1,19 @@
-<form action="<%= action %>" method="POST">
+<form id="login-form" action="<%= action %>" method="POST">
   <%= auth_token %>
   
-  <label for="email">Email</label>
-  <input type="text" name="user[email]" id="username"></input>
-    
-  <label for="user_password">Password</label>
-  <input type="password" name="user[password]" id="password"></input>
+  <div class="form-group">
+    <label for="email">Email Address</label>
+    <input type="text" name="user[email]" id="username"></input>
+  </div>
   
-  <input type="submit" value="<%= button %>">
+  <div class="form-group">
+    <label for="password">Password</label>
+    <input type="password" name="user[password]" id="password"></input>
+  </div>
+  
+  <input 
+    type="submit" 
+    class="btn btn-primary" 
+    id="login" 
+    value="<%= button %>">
 </form>
