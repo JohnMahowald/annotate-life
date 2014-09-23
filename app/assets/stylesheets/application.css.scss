@@ -102,6 +102,16 @@ body {
   padding: 10px;
 }
 
+.signout-button-container {
+  text-align: center;
+}
+
+#signout-button {
+  display: inline-block;
+  margin: 0 auto;
+  text-align: center;
+}
+
 .login-button {
   height: 45px;
   transition: background-color .5s;
@@ -143,4 +153,40 @@ body {
 .content-switch a {
   color: #28a956;
   font-size: 16pt;
+}
+
+.journal-index-title {
+  text-align: center;
+  font-family: caecilia, times, serif;
+  margin: 0;
+  padding: 0;
+}
+
+.journals-container {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+
+.place-card {
+  display: inline-block;
+  margin: 30px;
+  height: 150px;
+  width: 250px;
+  background-color: #28a956;
+  border-color: #1fae52;
+  color: white;
+  border-radius: 3px;
+  text-align: center;
+  transition: background-color .5s;
+}
+
+.place-card:hover {
+  background-color: #24984D;
+}
+
+.place-card h3 {
+  padding: 20px;
+  margin: 0;
+  font-family: helvetica, sans-serif;
 }

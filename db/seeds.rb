@@ -7,6 +7,11 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
-User.create(email: "john@me.com", password: "johnjohn")
-User.create(email: "tim@me.com", password: "timtim")
-User.create(email: "jared@me.com", password: "jaredjared")
+guest = User.create!(email: "john@me.com", password: "johnjohn")
+User.create!(email: "tim@me.com", password: "timtim")
+User.create!(email: "jared@me.com", password: "jaredjared")
+
+
+guest.journals.create!(title: "App Academy")
+guest.journals.create!(title: "Traveling")
+guest.journals.create!(title: "Career")
