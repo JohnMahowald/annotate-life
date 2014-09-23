@@ -1,0 +1,11 @@
+<form action="<%= action %>" method="POST">
+  <%= auth_token %>
+  
+  <label for="email">Email</label>
+  <input type="text" name="user[email]" id="username"></input>
+    
+  <label for="user_password">Password</label>
+  <input type="password" name="user[password]" id="password"></input>
+  
+  <input type="submit" value="<%= button %>">
+</form>
