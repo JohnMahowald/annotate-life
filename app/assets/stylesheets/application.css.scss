@@ -39,7 +39,6 @@ body {
   font-family: gotham, helvetica, sans-serif;
 }
 
-
 /* Login Pages */
 .bar-header {
   background-color: #2dbe60;
@@ -162,19 +161,24 @@ body {
   font-size: 16pt;
 }
 
+/* Static Pages Header */
+.header {
+/*  width: 100%;*/
+/*  height: 40px;*/
+/*  background-color: #428bca;*/
+/*  border-bottom: 1px solid #357ebd;*/
+}
+
+.header h1 {
+  margin: 0;
+}
+
 /* Journal Index */
 #main {
   background-color: #f0f0f0;
   position: absolute;
   height: 100%;
   width: 100%;
-}
-
-.header {
-  width: 100%;
-  height: 40px;
-  background-color: #428bca;
-  border-bottom: 1px solid #357ebd;
 }
 
 .index-title-wrapper {

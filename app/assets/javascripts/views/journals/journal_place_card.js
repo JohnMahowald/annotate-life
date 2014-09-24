@@ -9,5 +9,16 @@ AnnotateLife.Views.JournalPlaceCard = Backbone.View.extend({
   
   attributes: {
     class: "place-card"
+  },
+  
+  events: {
+    "click": "redirect"
+  },
+  
+  redirect: function(event) {
+    event.preventDefault();
+    var journalShowUrl = "/journals/" + this.model.id
+    console.log(journalShowUrl)
+    Backbone.history.navigate(journalShowUrl, { trigger: true })
   }
 });

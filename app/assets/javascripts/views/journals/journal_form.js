@@ -18,8 +18,13 @@ AnnotateLife.Views.JournalForm = Backbone.View.extend({
   createJournal: function(event) {
     event.preventDefault();
     var formData = $(event.currentTarget).serializeJSON();
-    this.collection.create(formData['journal']);
-    $(event.currentTarget).find("input").val("");
-    $(event.currentTarget).find("textarea").val("");
+    this.collection.create(formData['journal'], {
+      success: function() {
+        $(event.currentTarget).hide();
+        $("#new-journal-button").fadeIn("slow");
+        $(event.currentTarget).find("#journal-title").val("");
+        $(event.currentTarget).find("textarea").val("");
+      }
+    });
   }
 });
