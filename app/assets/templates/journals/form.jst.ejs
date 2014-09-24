@@ -1,3 +1,13 @@
-<div class="journal-form-container">
-  <h3>I'm a form</h3>
-</div>
+<form id='new-journal-form'>
+  <div class='form-group'>
+    <label for='journal-title'>Title</label>
+    <input type='text' name='journal[title]' id="journal-title">
+  </div>
+  
+  <div class='form-group'>
+    <label for='journal-description'>Description</label>
+    <textarea name='journal[description]' id='journal-description'></textarea>
+  </div>
+  
+  <input type="submit" id="new-journal-submit" value="Create Journal">
+</form>

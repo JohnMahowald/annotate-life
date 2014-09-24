@@ -1,4 +1,4 @@
-AnnotateLife.Views.JournalPlaceCard = Backbone.View.extend({
+AnnotateLife.Views.JournalPlaceCard = Backbone.View.extend({  
   template: JST["journals/place_card"],
   
   render: function() {

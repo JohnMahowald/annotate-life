@@ -12,10 +12,11 @@
 //
 //= require jquery
 //= require bootstrap-sprockets
+//= require jquery.serializejson.min.js
 //= require jquery_ujs
-//= require annotate_life
 //= require underscore
 //= require backbone
+//= require annotate_life
 //= require_tree ../templates
 //= require_tree ./utils
 //= require_tree ./models

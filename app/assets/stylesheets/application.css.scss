@@ -14,6 +14,9 @@
  *= require_self
  */
 
+
+/* Fonts */
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @font-face {
@@ -26,6 +29,8 @@
     src: url('/assets/gotham.ttf') format('truetype');
 }
 
+/* Main Style */
+
 /** {
   border: 1px solid blue;
 }*/
@@ -34,6 +39,8 @@ body {
   font-family: gotham, helvetica, sans-serif;
 }
 
+
+/* Login Pages */
 .bar-header {
   background-color: #2dbe60;
   width: 100%;
@@ -108,7 +115,7 @@ body {
 
 #signout-button {
   display: inline-block;
-  margin: 0 auto;
+  margin: 40px auto;
   text-align: center;
 }
 
@@ -155,10 +162,23 @@ body {
   font-size: 16pt;
 }
 
+/* Journal Index */
+.header {
+  width: 100%;
+  height: 40px;
+  background-color: #428bca;
+  border-bottom: 1px solid #357ebd;
+}
+
+.index-title-wrapper {
+  height: 100px;
+  padding: 40px;
+}
+
 .journal-index-title {
   text-align: center;
   font-family: caecilia, times, serif;
-  margin: 0;
+  margin: auto;
   padding: 0;
 }
 
@@ -170,6 +190,7 @@ body {
 
 .place-card {
   display: inline-block;
+  vertical-align: top;
   margin: 30px;
   height: 150px;
   width: 250px;
@@ -186,7 +207,57 @@ body {
 }
 
 .place-card h3 {
+  margin: 20px;
+}
+
+.place-card p {
+  text-align: left;
   padding: 20px;
-  margin: 0;
-  font-family: helvetica, sans-serif;
+}
+
+.journal-form-container {
+  height: 300px;
+  width: 250px;
+  margin: 0 auto;
+}
+
+#new-journal-form {
+  text-align: center;
+}
+
+#new-journal-form label {
+  display: block;
+}
+
+#new-journal-form input, textarea {
+  display: block;
+  width: 100%;
+  margin: 0px;
+  height: 40px;
+  border-radius: 3px;
+  border: 1px solid #cacaca;
+  line-height: 1;
+  font-size: 1.3 rem;
+  color: #3b3b3b;
+  padding: 10px;
+  text-align: center;
+}
+
+#new-journal-form textarea {
+  width: 100%;
+  text-align: left;
+  height: 100px;
+}
+
+input#new-journal-submit {
+  height: 45px;
+  margin: 30px auto 25px auto;
+  background-color: #28a956;
+  border-color: #1fae52;
+  transition: background-color .5s;
+  color: white;
+}
+
+#new-journal-submit:hover {
+  background-color: #24984D;
 }

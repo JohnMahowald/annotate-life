@@ -12,6 +12,12 @@ User.create!(email: "tim@me.com", password: "timtim")
 User.create!(email: "jared@me.com", password: "jaredjared")
 
 
-guest.journals.create!(title: "App Academy")
-guest.journals.create!(title: "Traveling")
-guest.journals.create!(title: "Career")
+guest.journals.create!(
+  title: "App Academy", 
+  description: "My adventures in learning code")
+guest.journals.create!(
+  title: "Traveling",
+  description: "A collection of stories from the road")
+guest.journals.create!(
+  title: "Career",
+  description: "Philosopher becomes a developer")
