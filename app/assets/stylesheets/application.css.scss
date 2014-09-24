@@ -161,16 +161,17 @@ body {
   font-size: 16pt;
 }
 
-/* Static Pages Header */
+/* Static Pages */
 .header {
-/*  width: 100%;*/
-/*  height: 40px;*/
-/*  background-color: #428bca;*/
-/*  border-bottom: 1px solid #357ebd;*/
+  height: 40px;
+  background-color: #27709b;
+  margin: 0;
 }
 
-.header h1 {
-  margin: 0;
+.header-brand {
+  width: 80px;
+  height: 100%;
+  margin: 0 auto;
 }
 
 /* Journal Index */
