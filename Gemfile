@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'annotate'
 gem 'autoprefixer-rails'
 gem 'backbone-on-rails'
 gem 'bcrypt', '~> 3.1.7'

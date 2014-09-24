@@ -11,15 +11,5 @@
   <%= render partial: "shared/errors" %>
 
   <%= yield %>
-  
-  <div class="signout-button-container">
-    <% if current_user %>
-      <%= button_to 'Sign Out', 
-          session_url, 
-          method: :delete, 
-          class: "btn btn-primary",
-          id: "signout-button" %>
-    <% end %>
-  </div>
 </body>
 </html>

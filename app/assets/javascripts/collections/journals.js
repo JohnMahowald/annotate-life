@@ -18,8 +18,12 @@ AnnotateLife.Collections.Journals = Backbone.Collection.extend({
       journal.fetch();
     }
     
-    return this.journal
+    return journal
   },
+  
+  parse: function(response) {
+    
+  }
 });
 
 AnnotateLife.journals = new AnnotateLife.Collections.Journals();

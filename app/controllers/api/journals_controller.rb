@@ -1,17 +1,16 @@
-class Api::JournalsController < ApplicationController
-  
+class Api::JournalsController < ApplicationController  
   def index
     journals = current_user.journals
     render json: journals
   end
   
   def show
-    journal = Journal.find(params[:id])
+    @journal = Journal.find(params[:id])
     
-    if journal
-      render json: journal
+    if @journal
+      render :show
     else
-      render json: journal.errors.full_messages, status: :unprocessable_entity
+      render json: @journal.errors.full_messages, status: :unprocessable_entity
     end
   end
   

@@ -37,6 +37,7 @@
 
 body {
   font-family: gotham, helvetica, sans-serif;
+  background-color: #f0f0f0;
 }
 
 /* Login Pages */
@@ -110,6 +111,8 @@ body {
 
 .signout-button-container {
   text-align: center;
+  display: inline-block;
+  margin: 0 auto;
 }
 
 #signout-button {
@@ -161,22 +164,16 @@ body {
   font-size: 16pt;
 }
 
-/* Static Pages */
-.header {
-  height: 40px;
-  background-color: #27709b;
-  margin: 0;
+/* Header */
+
+.navbar-brand {
+  font-family: caecilia, times, serif;
 }
 
-.header-brand {
-  width: 80px;
-  height: 100%;
-  margin: 0 auto;
-}
+/* Static Pages */
 
 /* Journal Index */
 #main {
-  background-color: #f0f0f0;
   position: absolute;
   height: 100%;
   width: 100%;
@@ -277,4 +274,22 @@ input#new-journal-submit {
 
 #new-journal-submit:hover {
   background-color: #24984D;
+}
+
+.signout-button-container {
+  border: 1px solid blue;
+}
+
+/* Journal Show */
+.new-col {
+  background-color: grey;
+  height: 40px;
+}
+
+.right-col {
+  margin-left: 4%;
+}
+
+.journal-show-title {
+  text-align: center;
 }
