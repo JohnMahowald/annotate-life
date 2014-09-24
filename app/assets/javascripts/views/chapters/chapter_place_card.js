@@ -5,5 +5,19 @@ AnnotateLife.Views.ChapterPlaceCard = Backbone.View.extend({
     var content = this.template({ chapter: this.model });
     this.$el.html(content);
     return this;
+  },
+  
+  events: {
+    "click .chapter-place-card": "selectChapter"
+  },
+  
+  selectChapter: function() {
+    
+    var view = this;
+    this.model.fetch({
+      success: function() {
+        view.model.collection.trigger('storiesReady', view.model);
+      }
+    });
   }
 });

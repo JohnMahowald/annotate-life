@@ -286,13 +286,22 @@ input#new-journal-submit {
   margin-left: 4%;
 }
 
-.journal-show-title {
+.col-header {
   text-align: center;
+  color: #747474;
 }
 
-.chapters {
+.journal-show-title {
+  text-align: center;
+  font-family: caecilia, times, serif;  
+}
+
+.chapters, {
   background-color: #428bca;
-  padding: 10px;
+  height: 100%;
+  width: 100%;
+  border-radius: 3px;
+  padding: 20px;
 }
 
 .chapter-place-card {
@@ -304,15 +313,45 @@ input#new-journal-submit {
   transition: background-color .5s;
   height: 40px;
   width: 90%;
-  margin: px auto;
+  margin: 20px auto;
 }
 
 .chapter-place-card h3 {
   margin: 0;
   padding: 10px;
-  font-size: 1.3em;
+  font-size: 1.3em;  
 }
 
 .chapter-place-card:hover {
+  background-color: #24984D;
+}
+
+.stories {
+  background-color: #428bca;
+  height: 100%;
+  width: 100%;
+  border-radius: 3px;
+  padding: 20px
+}
+
+.story-place-card {
+  background-color: #28a956;
+  border-color: #1fae52;
+  color: white;
+  border-radius: 3px;
+  text-align: center;
+  transition: background-color .5s;
+  height: 40px;
+  width: 90%;
+  margin: 20px auto;
+}
+
+.story-place-card h3 {
+  margin: 0;
+  padding: 10px;
+  font-size: 1.3em;  
+}
+
+.story-place-card:hover {
   background-color: #24984D;
 }

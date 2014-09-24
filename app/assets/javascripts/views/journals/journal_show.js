@@ -1,8 +1,10 @@
 AnnotateLife.Views.JournalShow = Backbone.CompositeView.extend({
   initialize: function() {
-    this.chapters = this.model.chapters()
+    this.chapters = this.model.chapters();
     this.listenTo(this.model, "sync", this.render);
     this.listenTo(this.chapters, "add", this.addChapter);
+    this.listenTo(this.chapters, "storiesReady", this.showStories);
+    this.attachForms();
   },
   
   template: JST["journals/show"],
@@ -15,10 +17,30 @@ AnnotateLife.Views.JournalShow = Backbone.CompositeView.extend({
   },
   
   addChapter: function(chapter) {
-    var journalView = new AnnotateLife.Views.ChapterPlaceCard({
+    var chapterView = new AnnotateLife.Views.ChapterPlaceCard({
       model: chapter
     })
     
-    this.addSubview(".chapters", journalView);
+    this.addSubview(".chapters", chapterView);
   },
+  
+  showStories: function(chapter) {
+    chapter.stories().each(this.addStory.bind(this));
+  },
+  
+  addStory: function(story) {
+    var storyView = new AnnotateLife.Views.StoryPlaceCard({
+      model: story
+    })
+    
+    this.addSubview(".stories", storyView);
+  },
+  
+  attachForms: function() {
+    var chapterForm = new AnnotateLife.Views.NewChapterForm({ 
+      model: this.model
+    });
+    debugger
+    this.addSubview(".new-journal-container", chapterForm)
+  }
 })

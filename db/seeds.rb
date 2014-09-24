@@ -23,8 +23,20 @@ career_journal = guest.journals.create!(
   description: "Philosopher becomes a developer")
 
 
-aa_journal.chapters.create!(title: "Final Project")
+final_project_chapter = aa_journal.chapters.create!(title: "Final Project")
 aa_journal.chapters.create!(title: "First Weeks")
 aa_journal.chapters.create!(title: "The Stack")
 aa_journal.chapters.create!(title: "Rails")
 aa_journal.chapters.create!(title: "Ruby")
+
+final_project_chapter.stories.create!(title: "Planning", text: "When first
+planning a project, it helps to have a roadmap. And that is when I knew
+that it was going to be challenging.")
+
+final_project_chapter.stories.create!(title: "Design", text: "It isn't always
+clear what is the best design. With so many websites out there, there are many
+competing design perspectives.")
+
+final_project_chapter.stories.create!(title: "Composite Views", text: "There is
+something in my nature that looks for challenges and tries to confront them 
+head on. Its no woder that I have a project with composite views...")
