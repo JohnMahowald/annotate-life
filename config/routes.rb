@@ -6,6 +6,6 @@ Rails.application.routes.draw do
   
   # TODO: defaults: { format: :json }
   namespace :api do 
-    resources :journals, only: [:index, :new, :create, :destroy]
+    resources :journals, only: [:index, :show, :create, :destroy]
   end
 end
