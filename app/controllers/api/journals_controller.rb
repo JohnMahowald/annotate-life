@@ -5,6 +5,16 @@ class Api::JournalsController < ApplicationController
     render json: journals
   end
   
+  def show
+    journal = Journal.find(params[:id])
+    
+    if journal
+      render json: journal
+    else
+      render json: journal.errors.full_messages, status: :unprocessable_entity
+    end
+  end
+  
   def create
     journal = current_user.journals.new(journal_params)
     
@@ -17,7 +27,7 @@ class Api::JournalsController < ApplicationController
   end
   
   def destroy
-    journal = Journals.find(params[:id])
+    journal = Journal.find(params[:id])
     journal.destroy
     render json: journal
   end

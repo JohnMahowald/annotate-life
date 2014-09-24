@@ -7,10 +7,11 @@ AnnotateLife.Collections.Journals = Backbone.Collection.extend({
     var journal = this.get(id);
     
     if (!journal) {
+      var journals = this;
       journal = new this.model({ id: id })
       journal.fetch({
         success: function(journal) {
-          this.collection.add(journal)
+          journals.add(journal)
         }
       });
     } else {
@@ -18,7 +19,7 @@ AnnotateLife.Collections.Journals = Backbone.Collection.extend({
     }
     
     return this.journal
-  }
+  },
 });
 
 AnnotateLife.journals = new AnnotateLife.Collections.Journals();

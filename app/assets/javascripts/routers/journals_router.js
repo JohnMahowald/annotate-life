@@ -5,7 +5,8 @@ AnnotateLife.Routers.AppRouter = Backbone.Router.extend({
   },
   
   routes: {
-    "": "index"
+    "": "index",
+    "journals/:id": "show"
   },
   
   index: function() {
@@ -16,6 +17,14 @@ AnnotateLife.Routers.AppRouter = Backbone.Router.extend({
     })
     
     this._swapView(indexView);
+  },
+  
+  show: function(id) {
+    var showView = new AnnotateLife.Views.JournalShow({
+      model: this.collection.getOrFetch(id)
+    })
+    
+    this._swapView(showView);
   },
   
   _swapView: function(view) {
