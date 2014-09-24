@@ -1,7 +1,7 @@
 AnnotateLife.Routers.AppRouter = Backbone.Router.extend({
   initialize: function(options) {
-    this.collection = AnnotateLife.journals,
-    this.$rootEl = options.$rootEl
+    this.collection = AnnotateLife.journals;
+    this.$rootEl = options.$rootEl;
   },
   
   routes: {

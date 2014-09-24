@@ -1,4 +1,8 @@
-AnnotateLife.Collections.Chapters = Backbone.Model.extend({
+AnnotateLife.Collections.Chapters = Backbone.Collection.extend({
+  initialize: function(model, options) {
+    this.journal = options.this
+  },
+  
   url: 'api/chapters',
   
   model: AnnotateLife.Models.Chapter,

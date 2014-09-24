@@ -19,10 +19,6 @@ AnnotateLife.Collections.Journals = Backbone.Collection.extend({
     }
     
     return journal
-  },
-  
-  parse: function(response) {
-    
   }
 });
 

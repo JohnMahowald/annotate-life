@@ -281,10 +281,6 @@ input#new-journal-submit {
 }
 
 /* Journal Show */
-.new-col {
-  background-color: grey;
-  height: 40px;
-}
 
 .right-col {
   margin-left: 4%;
@@ -292,4 +288,31 @@ input#new-journal-submit {
 
 .journal-show-title {
   text-align: center;
+}
+
+.chapters {
+  background-color: #428bca;
+  padding: 10px;
+}
+
+.chapter-place-card {
+  background-color: #28a956;
+  border-color: #1fae52;
+  color: white;
+  border-radius: 3px;
+  text-align: center;
+  transition: background-color .5s;
+  height: 40px;
+  width: 90%;
+  margin: px auto;
+}
+
+.chapter-place-card h3 {
+  margin: 0;
+  padding: 10px;
+  font-size: 1.3em;
+}
+
+.chapter-place-card:hover {
+  background-color: #24984D;
 }
