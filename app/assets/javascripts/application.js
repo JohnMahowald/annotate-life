@@ -14,6 +14,7 @@
 //= require bootstrap-sprockets
 //= require jquery.serializejson.min.js
 //= require jquery_ujs
+//= require jquery.ui.sortable
 //= require underscore
 //= require backbone
 //= require annotate_life
