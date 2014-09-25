@@ -324,11 +324,12 @@ input#new-journal-submit {
 }
 
 .chapters, {
-  background-color: #428bca;
+  background-color: white;
   height: 100%;
   width: 100%;
   border-radius: 3px;
   padding: 20px;
+  border: 1px solid #cacaca;
 }
 
 .chapter-place-card {
@@ -381,4 +382,25 @@ input#new-journal-submit {
 
 .story-place-card:hover {
   background-color: #24984D;
+}
+
+/* Story Edit View */
+
+.story-edit-form label {
+  display: block;
+}
+
+#story-title {
+  padding: 7px;
+  width: 100%;
+}
+
+#story-text {
+  width: 250px;
+  height: 300px;
+}
+
+.story-btn {
+  width: 100px;
+  margin: 10px;
 }

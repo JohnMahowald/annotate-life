@@ -43,5 +43,12 @@ AnnotateLife.Views.JournalShow = Backbone.CompositeView.extend({
     });
     
     this.addSubview(".new-journal-container", chapterForm)
+    this.attachStoryEdit();
+  },
+  
+  attachStoryEdit: function() {
+    var storyEditForm = new AnnotateLife.Views.StoryForm();
+    
+    this.addSubview(".story-edit", storyEditForm);
   }
 })
