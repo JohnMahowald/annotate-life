@@ -31,12 +31,20 @@ aa_journal.chapters.create!(title: "Ruby")
 
 final_project_chapter.stories.create!(title: "Planning", text: "When first
 planning a project, it helps to have a roadmap. And that is when I knew
-that it was going to be challenging.")
+that it was going to be challenging.", 
+img_url: "http://blog.homeaway.co.uk/wp-content/uploads/2012/06/cala-luna.jpg")
 
 final_project_chapter.stories.create!(title: "Design", text: "It isn't always
 clear what is the best design. With so many websites out there, there are many
-competing design perspectives.")
+competing design perspectives.", 
+img_url: "http://www.wallpapersonly.net/wallpapers/peak-wilderness-washington-mountains-1024x768.jpg")
 
 final_project_chapter.stories.create!(title: "Composite Views", text: "There is
 something in my nature that looks for challenges and tries to confront them 
-head on. Its no woder that I have a project with composite views...")
+head on. Its no woder that I have a project with composite views...",
+img_url: "http://images4.fanpop.com/image/photos/19900000/SunSet-sunsets-and-sunrises-19955133-1920-1080.jpg")
+
+final_project_chapter.stories.create!(title: "Implimeting", text: "I've always
+been the type of person that enjoys making soemthign come to pass. While
+intimidating, this has been a fun project to work on",
+img_url: "http://funlava.com/wp-content/uploads/2013/08/sunset.jpg")

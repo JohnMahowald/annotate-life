@@ -1,3 +1,8 @@
-<div class="story-place-card">
+<div 
+  class="story-place-card">
   <h3><%= story.escape('title') %></h3>
+  <div 
+    class="story-card-thumbnail" 
+    style="background-image: url(<%= story.escape('img_url') %>)">
+  </div>
 </dvi>
