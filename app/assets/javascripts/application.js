@@ -34,13 +34,4 @@ $(document).ready(function() {
     $password.val("johnjohn")
     $("#login").click();
   })
-  
-  $("#new-journal-button").on("click", function(event) {
-    event.preventDefault();
-    $(event.currentTarget).hide();
-    var $form = $("form");
-    $form.hide();
-    $form.removeClass("hidden")
-    $form.fadeIn('slow');
-  })
-})
+});

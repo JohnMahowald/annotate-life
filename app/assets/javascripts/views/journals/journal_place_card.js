@@ -12,12 +12,23 @@ AnnotateLife.Views.JournalPlaceCard = Backbone.View.extend({
   },
   
   events: {
-    "click": "redirect"
+    "click .dropdown-delete-journal": "removeJournal",
+    "click .journal-show-link": "redirect"
   },
   
   redirect: function(event) {
     event.preventDefault();
     var journalShowUrl = "/journals/" + this.model.id
     Backbone.history.navigate(journalShowUrl, { trigger: true })
+  },
+  
+  removeJournal: function(event) {
+    event.preventDefault();
+    var subview = this;
+    this.model.destroy({
+      success: function() {
+        subview.collection.trigger('journalDestroy', subview);
+      }
+    });
   }
 });

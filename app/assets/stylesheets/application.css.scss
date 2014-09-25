@@ -11,6 +11,7 @@
  * file per style scope.
  *
  *= require_tree .
+ *= require animate
  *= require_self
  */
 
@@ -207,7 +208,6 @@ body {
   border-color: #1fae52;
   color: white;
   border-radius: 3px;
-  text-align: center;
   transition: background-color .5s;
 }
 
@@ -217,17 +217,44 @@ body {
 
 .place-card h3 {
   margin: 20px;
+  text-align: left;
 }
 
 .place-card p {
-  text-align: left;
   padding: 20px;
+  text-align: left;
+}
+
+.journal-card-menu {
+  padding: 20px;
+  float: right;
+  display: inline;
+}
+
+.journal-show-link {
+  height: 100%;
 }
 
 .journal-form-container {
   height: 300px;
   width: 250px;
   margin: 0 auto;
+}
+
+.journal-form-wrapper {
+  height: 300px;
+  width: 250px;
+}
+
+.journal-form-wrapper .close-form {
+  float: right;
+  color: #747474;
+  display: inline;
+}
+
+.new-journal-container {
+  margin: 0 auto;
+  text-align: center;
 }
 
 #new-journal-button {

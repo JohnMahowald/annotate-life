@@ -2,17 +2,21 @@
   class="btn btn-primary" 
   id="new-journal-button">
     <span class="glyphicon glyphicon-plus"></span> Create New Journal</button>
-
-<form id='new-journal-form' class="hidden">
-  <div class='form-group'>
-    <label for='journal-title'>Title</label>
-    <input type='text' name='journal[title]' id="journal-title">
+<div class="journal-form-wrapper hidden">
+  <div class='close-button-fix'>
+    <span class="glyphicon glyphicon-remove-circle close-form"></span>
   </div>
+  <form id='new-journal-form'>
+    <div class='form-group'>
+      <label for='journal-title'>Title</label>
+      <input type='text' name='journal[title]' id="journal-title">
+    </div>
   
-  <div class='form-group'>
-    <label for='journal-description'>Description</label>
-    <textarea name='journal[description]' id='journal-description'></textarea>
-  </div>
+    <div class='form-group'>
+      <label for='journal-description'>Description</label>
+      <textarea name='journal[description]' id='journal-description'></textarea>
+    </div>
   
-  <input type="submit" id="new-journal-submit" value="Create Journal">
-</form>
+    <input type="submit" id="new-journal-submit" value="Create Journal">
+  </form>
+</div>

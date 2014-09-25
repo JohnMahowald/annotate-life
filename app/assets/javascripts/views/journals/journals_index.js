@@ -2,7 +2,12 @@ AnnotateLife.Views.JournalsIndex = Backbone.CompositeView.extend({
   initialize: function() {
     this.collection.each(this.addJournal.bind(this));
     this.listenTo(this.collection, "add", this.addJournal);
+    this.listenTo(this.collection, "journalDestroy", this.removeView);
     this.attachJournalForm();
+  },
+  
+  removeView: function(subview) {
+    this.removeSubview(".journals-container", subview);
   },
   
   template: JST['journals/index'],
@@ -16,7 +21,8 @@ AnnotateLife.Views.JournalsIndex = Backbone.CompositeView.extend({
 
   addJournal: function(journal) {
     var placeCardView = new AnnotateLife.Views.JournalPlaceCard({
-      model: journal
+      model: journal,
+      collection: this.collection
     });
     
     this.addSubview(".journals-container", placeCardView);
