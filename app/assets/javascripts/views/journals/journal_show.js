@@ -9,6 +9,8 @@ AnnotateLife.Views.JournalShow = Backbone.CompositeView.extend({
     this.listenTo(this.chapters, "storiesReady", this.attachStoriesIndex);
   },
   
+  attributes: { class: 'journal-show-container'},
+  
   template: JST["journals/show"],
   
   render: function() {
@@ -26,6 +28,7 @@ AnnotateLife.Views.JournalShow = Backbone.CompositeView.extend({
   },
   
   attachStoriesIndex: function(chapter) {
+    $('.stories').empty();
     var storiesIndex = new AnnotateLife.Views.StoriesIndex({
       model: chapter
     });
