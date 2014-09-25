@@ -10,16 +10,27 @@
         <span class="icon-bar"></span>
       </button>
       <a href="#">
-        <div class="navbar-brand navbar-brand-centered">Annotate</div>
+        <div class="navbar-brand navbar-brand-centered">
+          <img src="/assets/feather.svg" class='header-brand-image'>
+          Annotate
+        </div>
       </a>
     </div>
+    
     <div class="collapse navbar-collapse" id="navbar-brand-centered">
+      <ul class="nav navbar-nav">
+        <li><a href="#">Journals</a></li>
+      </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li>
+        <li class="dropdown">
           <a href="#" 
-             class="new-board-header-link">
+             class="dropdown-toggle new-board-header-link"
+             data-toggle="dropdown">
                <span class="glyphicon glyphicon-plus"></span>
           </a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Create New Journal</a></li>
+          </ul>
         </li>
         
         <li class="dropdown">

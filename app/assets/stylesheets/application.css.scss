@@ -185,6 +185,19 @@ body {
     margin-left: -80px;
 }
 
+div.navbar-brand.navbar-brand-centered {
+  background-color: #f8f8f8;
+  border-radius: 5px;
+}
+
+div.navbar-brand.navbar-brand-centered:hover {
+  background-color: #e7e7e7;
+}
+
+.header-brand-image {
+  height: 23px;
+}
+
 /* Static Pages */
 
 /* Journal Index */
