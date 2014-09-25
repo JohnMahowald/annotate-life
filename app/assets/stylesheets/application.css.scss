@@ -336,7 +336,19 @@ input#new-journal-submit {
 
 /* Journal Show */
 
+.journal-show-title {
+  text-align: center;
+  color: grey;
+}
+
 .journal-show-row {
+  margin: 3%;
+}
+
+.sub-col {
+  border: 1px solid blue;
+}
+/*.journal-show-row {
   margin: 5% auto;
 }
 
@@ -351,7 +363,7 @@ input#new-journal-submit {
 
 .journal-show-title {
   text-align: center;
-  font-family: caecilia, times, serif;  
+  font-family: caecilia, times, serif;
 }
 
 .chapters, .stories {
@@ -379,20 +391,12 @@ input#new-journal-submit {
 .chapter-place-card h3 {
   margin: 0;
   padding: 10px;
-  font-size: 1.3em;  
+  font-size: 1.3em;
 }
 
 .chapter-place-card:hover {
   background-color: #24984D;
 }
-
-/*.stories {
-  background-color: white;
-  height: 100%;
-  width: 100%;
-  border-radius: 3px;
-  padding: 20px
-}*/
 
 .story-place-card {
   background-color: #28a956;
@@ -410,7 +414,7 @@ input#new-journal-submit {
 .story-place-card h3 {
   margin: 0;
   padding: 10px;
-  font-size: 1em;  
+  font-size: 1em;
 }
 
 .story-place-card:hover {
@@ -426,7 +430,7 @@ input#new-journal-submit {
   margin: auto;
   border-radius: 5px;
 }
-
+*/
 /* Story Edit View */
 
 .story-edit-form label {
@@ -439,7 +443,7 @@ input#new-journal-submit {
 }
 
 #story-text {
-  width: 250px;
+  width: 100%;
   height: 300px;
 }
 

@@ -6,6 +6,8 @@ AnnotateLife.Views.JournalsIndex = Backbone.CompositeView.extend({
     this.attachJournalForm();
   },
   
+  attributes: { class: "journal-index" },
+  
   removeView: function(subview) {
     this.removeSubview(".journals-container", subview);
   },
@@ -33,9 +35,5 @@ AnnotateLife.Views.JournalsIndex = Backbone.CompositeView.extend({
       collection: this.collection
     });
     this.addSubview(".journal-form-container", journalFormView);
-  },
-  
-  attributes: {
-    class: "journal-index"
   }
 });

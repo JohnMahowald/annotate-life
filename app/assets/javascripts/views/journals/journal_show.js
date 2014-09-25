@@ -1,11 +1,12 @@
+/*global AnnotateLife, Backbone, JST */
+
 AnnotateLife.Views.JournalShow = Backbone.CompositeView.extend({
   initialize: function() {
     this.chapters = this.model.chapters();
-    this.chapters.each(this.addChapter.bind(this));
+    this.attachChaptersIndex();
+    this.attachStoryEditForm();
     this.listenTo(this.model, "sync", this.render);
-    this.listenTo(this.chapters, "add", this.addChapter);
-    this.listenTo(this.chapters, "storiesReady", this.showStories);
-    this.attachForms();
+    this.listenTo(this.chapters, "storiesReady", this.attachStoriesIndex);
   },
   
   template: JST["journals/show"],
@@ -17,38 +18,22 @@ AnnotateLife.Views.JournalShow = Backbone.CompositeView.extend({
     return this;
   },
   
-  addChapter: function(chapter) {
-    var chapterView = new AnnotateLife.Views.ChapterPlaceCard({
-      model: chapter
-    })
-    
-    this.addSubview(".chapters", chapterView);
-  },
-  
-  showStories: function(chapter) {
-    chapter.stories().each(this.addStory.bind(this));
-  },
-  
-  addStory: function(story) {
-    var storyView = new AnnotateLife.Views.StoryPlaceCard({
-      model: story
-    })
-    
-    this.addSubview(".stories", storyView);
-  },
-  
-  attachForms: function() {
-    var chapterForm = new AnnotateLife.Views.NewChapterForm({ 
-      model: this.model
+  attachChaptersIndex: function() {
+    var chaptersIndex = new AnnotateLife.Views.ChaptersIndex({
+      collection: this.chapters
     });
-    
-    this.addSubview(".new-journal-container", chapterForm)
-    this.attachStoryEdit();
+    this.addSubview('.chapters', chaptersIndex);
   },
   
-  attachStoryEdit: function() {
+  attachStoriesIndex: function(chapter) {
+    var storiesIndex = new AnnotateLife.Views.StoriesIndex({
+      model: chapter
+    });
+    this.addSubview('.stories', storiesIndex);
+  },
+  
+  attachStoryEditForm: function() {
     var storyEditForm = new AnnotateLife.Views.StoryForm();
-    
     this.addSubview(".story-edit", storyEditForm);
   }
-})
+});
