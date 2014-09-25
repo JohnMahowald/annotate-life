@@ -16,8 +16,13 @@ AnnotateLife.Views.JournalShow = Backbone.CompositeView.extend({
   render: function() {
     var content = this.template({ journal: this.model });
     this.$el.html(content);
+    this.setCurrentJournalTitle();
     this.attachSubviews();
     return this;
+  },
+  
+  setCurrentJournalTitle: function() {
+    $('#current-journal-title').html(this.model.escape('title'));
   },
   
   attachChaptersIndex: function() {

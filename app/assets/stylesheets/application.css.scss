@@ -198,6 +198,11 @@ div.navbar-brand.navbar-brand-centered:hover {
   height: 23px;
 }
 
+#current-journal-title {
+  display: inline-block;
+  padding-right: 5px;
+}
+
 /* Static Pages */
 
 /* Journal Index */
@@ -352,7 +357,9 @@ input#new-journal-submit {
 .sub-col {
   background-color: white;
   border-radius: 3px;
-  border: 1px solid blue;
+  border: 1px solid #cacaca;
+  height: 450px;
+  overflow-y: auto;
 }
 
 .chapter-place-card {
