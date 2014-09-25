@@ -38,11 +38,9 @@ $(document).ready(function() {
   $("#new-journal-button").on("click", function(event) {
     event.preventDefault();
     $(event.currentTarget).hide();
-    console.log(event);
     var $form = $("form");
     $form.hide();
     $form.removeClass("hidden")
-    console.log($form)
     $form.fadeIn('slow');
   })
 })

@@ -1,6 +1,7 @@
 AnnotateLife.Views.JournalShow = Backbone.CompositeView.extend({
   initialize: function() {
     this.chapters = this.model.chapters();
+    this.chapters.each(this.addChapter.bind(this));
     this.listenTo(this.model, "sync", this.render);
     this.listenTo(this.chapters, "add", this.addChapter);
     this.listenTo(this.chapters, "storiesReady", this.showStories);
@@ -40,7 +41,7 @@ AnnotateLife.Views.JournalShow = Backbone.CompositeView.extend({
     var chapterForm = new AnnotateLife.Views.NewChapterForm({ 
       model: this.model
     });
-    debugger
+    
     this.addSubview(".new-journal-container", chapterForm)
   }
 })
