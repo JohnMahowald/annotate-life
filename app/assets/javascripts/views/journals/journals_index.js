@@ -19,6 +19,7 @@ AnnotateLife.Views.JournalsIndex = Backbone.CompositeView.extend({
     this.$el.html(content);
     this.setCurrentJournalTitle();
     this.attachSubviews();
+    $('#main').removeClass('fade-to-background');
     return this;
   },  
   
