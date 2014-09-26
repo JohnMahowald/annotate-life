@@ -1,6 +1,6 @@
 /*global AnnotateLife, Backbone, JST, $ */
 
-AnnotateLife.Views.JournalShow = Backbone.CompositeView.extend({
+AnnotateLife.Views.JournalShow = Backbone.AnimatedView.extend({
   template: JST["journals/show"],
   attributes: { class: 'journal-show-container'},
   
@@ -13,30 +13,44 @@ AnnotateLife.Views.JournalShow = Backbone.CompositeView.extend({
   },
   
   events: {
-    "sortstart": "startSort",
-    "sortstop": "sortStop",
-    // "sortreceive": "sortReceive",
+    "sortstart": "getStartOrder",
+    "sortstop": "getStopOrder",
     "click .chapter-place-card": "storySelectMode",
     "click .story-place-card": "storyEditMode",
     "mouseover .hover-select-group": "storySelectMode",
     "mouseleave .hover-select-group": "storyEditMode"
   },
   
-  startSort: function(event, ui) {
-    console.log('sort started');
-    console.log(event);
-    console.log(ui);
+  getStopOrder: function(event) {
+    var cardEndOrder = [];
+    $cards = this.$('.chapter-place-card');
+    $cards.each(function(index, card) {
+      cardEndOrder.push($(card).data('id'));
+    })
+    
+    this.saveNewCardOrder(cardEndOrder);
   },
   
-  sortStop: function(event, ui) {
-    console.log('sort stopped');
-    console.log(event);
-    console.log(ui);
+  saveNewCardOrder: function(newOrder) {
+    var journal = this;
+    debugger
+    newOrder.forEach(function(id, index) {
+      chapterNum = index + 1
+      var chapter = journal.chapters.findWhere({ id: id })
+      if (chapter.get('chapter_num') !== chapterNum) {
+        chapter.set('chapter_num', chapterNum);
+        chapter.save();
+      }
+    });
   },
   
-  sortReceive: function(event) {
-    console.log('sort received');
-    console.log(event);
+  getStartOrder: function(event) {
+    var journal = this;
+    journal.cardStartOrder = [];
+    $cards = this.$('.chapter-place-card');
+    $cards.each(function(index, card) {
+      journal.cardStartOrder.push($(card).data('chapterNum'));
+    })
   },
   
   render: function() {
@@ -45,9 +59,7 @@ AnnotateLife.Views.JournalShow = Backbone.CompositeView.extend({
     this.setCurrentJournalTitle();
     this.attachSubviews();
     this.chapterSelectMode();
-    $('.chapters-list').sortable({
-      placeholder: 'chapter-place-card-holder'
-    });
+    $('.chapters-list').sortable({ placeholder: 'chapter-place-card-holder' });
     return this;
   },
   
@@ -73,47 +85,5 @@ AnnotateLife.Views.JournalShow = Backbone.CompositeView.extend({
   attachStoryEditForm: function() {
     var storyEditForm = new AnnotateLife.Views.StoryForm();
     this.addSubview(".story-edit", storyEditForm);
-  },
-  
-  chapterSelectMode: function() {
-    $('#main').addClass('fade-to-background');
-    $('.chapters').addClass('col-xs-offset-4');
-    $('.story-edit').addClass('offset-right');
-  },
-  
-  storySelectMode: function() {
-    /* Chapter Transitions */
-    $('.chapters').removeClass('col-xs-offset-4 col-xs-4');
-    $('.chapters').addClass('col-xs-3');
-    $('.chapters').css('z-index', '-1');
-    
-    /* Stories Index Transitions */
-    $('.stories').removeClass('col-xs-4 hidden');
-    $('.stories').addClass('col-xs-5 animated fadeIn');
-    
-    /* Story Edit Transitions */
-    $('.story-edit').removeClass('col-xs-7')
-    $('.story-edit').addClass('col-xs-4')
-  },
-  
-  storyEditMode: function() {
-    $('#main').removeClass('fade-to-background');
-    $('#hover-controller').addClass('hover-select-group')
-    /* Chapter Transitions */
-    $('.chapters').removeClass('col-xs-3')
-    $('.chapters').addClass('col-xs-2')
-    /* Stories Index Transitions */
-    $('.stories').removeClass('col-xs-5 col-xs-offset-1');
-    $('.stories').addClass('col-xs-3');
-    
-    /* Story Edit Transitions */
-    $('.story-edit').removeClass('col-xs-4 hidden');
-    $('.story-edit').addClass('col-xs-7');
-    setTimeout(this.slideEditFromRight, 0)
-  },
-  
-  slideEditFromRight: function() {
-    $('.story-edit').addClass('animated fadeIn');
-    $('.story-edit').css('right', '0px')
   }
 });

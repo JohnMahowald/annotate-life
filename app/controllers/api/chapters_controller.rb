@@ -8,4 +8,20 @@ class Api::ChaptersController < ApplicationController
       render json: @chapter.errors.full_messages, status: :unprocessable_entity
     end
   end
+  
+  def update
+    @chapter = Chapter.find(params[:id])
+    
+    if @chapter.update_attributes(chapter_params)
+      render :show
+    else
+      render json: @chapter.errors.full_messages, status: :unprocessable_entity
+    end
+  end
+  
+  private
+  
+  def chapter_params
+    params.require(:chapter).permit(:title, :chapter_num, :journal_id)
+  end
 end

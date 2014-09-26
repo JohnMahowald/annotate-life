@@ -32,10 +32,6 @@
 
 /* Main Style */
 
-/** {
-  border: 1px solid blue;
-}*/
-
 body {
   font-family: gotham, helvetica, sans-serif;
   background-color: #f0f0f0;
@@ -55,8 +51,7 @@ body {
 }
 
 #hover-controller {
-  height: 100%;
-  width: 100%;
+  background-color: red;
 }
 
 /* Login Pages */
@@ -426,6 +421,18 @@ input#new-journal-submit {
 }
 
 .chapter-place-card-holder {
+  color: white;
+  background-color: #CCFFCC;
+  border-color: #1fae52;
+  border-radius: 3px;
+  text-align: center;
+  transition: background-color .5s;
+  height: 40px;
+  width: 90%;
+  margin: 20px auto;
+}
+
+.chapter-place-card-form {
   color: white;
   background-color: #CCFFCC;
   border-color: #1fae52;

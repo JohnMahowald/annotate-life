@@ -18,8 +18,10 @@
 //= require underscore
 //= require backbone
 //= require annotate_life
+//= require ./utils/composite_view
+//= require ./utils/animated_view
 //= require_tree ../templates
-//= require_tree ./utils
+// require_tree ./utils
 //= require_tree ./models
 //= require_tree ./collections
 //= require_tree ./views
