@@ -8,6 +8,8 @@
 #  chapter_id :integer          not null
 #  created_at :datetime
 #  updated_at :datetime
+#  img_url    :string(255)
+#  ord        :integer          not null
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html

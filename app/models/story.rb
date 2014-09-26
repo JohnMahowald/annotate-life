@@ -11,7 +11,15 @@
 #
 
 class Story < ActiveRecord::Base
+  after_initialize :ensure_ord
   validates :title, :text, :chapter_id, presence: true
   
   belongs_to :chapter
+  
+  private
+  
+  def ensure_ord
+    return if self.ord
+    self.ord = chapter.stories.count + 1
+  end
 end

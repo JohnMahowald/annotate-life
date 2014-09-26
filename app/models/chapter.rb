@@ -22,7 +22,6 @@ class Chapter < ActiveRecord::Base
   
   def ensure_chapter_num
     return if self.chapter_num
-    chapters = self.journal.chapters.length
-    self.chapter_num ||= chapters + 1
+    self.chapter_num = self.journal.chapters.count + 1
   end
 end
