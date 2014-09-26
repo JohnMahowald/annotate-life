@@ -42,6 +42,8 @@ AnnotateLife.Views.JournalShow = Backbone.AnimatedView.extend({
         chapter.save();
       }
     });
+    
+    journal.chapters.sort();
   },
   
   getStartOrder: function(event) {
