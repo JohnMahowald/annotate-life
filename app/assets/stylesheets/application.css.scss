@@ -363,17 +363,17 @@ input#new-journal-submit {
 }
 
 .chapters {
-  transition: margin .3s, width .3s;
+  transition: margin .4s, width .4s;
 }
 
 .stories {
-  transition: margin .3s, width .3s;
+  transition: margin .4s, width .4s;
   animation-duration: 2s;
   
 }
 
 .story-edit {
-  transition: margin .3s, width .3s, right .3s;
+  transition: margin .4s, width .4s, right .3s;
   animation-duration: 2s;  
 }
 
@@ -461,7 +461,7 @@ input#new-journal-submit {
   width: 100%;
   height: 280px;
   margin: auto;
-  text-align: right;
+  text-align: left;
 }
 
 .story-btn {
