@@ -32,19 +32,19 @@ aa_journal.chapters.create!(title: "Ruby")
 final_project_chapter.stories.create!(title: "Planning", text: "When first
 planning a project, it helps to have a roadmap. And that is when I knew
 that it was going to be challenging.", 
-img_url: "http://blog.homeaway.co.uk/wp-content/uploads/2012/06/cala-luna.jpg")
+img_url: "http://media-cache-ak0.pinimg.com/736x/c4/69/db/c469dbb0d703f2d86664abdc43913e0f.jpg")
 
 final_project_chapter.stories.create!(title: "Design", text: "It isn't always
 clear what is the best design. With so many websites out there, there are many
 competing design perspectives.", 
-img_url: "http://www.wallpapersonly.net/wallpapers/peak-wilderness-washington-mountains-1024x768.jpg")
+img_url: "http://media-cache-ec0.pinimg.com/736x/7e/d9/db/7ed9db24b050ebbe66be9461beba73b8.jpg")
 
 final_project_chapter.stories.create!(title: "Composite Views", text: "There is
 something in my nature that looks for challenges and tries to confront them 
 head on. Its no woder that I have a project with composite views...",
-img_url: "http://images4.fanpop.com/image/photos/19900000/SunSet-sunsets-and-sunrises-19955133-1920-1080.jpg")
+img_url: "http://media-cache-ak0.pinimg.com/736x/88/bf/38/88bf3817761e9b4405db691f3e734409.jpg")
 
-final_project_chapter.stories.create!(title: "Implimeting", text: "I've always
-been the type of person that enjoys making soemthign come to pass. While
+final_project_chapter.stories.create!(title: "Implementing", text: "I've always
+been the type of person that enjoys making something come to pass. While
 intimidating, this has been a fun project to work on",
-img_url: "http://funlava.com/wp-content/uploads/2013/08/sunset.jpg")
+img_url: "http://media-cache-ec0.pinimg.com/736x/d2/57/64/d25764e65caa564ad4b58d4203133081.jpg")
