@@ -362,6 +362,18 @@ input#new-journal-submit {
   overflow-y: auto;
 }
 
+.chapters {
+  transition: margin .5s, width .5s;
+}
+
+.stories {
+  transition: margin .5s, width .5s;
+}
+
+.story-edit {
+  transition: margin .5s, width 1s;
+}
+
 .chapter-place-card {
   color: white;
   background-color: #B2B2B2;
@@ -440,8 +452,9 @@ input#new-journal-submit {
 
 #story-text {
   width: 100%;
-  height: 300px;
+  height: 280px;
   margin: auto;
+  text-align: right;
 }
 
 .story-btn {
