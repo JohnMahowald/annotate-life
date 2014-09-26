@@ -3,6 +3,8 @@ AnnotateLife.Collections.Chapters = Backbone.Collection.extend({
     this.journal = options.this
   },
   
+  comparator: 'chapter_num',
+  
   url: 'api/chapters',
   
   model: AnnotateLife.Models.Chapter,

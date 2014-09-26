@@ -3,6 +3,8 @@ AnnotateLife.Collections.Stories = Backbone.Collection.extend({
     this.chapter = options.chapter
   },
   
+  comparator: "ord",
+  
   url: "api/stories",
   
   model: AnnotateLife.Models.Story,
