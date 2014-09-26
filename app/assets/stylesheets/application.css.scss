@@ -41,6 +41,14 @@ body {
   background-color: #f0f0f0;
 }
 
+#main {
+  transition: background-color .5s;
+}
+
+.fade-to-background {
+  background-color: rgba(77, 77, 77, .4);
+}
+
 /* Login Pages */
 .bar-header {
   background-color: #2dbe60;

@@ -25,6 +25,7 @@ AnnotateLife.Views.JournalShow = Backbone.CompositeView.extend({
     this.setCurrentJournalTitle();
     this.attachSubviews();
     this.chapterSelectMode();
+    $('.chapters-list').sortable();
     return this;
   },
   
@@ -53,6 +54,7 @@ AnnotateLife.Views.JournalShow = Backbone.CompositeView.extend({
   },
   
   chapterSelectMode: function() {
+    $('#main').addClass('fade-to-background');
     $('.chapters').addClass('col-xs-offset-4');
     $('.story-edit').addClass('offset-right');
   },
@@ -61,6 +63,7 @@ AnnotateLife.Views.JournalShow = Backbone.CompositeView.extend({
     /* Chapter Transitions */
     $('.chapters').removeClass('col-xs-offset-4 col-xs-4');
     $('.chapters').addClass('col-xs-3');
+    $('.chapters').css('z-index', '-1');
     
     /* Stories Index Transitions */
     $('.stories').removeClass('col-xs-4 hidden');
@@ -72,8 +75,8 @@ AnnotateLife.Views.JournalShow = Backbone.CompositeView.extend({
   },
   
   storyEditMode: function() {
+    $('#main').removeClass('fade-to-background');
     $('#hover-controller').addClass('hover-select-group')
-    this.delegateEvents();
     /* Chapter Transitions */
     $('.chapters').removeClass('col-xs-3')
     $('.chapters').addClass('col-xs-2')
