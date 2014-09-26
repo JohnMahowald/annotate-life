@@ -1,4 +1,4 @@
-/*global AnnotateLife, Backbone, JST */
+/*global AnnotateLife, Backbone, JST, $ */
 
 AnnotateLife.Views.JournalShow = Backbone.CompositeView.extend({
   initialize: function() {
@@ -52,23 +52,40 @@ AnnotateLife.Views.JournalShow = Backbone.CompositeView.extend({
   },
   
   promptChapterSelect: function() {
-    $('.stories').addClass('hidden');
-    $('.story-edit').addClass('hidden');
     $('.chapters').addClass('col-xs-offset-4');
+    $('.stories').addClass('hidden');
+    $('.story-edit').addClass('hidden offset-right');
   },
   
   promptStorySelect: function() {
+    /* Chapter Transitions */
     $('.chapters').removeClass('col-xs-offset-4 col-xs-4');
     $('.chapters').addClass('col-xs-2');
+    
+    /* Stories Index Transitions */
     $('.stories').removeClass('col-xs-4 hidden');
-    $('.stories').addClass('col-xs-5 col-xs-offset-1');
+    $('.stories').addClass('col-xs-5 col-xs-offset-1 animated fadeIn');
+    // setTimeout(this.slideStoriesFromRight, 0)
   },
   
   storyEditMode: function() {
+    /* Stories Index Transitions */
     $('.stories').removeClass('col-xs-5 col-xs-offset-1');
-    $('.stories').addClass('col-xs-3')
-    $('.story-edit').removeClass('hidden')
-    $('.story-edit').removeClass('col-xs-4 hidden');    
+    $('.stories').addClass('col-xs-3');
+    
+    /* Story Edit Transitions */
+    $('.story-edit').removeClass('col-xs-4 hidden');
     $('.story-edit').addClass('col-xs-7');
+    setTimeout(this.slideEditFromRight, 0)
+  },
+  
+  // slideStoriesFromRight: function() {
+  //   $('.stories').addClass('animated fadeIn')
+  //   $('.stories').css('right', '0px');
+  // },
+  
+  slideEditFromRight: function() {
+    $('.story-edit').addClass('animated fadeIn');
+    $('.story-edit').css('right', '0px')
   }
 });

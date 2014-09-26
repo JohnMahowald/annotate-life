@@ -363,15 +363,22 @@ input#new-journal-submit {
 }
 
 .chapters {
-  transition: margin .5s, width .5s;
+  transition: margin .3s, width .3s;
 }
 
 .stories {
-  transition: margin .5s, width .5s;
+  transition: margin .3s, width .3s;
+  animation-duration: 2s;
+  
 }
 
 .story-edit {
-  transition: margin .5s, width 1s;
+  transition: margin .3s, width .3s, right .3s;
+  animation-duration: 2s;  
+}
+
+.offset-right {
+  right: -1500px;
 }
 
 .chapter-place-card {
@@ -430,12 +437,12 @@ input#new-journal-submit {
   background-size: cover;
   margin: auto;
   border-radius: 5px;
-  opacity: .6;
+  opacity: .1;
   transition: opacity .5s;
 }
 
 .story-card-thumbnail:hover {
-  opacity: .9;
+  opacity: .4;
 }
 
 /* Story Edit View */
