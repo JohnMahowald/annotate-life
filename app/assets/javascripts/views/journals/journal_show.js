@@ -13,10 +13,30 @@ AnnotateLife.Views.JournalShow = Backbone.CompositeView.extend({
   },
   
   events: {
+    "sortstart": "startSort",
+    "sortstop": "sortStop",
+    // "sortreceive": "sortReceive",
     "click .chapter-place-card": "storySelectMode",
     "click .story-place-card": "storyEditMode",
     "mouseover .hover-select-group": "storySelectMode",
     "mouseleave .hover-select-group": "storyEditMode"
+  },
+  
+  startSort: function(event, ui) {
+    console.log('sort started');
+    console.log(event);
+    console.log(ui);
+  },
+  
+  sortStop: function(event, ui) {
+    console.log('sort stopped');
+    console.log(event);
+    console.log(ui);
+  },
+  
+  sortReceive: function(event) {
+    console.log('sort received');
+    console.log(event);
   },
   
   render: function() {
@@ -25,7 +45,9 @@ AnnotateLife.Views.JournalShow = Backbone.CompositeView.extend({
     this.setCurrentJournalTitle();
     this.attachSubviews();
     this.chapterSelectMode();
-    $('.chapters-list').sortable();
+    $('.chapters-list').sortable({
+      placeholder: 'chapter-place-card-holder'
+    });
     return this;
   },
   

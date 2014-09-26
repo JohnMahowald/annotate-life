@@ -1,6 +1,6 @@
 class Api::ChaptersController < ApplicationController
   def show
-    @chapter = Chapter.find(params[:id])
+    @chapter = Chapter.includes(:stories).find(params[:id])
     
     if @chapter
       render :show

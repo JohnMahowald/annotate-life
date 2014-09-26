@@ -5,7 +5,7 @@ class Api::JournalsController < ApplicationController
   end
   
   def show
-    @journal = Journal.find(params[:id])
+    @journal = Journal.includes(:chapters).find(params[:id])
     
     if @journal
       render :show

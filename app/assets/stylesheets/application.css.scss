@@ -49,6 +49,12 @@ body {
   background-color: rgba(77, 77, 77, .4);
 }
 
+#hover-controller {
+  height: 100%;
+  width: 100%;
+  border: 1px solid blue;
+}
+
 /* Login Pages */
 .bar-header {
   background-color: #2dbe60;
@@ -411,6 +417,18 @@ input#new-journal-submit {
 
 .chapter-place-card:hover {
   background-color: #24984D;
+}
+
+.chapter-place-card-holder {
+  color: white;
+  background-color: #CCFFCC;
+  border-color: #1fae52;
+  border-radius: 3px;
+  text-align: center;
+  transition: background-color .5s;
+  height: 40px;
+  width: 90%;
+  margin: 20px auto;
 }
 
 .story-place-card {
