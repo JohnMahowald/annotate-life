@@ -30,8 +30,8 @@ Backbone.CompositeView = Backbone.View.extend({
   
   onRender: function() {
     _(this.subviews()).each(function (subviews, selector) {
-      _subviews.each(function(subview) {
-        subview.onRender();
+      _(subviews).each(function(subview) {
+        if (subview.onRender) { subview.onRender()};
       });
     });
   },

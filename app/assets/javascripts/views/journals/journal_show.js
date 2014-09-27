@@ -13,27 +13,36 @@ AnnotateLife.Views.JournalShow = Backbone.AnimatedView.extend({
   },
   
   events: {
-    "sortstart": "getStartOrder",
-    "sortstop": "getStopOrder",
+    "sortstop .chapters-list": "getChaptersStopOrder",
+    "sortstop .stories-list": "getStoriesStopOrder",
     "click .chapter-place-card": "storySelectMode",
     "click .story-place-card": "storyEditMode",
     "mouseover .hover-select-group": "storySelectMode",
     "mouseleave .hover-select-group": "storyEditMode"
   },
   
-  getStopOrder: function(event) {
+  getChaptersStopOrder: function(event) {
     var cardEndOrder = [];
     $cards = this.$('.chapter-place-card');
     $cards.each(function(index, card) {
       cardEndOrder.push($(card).data('id'));
     })
     
-    this.saveNewCardOrder(cardEndOrder);
+    this.saveNewChapterOrder(cardEndOrder);
   },
   
-  saveNewCardOrder: function(newOrder) {
+  getStoriesStopOrder: function() {
+    var cardEndOrder = [];
+    $cards = this.$('.stories-place-card');
+    $cards.each(function(index, card) {
+      cardEndOrder.push($(card).data('id'));
+    })
+    
+    this.saveNewStoriesOrder(cardEndOrder);
+  },
+  
+  saveNewChapterOrder: function(newOrder) {
     var journal = this;
-    debugger
     newOrder.forEach(function(id, index) {
       chapterNum = index + 1
       var chapter = journal.chapters.findWhere({ id: id })
@@ -46,13 +55,8 @@ AnnotateLife.Views.JournalShow = Backbone.AnimatedView.extend({
     journal.chapters.sort();
   },
   
-  getStartOrder: function(event) {
-    var journal = this;
-    journal.cardStartOrder = [];
-    $cards = this.$('.chapter-place-card');
-    $cards.each(function(index, card) {
-      journal.cardStartOrder.push($(card).data('chapterNum'));
-    })
+  saveNewStoriesOrder: function(newOrder) {
+    
   },
   
   render: function() {
@@ -61,8 +65,14 @@ AnnotateLife.Views.JournalShow = Backbone.AnimatedView.extend({
     this.setCurrentJournalTitle();
     this.attachSubviews();
     this.chapterSelectMode();
-    $('.chapters-list').sortable({ placeholder: 'chapter-place-card-holder' });
+    this.makeSortable();
     return this;
+  },
+  
+  makeSortable: function() {
+    $('.chapters-list').sortable({
+      placeholder: 'chapter-place-card-holder'
+    });
   },
   
   setCurrentJournalTitle: function() {
@@ -82,6 +92,7 @@ AnnotateLife.Views.JournalShow = Backbone.AnimatedView.extend({
       model: chapter
     });
     this.addSubview('.stories', storiesIndex);
+    this.onRender();
   },
   
   attachStoryEditForm: function() {

@@ -446,7 +446,7 @@ input#new-journal-submit {
 
 .story-place-card {
   background-color: #B2B2B2;
-  border-color: #1fae52;
+  border: 1px solid #cacaca;
   color: #737373;
   border-radius: 3px;
   text-align: center;
@@ -459,9 +459,10 @@ input#new-journal-submit {
 }
 
 .story-place-card h3 {
+  color: black;
   margin: 0;
   padding: 10px;
-  font-size: 1em;
+  font-size: 1.5em;
 }
 
 .story-place-card:hover {
@@ -474,14 +475,13 @@ input#new-journal-submit {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  margin: auto;
   border-radius: 5px;
-  opacity: .1;
-  transition: opacity .5s;
+  opacity: .2;
+  transition: opacity 1s;
 }
 
 .story-card-thumbnail:hover {
-  opacity: .4;
+  opacity: .8;
 }
 
 /* Story Edit View */

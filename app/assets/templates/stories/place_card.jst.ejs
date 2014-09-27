@@ -1,8 +1,6 @@
-<div 
-  class="story-place-card">
+<div
+  class="story-place-card story-card-thumbnail"
+  data-id='<%= story.id %>'
+  style="background-image: url(<%= story.escape('img_url') %>)">
   <h3><%= story.escape('title') %></h3>
-  <div 
-    class="story-card-thumbnail" 
-    style="background-image: url(<%= story.escape('img_url') %>)">
-  </div>
-</dvi>
+</div>
