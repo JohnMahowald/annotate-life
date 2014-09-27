@@ -14,7 +14,6 @@ AnnotateLife.Views.JournalShow = Backbone.AnimatedView.extend({
   
   events: {
     "sortstop .chapters-list": "getChaptersStopOrder",
-    "sortstop .stories-list": "getStoriesStopOrder",
     "click .chapter-place-card": "storySelectMode",
     "click .story-place-card": "storyEditMode",
     "mouseover .hover-select-group": "storySelectMode",
@@ -31,16 +30,6 @@ AnnotateLife.Views.JournalShow = Backbone.AnimatedView.extend({
     this.saveNewChapterOrder(cardEndOrder);
   },
   
-  getStoriesStopOrder: function() {
-    var cardEndOrder = [];
-    $cards = this.$('.stories-place-card');
-    $cards.each(function(index, card) {
-      cardEndOrder.push($(card).data('id'));
-    })
-    
-    this.saveNewStoriesOrder(cardEndOrder);
-  },
-  
   saveNewChapterOrder: function(newOrder) {
     var journal = this;
     newOrder.forEach(function(id, index) {
@@ -53,10 +42,6 @@ AnnotateLife.Views.JournalShow = Backbone.AnimatedView.extend({
     });
     
     journal.chapters.sort();
-  },
-  
-  saveNewStoriesOrder: function(newOrder) {
-    
   },
   
   render: function() {

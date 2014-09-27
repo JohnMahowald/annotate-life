@@ -8,6 +8,8 @@
 #  chapter_id :integer          not null
 #  created_at :datetime
 #  updated_at :datetime
+#  img_url    :string(255)
+#  ord        :integer          not null
 #
 
 class Story < ActiveRecord::Base
@@ -21,6 +23,6 @@ class Story < ActiveRecord::Base
   
   def ensure_ord
     return if self.ord
-    self.ord = chapter.stories.count + 1
+    self.ord = chapter.stories.count
   end
 end
