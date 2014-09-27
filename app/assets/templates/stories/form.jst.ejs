@@ -1,15 +1,20 @@
-<h3 class='col-title'>Tell Your Story</h3>
-<div class='sub-col'>
-  <form class='story-edit-form'>
-    <div class="form-group">
-      <input type='text' name='story[title]' id='story-title' placeholder="Title"></input>
-    </div>
+<div class= class='edit-container'>
+  <h2 class='col-title'>Tell Your Story</h2>
+  <div class='sub-col'>
+    <input 
+      type='text' 
+      name='story[title]' 
+      id='story-title' 
+      placeholder="Title"></input>
+    <textarea 
+      name='story[text]' 
+      id='story-text' 
+      placeholder="Your Story"></textarea>
+  </div>
   
-    <div class='form-group'>
-      <textarea name='story[text]' id='story-text' placeholder="Your Story"></textarea>
-    </dvi>
-  </form>
-
-  <button class='btn btn-default story-btn discard-story'>Discard</button>
-  <button class='btn btn-primary story-btn save-story'>Save</button>
+  <div class='publish-options'>
+    <button class='discard'>Discard</button>
+    <button class='publish'>Publish</button>
+  </div>
+  
 </div>
