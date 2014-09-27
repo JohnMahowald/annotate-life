@@ -2,7 +2,7 @@
 
 AnnotateLife.Views.JournalShow = Backbone.AnimatedView.extend({
   template: JST["journals/show"],
-  attributes: { class: 'journal-show-container'},
+  attributes: { class: 'journal-show'},
   
   initialize: function() {
     this.chapters = this.model.chapters();

@@ -50,22 +50,18 @@ body {
   margin: 0;
   height: 100%;
   width: 100%;
-  padding: 1%;
-/*  opacity: 0;*/
-  transition: opacity .5s;
+  padding: 2%;
+  opacity: 0;
+  transition: opacity .7s;
 }
 
 #main:hover {
-  background-color: hsla(0, 0, 80%, .2);
+  background-color: hsla(0, 0, 70%, .3);
   opacity: 1;
 }
 
 .fade-to-background {
   background-color: rgba(77, 77, 77, .4);
-}
-
-#hover-controller {
-  background-color: red;
 }
 
 /* Login Pages */
@@ -363,15 +359,50 @@ input#new-journal-submit {
 
 /* Journal Show */
 
-.sub-col {
-  background-color: white;
-  border: 1px solid #cacaca;
-  height: 500px;
-  border-radius: 3px;
-  position: relative;
+.journal-show {
+  width: 100%;
+  height: 100%;
 }
 
-.journal-show-title {
+.select-controller {
+  height: 90%;
+  width: 100%;
+  margin: 0 auto;
+  opacity: .9;
+/*  background-color: red;*/
+  transition: width .3s;
+}
+
+.main-col {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  border: 1px solid #cacaca;
+  border-radius: 3px;
+  transition: width .3s;
+}
+
+.chapter-select {
+  width: 45%;
+}
+
+.story-select {
+  transition: margin 1s;
+  width: 70%;
+}
+
+.chapters-mid {
+  width: 35%;
+  float: left;  
+}
+
+.stories-lg {
+  width: 55%;
+  float: right;
+  animation-duration: .3s;
+}
+
+/*.journal-show-title {
   text-align: center;
   color: grey;
   height: 1%;
@@ -384,24 +415,10 @@ input#new-journal-submit {
   width: 100%;
 }
 
-.chapters {
-  transition: margin .4s, width .4s;
-}
-
-.stories {
-  transition: margin .4s, width .4s;
-  animation-duration: 2s;
-  
-}
-
-.story-edit {
-  transition: margin .4s, width .4s, right .3s;
-  animation-duration: 2s;  
-}
-
 .offset-right {
   right: -1500px;
 }
+*/
 
 .sub-col-header {
   background-color: #cacaca;
@@ -410,16 +427,16 @@ input#new-journal-submit {
   transition: height .5s;
 }
 
+.sub-col-header:hover {
+  height: 10%;
+}
+
 .sub-col-header h2 {
   color: white;
   text-align: center;
   margin: 0;
   padding: 1%;
   font-size: 1.3em;
-}
-
-.sub-col-header:hover {
-  height: 10%;
 }
 
 .chapter-place-card {
@@ -470,13 +487,13 @@ input#new-journal-submit {
   margin: 20px auto;
 }
 
-.chapter-bottom {
+/*.chapter-bottom {
   background-color: #cacaca;
   position: absolute;
   bottom: 0;
   height: 50px;
   width: 100%;
-}
+}*/
 
 .stories-list {
   display: block;
@@ -511,11 +528,11 @@ input#new-journal-submit {
 }
 
 .stories-bottom {
-  background-color: #cacaca;
+/*  background-color: #cacaca;
   position: absolute;
   bottom: 0;
   height: 50px;
-  width: 100%;
+  width: 100%;*/
 }
 
 /* Story Edit View */

@@ -5,7 +5,7 @@ AnnotateLife.Views.StoriesIndex = Backbone.CompositeView.extend({
     this.listenTo(this.stories, 'add', this.addStory);
   },
   
-  attributes: { class: 'stories-show' },
+  attributes: { class: 'sub-col' },
   
   template: JST['stories/index'],
   

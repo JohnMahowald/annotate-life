@@ -5,7 +5,7 @@ AnnotateLife.Views.ChaptersIndex = Backbone.CompositeView.extend({
     this.listenTo(this.collection, "add", this.addChapter)
   },
   
-  attributes: { class: "chapters-index" },
+  attributes: { class: "sub-col" },
   
   template: JST['chapters/index'],
   
