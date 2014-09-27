@@ -1,7 +1,7 @@
 AnnotateLife.Views.StoryForm = Backbone.View.extend({  
   template: JST["stories/form"],
   
-  attributes: { class: "new-story-form" },
+  attributes: { class: "story-form" },
   
   render: function() {
     var content = this.template();

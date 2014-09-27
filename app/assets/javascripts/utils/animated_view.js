@@ -17,18 +17,15 @@ Backbone.AnimatedView = Backbone.CompositeView.extend({
       $('.stories').removeClass('hidden');
       $('.stories').addClass('stories-lg animated fadeIn');
     });
-  //   /* Chapter Transitions */
-  //   $('.chapters').removeClass('col-xs-offset-4 col-xs-4');
-  //   $('.chapters').addClass('col-xs-3');
-  //
-  //   /* Stories Index Transitions */
-  //   $('.stories').removeClass('col-xs-4 hidden');
-  //   $('.stories').addClass('col-xs-5 animated fadeIn');
-  //
-  //   /* Story Edit Transitions */
-  //   $('.story-edit').removeClass('col-xs-7')
-  //   $('.story-edit').addClass('col-xs-4')
+  },
+  
+  storyEditMode: function() {
+    $('.select-controller').addClass('story-edit-mode')
+    $('.story-edit').removeClass('hidden');
+    $('.story-edit').addClass('animated fadeIn');
+    // $('.stories').css('float', 'left');
   }
+  
   //
   // storyEditMode: function(event) {
   //   $('#main').removeClass('fade-to-background');
