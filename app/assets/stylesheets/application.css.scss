@@ -15,7 +15,6 @@
  *= require_self
  */
 
-
 /* Fonts */
 
 @import "bootstrap-sprockets";
@@ -35,6 +34,7 @@
 body {
   font-family: gotham, helvetica, sans-serif;
   background-color: #f0f0f0;
+  background-image: url("badlands.jpg");
 }
 
 #main {
@@ -42,8 +42,18 @@ body {
   margin: 0;
   height: 100%;
   width: 100%;
-  padding : 1%;
+  padding: 1%;
   transition: background-color .5s;
+}
+
+.main-wrapper {
+  background-color: #cacaca;
+  transition: opacity 1s;
+  opacity: .1;
+}
+
+.main-wrapper:hover {
+  opacity: .7;
 }
 
 #main h2 {
@@ -55,7 +65,6 @@ body {
 .fade-to-background {
   background-color: rgba(77, 77, 77, .4);
 }
-
 
 #hover-controller {
   background-color: red;
@@ -227,20 +236,16 @@ div.navbar-brand.navbar-brand-centered:hover {
   padding-right: 5px;
 }
 
-/* Static Pages */
-
 /* Journal Index */
 
 .index-title-wrapper {
-  height: 100px;
-  padding: 40px;
-}
-
-.journal-index-title {
-  text-align: center;
+  margin-top: 1%;
   font-family: caecilia, times, serif;
-  margin: auto;
-  padding: 0;
+  text-align: center;
+  font-size: 3em;
+/*  font-weight: bold;*/
+  color: #cacaca;
+  text-shadow: 0px 1px 0px rgba(0, 0, 0,.1); /* 50% white from bottom */
 }
 
 .journals-container {
@@ -321,7 +326,7 @@ div.navbar-brand.navbar-brand-centered:hover {
   display: block;
 }
 
-#new-journal-form input, textarea {
+#new-journal-form input, #new-journal-form textarea {
   display: block;
   width: 100%;
   margin: 0px;
@@ -362,14 +367,15 @@ input#new-journal-submit {
 
 .sub-col {
   background-color: white;
-  border-radius: 3px;
   border: 1px solid #cacaca;
   height: 500px;
+  border-radius: 3px;
 }
 
 .journal-show-title {
   text-align: center;
   color: grey;
+  height: 1%;
 }
 
 .journal-show-row {
@@ -463,13 +469,6 @@ input#new-journal-submit {
   transition: background-color .5s;
 }
 
-.story-place-card h3 {
-  color: black;
-  margin: 0;
-  padding: 10px;
-  font-size: 1.5em;
-}
-
 .story-place-card:hover {
   background-color: #909090; 
 }
@@ -503,8 +502,8 @@ input#new-journal-submit {
 
 /* Story Edit View */
 
-
 .story-edit {
+  margin-top: 20px;
 }
 
 .story-edit-form label {
@@ -514,35 +513,56 @@ input#new-journal-submit {
 #story-title {
   width: 100%;
   margin: auto;
-  height: 9%x;
+  padding: 2%;  
+  height: 9%;
   line-height: 1.2;
-  font-size: 1.3 em;
-  padding: 10px;
+  font-size: 1.9 em;
+  border-radius: none;
+  border: none;
+  position: relative;
+}
+
+#story-title:focus {
+  outline: 0;
 }
 
 #story-text {
   width: 100%;
-  height: 92%;
+  height: 91%;
   margin: auto;
   resize: both;
+  border: 0;
+  text-align: left;
+  border-radius: none;
+  resize: none;
+  padding: 2%;
+}
+
+#story-text:focus {
+  outline: 0;
+}
+
+.form-divider {
+  position: relative;
+}
+
+.form-divider:after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: -1px;
+  width: 75%;
+}
+
+.form-divider:after {
+  right: -1px;
+  height: 1px;
+  background-image: -webkit-gradient(linear, 0 0, 100% 0, from(#cacaca), to(transparent));
+  background-image: -webkit-linear-gradient(left, #cacaca, transparent);
+  background-image: -moz-linear-gradient(left, #cacaca, transparent);
+  background-image: -o-linear-gradient(left, #cacaca, transparent);
 }
 
 .publish-options button {
   margin: 10px;
-}
-
-
-.top-to-bottom {
-    border-width: 3px;
-    border-style: solid;
-/*    -webkit-border-image:
-      -webkit-gradient(linear, 0 0, 0 100%, from(black), to(rgba(0, 0, 0, 0))) 1 100%;
-    -webkit-border-image:
-      -webkit-linear-gradient(black, rgba(0, 0, 0, 0)) 1 100%;
-    -moz-border-image:
-      -moz-linear-gradient(black, rgba(0, 0, 0, 0)) 1 100%;
-    -o-border-image:
-      -o-linear-gradient(black, rgba(0, 0, 0, 0)) 1 100%;*/
-    border-image:
-      linear-gradient(to right, black, rgba(0, 0, 0, 0)) 1 100%;
 }

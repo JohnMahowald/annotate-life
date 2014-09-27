@@ -56,8 +56,10 @@ AnnotateLife.Views.JournalShow = Backbone.AnimatedView.extend({
     this.onRender();
   },
   
-  attachStoryEditForm: function() {
-    var storyEditForm = new AnnotateLife.Views.StoryForm();
+  attachStoryEditForm: function(event) {
+    var storyEditForm = new AnnotateLife.Views.StoryForm({
+      model: this.model
+    });
     this.addSubview(".story-edit", storyEditForm);
   },
   

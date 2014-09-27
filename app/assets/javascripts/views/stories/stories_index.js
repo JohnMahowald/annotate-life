@@ -17,7 +17,7 @@ AnnotateLife.Views.StoriesIndex = Backbone.CompositeView.extend({
   },
   
   events: {
-    "sortstop .stories-list": "getStoriesStopOrder"
+    "sortstop .stories-list": "getStoriesStopOrder",
   },
   
   getStoriesStopOrder: function() {
@@ -64,7 +64,9 @@ AnnotateLife.Views.StoriesIndex = Backbone.CompositeView.extend({
   },
   
   addStory: function(story) {
-    var storyView = new AnnotateLife.Views.StoryPlaceCard({ model: story })
+    var storyView = new AnnotateLife.Views.StoryPlaceCard({ 
+      model: story
+    })
     this.addSubview(".stories-list", storyView);
   }
 });
