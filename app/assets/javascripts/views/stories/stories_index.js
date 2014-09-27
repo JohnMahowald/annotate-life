@@ -48,17 +48,19 @@ AnnotateLife.Views.StoriesIndex = Backbone.CompositeView.extend({
     var chapter = this;
     newOrder.forEach(function(id, index) {
       var story = chapter.stories.findWhere({ id: id })
-      if (story.get('ord') !== index {
+      if (story.get('ord') !== index) {
         story.set('ord', index);
         story.save();
-      })
+      }
     })
     
-    chapter.stories.save();
+    chapter.stories.sort();
   },
   
   onRender: function() {
-    $('.stories-list').sortable();
+    $('.stories-list').sortable({
+      placeholder: 'story-place-card-placeholder'
+    });
   },
   
   addStory: function(story) {

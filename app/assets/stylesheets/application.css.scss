@@ -451,7 +451,6 @@ input#new-journal-submit {
   border-radius: 3px;
   text-align: center;
   width: 90%;
-  height: 20%;
   margin: 20px auto;
   padding: 8%;
   padding-top: 2%;
@@ -466,8 +465,20 @@ input#new-journal-submit {
 }
 
 .story-place-card:hover {
-  background-color: #909090;
-  
+  background-color: #909090; 
+}
+
+.story-place-card-placeholder {
+  background-color: blue;
+  border: 1px solid #cacaca;
+  color: #737373;
+  border-radius: 3px;
+  text-align: center;
+  width: 90%;
+  height: 90px;
+  margin: 20px auto;
+  padding: 8%;
+  padding-top: 2%;
 }
 
 .story-card-thumbnail {

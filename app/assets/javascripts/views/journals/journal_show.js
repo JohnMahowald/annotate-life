@@ -6,6 +6,7 @@ AnnotateLife.Views.JournalShow = Backbone.AnimatedView.extend({
   
   initialize: function() {
     this.chapters = this.model.chapters();
+    debugger
     this.attachChaptersIndex();
     this.attachStoryEditForm();
     this.listenTo(this.model, "sync", this.render);
@@ -18,30 +19,6 @@ AnnotateLife.Views.JournalShow = Backbone.AnimatedView.extend({
     "click .story-place-card": "storyEditMode",
     "mouseover .hover-select-group": "storySelectMode",
     "mouseleave .hover-select-group": "storyEditMode"
-  },
-  
-  getChaptersStopOrder: function(event) {
-    var cardEndOrder = [];
-    $cards = this.$('.chapter-place-card');
-    $cards.each(function(index, card) {
-      cardEndOrder.push($(card).data('id'));
-    })
-    
-    this.saveNewChapterOrder(cardEndOrder);
-  },
-  
-  saveNewChapterOrder: function(newOrder) {
-    var journal = this;
-    newOrder.forEach(function(id, index) {
-      chapterNum = index + 1
-      var chapter = journal.chapters.findWhere({ id: id })
-      if (chapter.get('chapter_num') !== chapterNum) {
-        chapter.set('chapter_num', chapterNum);
-        chapter.save();
-      }
-    });
-    
-    journal.chapters.sort();
   },
   
   render: function() {
@@ -83,5 +60,28 @@ AnnotateLife.Views.JournalShow = Backbone.AnimatedView.extend({
   attachStoryEditForm: function() {
     var storyEditForm = new AnnotateLife.Views.StoryForm();
     this.addSubview(".story-edit", storyEditForm);
-  }
+  },
+  
+  getChaptersStopOrder: function(event) {
+    var cardEndOrder = [];
+    $cards = this.$('.chapter-place-card');
+    $cards.each(function(index, card) {
+      cardEndOrder.push($(card).data('id'));
+    })
+    
+    this.saveNewChapterOrder(cardEndOrder);
+  },
+  
+  saveNewChapterOrder: function(newOrder) {
+    var journal = this;
+    newOrder.forEach(function(id, index) {
+      chapterNum = index + 1
+      var chapter = journal.chapters.findWhere({ id: id })
+      if (chapter.get('chapter_num') !== chapterNum) {
+        chapter.save({'chapter_num': chapterNum});
+      }
+    });
+    
+    // journal.chapters.sort();
+  },
 });
