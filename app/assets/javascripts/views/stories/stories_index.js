@@ -50,7 +50,7 @@ AnnotateLife.Views.StoriesIndex = Backbone.CompositeView.extend({
       var story = chapter.stories.findWhere({ id: id })
       if (story.get('ord') !== index) {
         story.set('ord', index);
-        story.save();
+        story.save({});
       }
     })
     

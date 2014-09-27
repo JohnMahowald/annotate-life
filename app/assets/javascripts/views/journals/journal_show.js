@@ -78,10 +78,11 @@ AnnotateLife.Views.JournalShow = Backbone.AnimatedView.extend({
       chapterNum = index + 1
       var chapter = journal.chapters.findWhere({ id: id })
       if (chapter.get('chapter_num') !== chapterNum) {
-        chapter.save({'chapter_num': chapterNum});
+        chapter.set('chapter_num', chapterNum)
+        chapter.save();
       }
     });
     
-    // journal.chapters.sort();
+    journal.chapters.sort();
   },
 });
