@@ -6,7 +6,6 @@ AnnotateLife.Views.JournalShow = Backbone.AnimatedView.extend({
   
   initialize: function() {
     this.chapters = this.model.chapters();
-    debugger
     this.attachChaptersIndex();
     this.attachStoryEditForm();
     this.listenTo(this.model, "sync", this.render);

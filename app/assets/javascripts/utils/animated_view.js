@@ -19,7 +19,7 @@ Backbone.AnimatedView = Backbone.CompositeView.extend({
     $('.story-edit').addClass('col-xs-4')
   },
   
-  storyEditMode: function() {
+  storyEditMode: function(event) {
     $('#main').removeClass('fade-to-background');
     $('#hover-controller').addClass('hover-select-group')
     /* Chapter Transitions */

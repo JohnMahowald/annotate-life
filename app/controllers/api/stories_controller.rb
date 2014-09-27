@@ -1,4 +1,13 @@
 class Api::StoriesController < ApplicationController
+  def show
+    story = Stroy.find(params[:id])
+    if story
+      render json: story
+    else
+      render json: story.errors.full_messages, status: :unprocessable_entity
+    end
+  end
+  
   def update
     @story = Story.find(params[:id])
     
