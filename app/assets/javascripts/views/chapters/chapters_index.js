@@ -24,9 +24,10 @@ AnnotateLife.Views.ChaptersIndex = Backbone.CompositeView.extend({
   },
   
   attachNewChapterForm: function() {
-    var newChapterForm = new AnnotateLife.Views.NewChapterForm({ 
-      model: this.model
+    var newChapterForm = new AnnotateLife.Views.ChapterForm({ 
+      model: this.model,
+      collection: this.collection 
     });
-    this.addSubview(".new-chapter-form", newChapterForm) 
+    this.addSubview(".chapter-form", newChapterForm) 
   }
 });

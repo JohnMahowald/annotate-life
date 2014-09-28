@@ -7,7 +7,6 @@ AnnotateLife.Views.JournalShow = Backbone.AnimatedView.extend({
   initialize: function() {
     this.chapters = this.model.chapters();
     this.attachChaptersIndex();
-    this.attachStoryEditForm();
     this.listenTo(this.model, "sync", this.render);
     this.listenTo(this.chapters, "storiesReady", this.attachStoriesIndex);
   },
@@ -15,7 +14,7 @@ AnnotateLife.Views.JournalShow = Backbone.AnimatedView.extend({
   events: {
     "sortstop .chapters-list": "getChaptersStopOrder",
     "click .chapter-place-card": "storySelectMode",
-    "click .story-place-card": "storyEditMode",
+    "click .story-place-card": "viewStory",
     "mouseover .hover-select-group": "storySelectMode",
     "mouseleave .hover-select-group": "storyEditMode"
   },
@@ -42,6 +41,7 @@ AnnotateLife.Views.JournalShow = Backbone.AnimatedView.extend({
   
   attachChaptersIndex: function() {
     var chaptersIndex = new AnnotateLife.Views.ChaptersIndex({
+      model: this.model,
       collection: this.chapters
     });
     this.addSubview('.chapters', chaptersIndex);
@@ -55,13 +55,13 @@ AnnotateLife.Views.JournalShow = Backbone.AnimatedView.extend({
     this.addSubview('.stories', storiesIndex);
     this.onRender();
   },
-  
-  attachStoryEditForm: function(event) {
-    var storyEditForm = new AnnotateLife.Views.StoryForm({
-      model: this.model
-    });
-    this.addSubview(".story-edit", storyEditForm);
-  },
+
+  // attachStoryEditForm: function(event) {
+  //   var storyEditForm = new AnnotateLife.Views.StoryForm({
+  //     model: this.model
+  //   });
+  //   this.addSubview(".story-edit", storyEditForm);
+  // },
   
   getChaptersStopOrder: function(event) {
     var cardEndOrder = [];
@@ -86,4 +86,23 @@ AnnotateLife.Views.JournalShow = Backbone.AnimatedView.extend({
     
     journal.chapters.sort();
   },
+  
+  chapterSelectMode: function() {
+    $('.select-controller').addClass('chapter-select');
+  },
+  
+  storySelectMode: function() {
+    $('.chapters').addClass('chapters-mid');
+    $('.select-controller').css("width", '70%')
+    $('.select-controller').animate({ 
+      marginLeft: '0'
+    }, 200, function() {
+      $('.stories').removeClass('hidden');
+      $('.stories').addClass('stories-lg animated fadeIn');
+    });
+  },
+  
+  viewStory: function(event) {
+    $(event.currentTarget)
+  }
 });

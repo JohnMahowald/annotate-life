@@ -1,3 +1,11 @@
-<div class='chapter-place-card' data-id='<%= chapter.id %>'>
-  <a href='#'><h3><%= chapter.escape("title") %></h3></a>
-</div>
+<a href='#'>
+  <div class='chapter-place-card' data-id='<%= chapter.id %>'>
+  
+    <h3><%= chapter.escape("title") %></h3>
+  
+    <div class='chapter-delete-button'>
+      <span class="glyphicon glyphicon-chevron-down"></span>
+    </div>
+  
+  </div>
+</a>

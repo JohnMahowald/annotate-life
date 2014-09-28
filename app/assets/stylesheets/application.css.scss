@@ -435,27 +435,35 @@ input#new-journal-submit {
 }
 
 .chapter-place-card {
-  color: white;
+  height: 60px;
+  width: 90%;  
   background-color: #B2B2B2;
   border-color: #1fae52;
   border-radius: 3px;
-  text-align: center;
-  transition: background-color .5s;
-  height: 40px;
-  width: 90%;
   margin: 6% auto;
+  padding: 1%;
+  text-align: center;
+  color: white;
+  transition: background-color .5s;
 }
 
 .chapter-place-card h3 {
   color: white;
-  margin: 0;
-  padding: 10px;
-  font-size: 1.3em;
+  font-size: 1.3em;  
   display: inline-block;
+  margin: 0;
+  padding-left: 6%;
 }
 
 .chapter-place-card:hover {
   background-color: #24984D;
+}
+
+.chapter-delete-button {
+  display: inline-block;
+  font-size: 1em;
+  float: right;
+  padding: 1%;
 }
 
 .chapter-place-card-holder {

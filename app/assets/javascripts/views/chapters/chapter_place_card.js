@@ -8,6 +8,7 @@ AnnotateLife.Views.ChapterPlaceCard = Backbone.View.extend({
   },
   
   events: {
+    "click .chapter-delete-button": "deleteChapter",    
     "click .chapter-place-card": "selectChapter"
   },
   
@@ -19,5 +20,10 @@ AnnotateLife.Views.ChapterPlaceCard = Backbone.View.extend({
         view.model.collection.trigger('storiesReady', view.model);
       }
     });
+  },
+  
+  deleteChapter: function(event) {
+    event.preventDefault();
+    console.log(event);
   }
 });
