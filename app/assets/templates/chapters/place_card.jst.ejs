@@ -1,11 +1,19 @@
-<a href='#'>
-  <div class='chapter-place-card' data-id='<%= chapter.id %>'>
-  
-    <h3><%= chapter.escape("title") %></h3>
-  
-    <div class='chapter-delete-button'>
-      <span class="glyphicon glyphicon-chevron-down"></span>
-    </div>
-  
+<div class='chapter-place-card' data-id='<%= chapter.id %>'>
+  <div class="dropdown">
+    <span 
+      class="chapter-card-menu dropdown-toggle glyphicon glyphicon-chevron-down"
+      data-toggle="dropdown"></span>
+    <ul
+      class="dropdown-menu dropdown-menu-right" 
+      aria-labelledby="dropdownMenu1">
+      <li><a href="#" class='chapter-show-link'>show</a></li>
+      <li class="divider"></li>
+      <li><a href="#" class="delete-chapter">delete</a></li>
+
+    </ul>
   </div>
-</a>
+
+  <div class="chapter-show-link">
+    <h3><%= chapter.escape("title") %></h3>
+  </div>
+</div>

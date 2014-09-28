@@ -13,7 +13,7 @@ AnnotateLife.Views.JournalShow = Backbone.AnimatedView.extend({
   
   events: {
     "sortstop .chapters-list": "getChaptersStopOrder",
-    "click .chapter-place-card": "storySelectMode",
+    "click .chapter-show-link": "storySelectMode",
     "click .story-place-card": "viewStory",
     "mouseover .hover-select-group": "storySelectMode",
     "mouseleave .hover-select-group": "storyEditMode"

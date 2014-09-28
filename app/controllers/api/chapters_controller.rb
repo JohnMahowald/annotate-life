@@ -30,6 +30,12 @@ class Api::ChaptersController < ApplicationController
     end
   end
   
+  def destroy
+    chapter = Chapter.find(params[:id])
+    chapter.destroy
+    render json: chapter
+  end
+  
   private
   
   def chapter_params
