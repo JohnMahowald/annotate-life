@@ -13,10 +13,15 @@ AnnotateLife.Views.ChapterForm = Backbone.View.extend({
   
   createNewChapter: function(event) {
     event.preventDefault();
-    var title = $(event.currentTarget).find('#chapter-title').val();
+    var $input = $(event.currentTarget).find('#chapter-title')
+    var title = $input.val();
     this.collection.create({
       title: title,
       journal_id: this.model.id
+    }, { 
+      success: function() {
+       $input.val(''); 
+      }
     });
   }
 });
