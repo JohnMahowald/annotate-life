@@ -3,6 +3,7 @@ AnnotateLife.Views.StoriesIndex = Backbone.CompositeView.extend({
     this.stories = this.model.stories();
     this.stories.each(this.addStory.bind(this));
     this.listenTo(this.stories, 'add', this.addStory);
+    this.listenTo(this.stories, 'removeStory', this.removeStory);
   },
   
   attributes: { class: 'sub-col' },
@@ -74,6 +75,11 @@ AnnotateLife.Views.StoriesIndex = Backbone.CompositeView.extend({
       model: story
     })
     this.addSubview(".stories-list", storyView);
+  },
+  
+  removeStory: function(storySubview) {
+    debugger
+    this.removeSubview(".stories-list", storySubview)
   },
   
   renderStoryForm: function() {

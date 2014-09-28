@@ -15,5 +15,15 @@
 
   <div class="chapter-show-link">
     <h3><%= chapter.escape("title") %></h3>
+    
+    <div class='story-preview-thumbnails'>
+      <% if (chapter.attributes.thumbnail_urls) { %>
+        <% chapter.attributes.thumbnail_urls.forEach(function (url) { %>
+          <div class='story-thumb'
+            style='background-image: url(<%= url %>)'>
+          </div>
+        <% }); %>
+      <% } %>
+    </div>
   </div>
 </div>

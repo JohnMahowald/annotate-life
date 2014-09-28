@@ -27,6 +27,12 @@ class Api::StoriesController < ApplicationController
     end
   end
   
+  def destroy
+    story = Story.find(params[:id])
+    story.destroy
+    render json: story
+  end
+  
   private
   
   def stories_params

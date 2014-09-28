@@ -33,7 +33,6 @@ AnnotateLife.Views.ChaptersIndex = Backbone.CompositeView.extend({
   },
   
   removeChapter: function(subview) {
-    debugger
     this.removeSubview(".chapters-list", subview);
   }
 });

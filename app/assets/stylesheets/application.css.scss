@@ -51,7 +51,7 @@ body {
   height: 100%;
   width: 100%;
   padding: 2%;
-  opacity: 0;
+/*  opacity: 0;*/
   transition: opacity 1s;
 }
 
@@ -435,7 +435,7 @@ input#new-journal-submit {
 }
 
 .chapter-place-card {
-  height: 60px;
+  height: 200px;
   width: 90%;  
   background-color: #B2B2B2;
   border-color: #1fae52;
@@ -464,6 +464,19 @@ input#new-journal-submit {
   font-size: 1em;
   float: right;
   padding: 1%;
+}
+
+.hide-thumbs {
+  display: none;
+}
+
+.story-thumb {
+  height: 80px;
+  width: 80px;
+  margin: 2% auto;
+  background-color: red;
+  display: inline-block;
+  margin: 0 auto;
 }
 
 .chapter-place-card-holder {
@@ -517,6 +530,10 @@ input#new-journal-submit {
 
 .story-place-card:hover {
   background-color: #909090; 
+}
+
+.story-card-menu {
+  float: right;
 }
 
 .place-card-header {

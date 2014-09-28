@@ -14,9 +14,7 @@
 
 class Story < ActiveRecord::Base
   after_initialize :ensure_ord
-  
-  validates :title, :text, :chapter_id, presence: true
-  
+  validates :title, :text, :chapter_id, presence: true  
   belongs_to :chapter
   
   private

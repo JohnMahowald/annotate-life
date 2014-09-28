@@ -57,6 +57,7 @@ AnnotateLife.Views.JournalShow = Backbone.AnimatedView.extend({
   },
 
   attachStoryEditView: function(storyEditForm) {
+    $('.story-preview-thumbnails').addClass('hide-thumbs')    
     this.addSubview(".story-edit", storyEditForm);
   },
   
