@@ -8,7 +8,8 @@ AnnotateLife.Views.StoryPlaceCard = Backbone.View.extend({
   },
   
   events: {
-    "click .delete-story": "deleteStory"
+    "click .delete-story": "deleteStory",
+    "click .show-story": "showStory"
   },
   
   deleteStory: function(event) {
@@ -20,5 +21,14 @@ AnnotateLife.Views.StoryPlaceCard = Backbone.View.extend({
         collection.trigger('removeStory', storyCard);
       }
     });
+  },
+  
+  showStory: function(event) {
+    event.preventDefault();
+    this.model.collection.trigger('storyShowView', this.model);
+    var storyShow = new AnnotateLife.Views.StoryShow({
+      model: this.model
+    })
+    this.model.collection.chapter.collection.trigger('storyShowView', storyShow);
   }
 });

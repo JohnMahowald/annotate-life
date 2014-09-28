@@ -19,12 +19,7 @@ AnnotateLife.Views.StoriesIndex = Backbone.CompositeView.extend({
   
   events: {
     "sortstop .stories-list": "getStoriesStopOrder",
-    "click .stories-place-card": "viewStory",
     "click #new-story": "renderStoryForm"
-  },
-  
-  view: function(event) {
-    alert('story!');
   },
   
   getStoriesStopOrder: function() {
@@ -78,7 +73,6 @@ AnnotateLife.Views.StoriesIndex = Backbone.CompositeView.extend({
   },
   
   removeStory: function(storySubview) {
-    debugger
     this.removeSubview(".stories-list", storySubview)
   },
   
