@@ -51,12 +51,12 @@ body {
   height: 100%;
   width: 100%;
   padding: 2%;
-/*  opacity: 0;*/
+  opacity: 0;
   transition: opacity 1s;
 }
 
 #main:hover {
-  background-color: hsla(0, 0, 70%, .3);
+  background-color: hsla(0, 0, 50%, .7);
   opacity: 1;
 }
 
@@ -417,13 +417,13 @@ input#new-journal-submit {
 
 .sub-col-header {
   background-color: #cacaca;
-  height: 10%;
+  height: 30px;
   width: 100%;
-  transition: height 1s;
+  transition: height .3s;
 }
 
 .sub-col-header:hover {
-  height: 20%;
+  height: 45px;
 }
 
 .sub-col-header h2 {
@@ -505,19 +505,14 @@ input#new-journal-submit {
 }
 
 .story-place-card {
-  background-color: #B2B2B2;
-  border: 1px solid #cacaca;
-  color: #737373;
+  background-color: #28a956;
+  opacity: .7;
   border-radius: 3px;
   text-align: center;
   width: 90%;
-  height: 80px;
+  height: 250px;
   margin: 6% auto;
   transition: background-color .5s;
-}
-
-.story-place-card h3 {
-  margin: 0;
 }
 
 .story-place-card:hover {
@@ -526,8 +521,26 @@ input#new-journal-submit {
 
 .place-card-header {
   background-color: #cacaca;
-  height: 40%;
+  height: 20%;
   width: 100%;
+  padding: 3%;
+  font-size: 1em;
+  transition: height .4s;
+}
+
+.place-card-header:hover {
+  height: 25%;
+  font-size: 1.6em;
+}
+
+.place-card-header h3 {
+  margin: 0;
+  font-size: 1em;
+  transition: font-size .4s;
+}
+
+.place-card-header h3 {
+  font-size: 1em;
 }
 
 .sub-col-bottom {
@@ -540,7 +553,7 @@ input#new-journal-submit {
 }
 
 .sub-col-bottom:hover {
-  height: 15%;
+/*  height: 15%;*/
 }
 
 

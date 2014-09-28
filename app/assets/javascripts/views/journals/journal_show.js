@@ -9,12 +9,12 @@ AnnotateLife.Views.JournalShow = Backbone.AnimatedView.extend({
     this.attachChaptersIndex();
     this.listenTo(this.model, "sync", this.render);
     this.listenTo(this.chapters, "storiesReady", this.attachStoriesIndex);
+    this.listenTo(this.chapters, "storyEditView", this.attachStoryEditView)
   },
   
   events: {
     "sortstop .chapters-list": "getChaptersStopOrder",
     "click .chapter-show-link": "storySelectMode",
-    "click .story-place-card": "viewStory",
     "mouseover .hover-select-group": "storySelectMode",
     "mouseleave .hover-select-group": "storyEditMode"
   },
@@ -56,12 +56,9 @@ AnnotateLife.Views.JournalShow = Backbone.AnimatedView.extend({
     this.onRender();
   },
 
-  // attachStoryEditForm: function(event) {
-  //   var storyEditForm = new AnnotateLife.Views.StoryForm({
-  //     model: this.model
-  //   });
-  //   this.addSubview(".story-edit", storyEditForm);
-  // },
+  attachStoryEditView: function(storyEditForm) {
+    this.addSubview(".story-edit", storyEditForm);
+  },
   
   getChaptersStopOrder: function(event) {
     var cardEndOrder = [];

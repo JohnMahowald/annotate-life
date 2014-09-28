@@ -16,9 +16,13 @@ AnnotateLife.Views.StoryForm = Backbone.View.extend({
   publishStory: function(event) {
     event.preventDefault(event);
     var story = this;
-    var title = $(event.delgateTarget).find('#story-title').val();
+    var title = $(event.delegateTarget).find('#story-title').val();
     var text = $(event.delegateTarget).find('#story-text').val();
     var chapterId = this.model.id
-    debugger
+    this.model.stories().create({
+      title: title,
+      text: text,
+      'chapter_id': chapterId
+    });
   }
 });

@@ -18,12 +18,12 @@ AnnotateLife.Views.StoriesIndex = Backbone.CompositeView.extend({
   
   events: {
     "sortstop .stories-list": "getStoriesStopOrder",
-    "click .stories-place-card": "addStory",
-    "click #new-story": "attachStoryForm"
+    "click .stories-place-card": "viewStory",
+    "click #new-story": "renderStoryForm"
   },
   
-  addStory: function(event) {
-    alert('adding story!');
+  view: function(event) {
+    alert('story!');
   },
   
   getStoriesStopOrder: function() {
@@ -76,14 +76,12 @@ AnnotateLife.Views.StoriesIndex = Backbone.CompositeView.extend({
     this.addSubview(".stories-list", storyView);
   },
   
-  attachStoryForm: function() {
-    debugger
+  renderStoryForm: function() {
     var storyForm = new AnnotateLife.Views.StoryForm({
-      model: this.model,
-      collection: this.stories
+      model: this.model
     });
     
-    this.addSubview(".story-edit", storyForm)
+    this.model.collection.trigger('storyEditView', storyForm)
     this.enterStoryEdit();
   },
   
