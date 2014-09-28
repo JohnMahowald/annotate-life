@@ -3,7 +3,7 @@ AnnotateLife.Views.ChaptersIndex = Backbone.CompositeView.extend({
     this.collection.each(this.addChapter.bind(this));
     this.attachNewChapterForm();
     this.listenTo(this.collection, "add", this.addChapter);
-    this.listenTo(this.collection, "destroy", this.removeChapter);
+    this.listenTo(this.collection, "deleteChapter", this.removeChapter);
   },
   
   attributes: { class: "sub-col" },
@@ -30,5 +30,10 @@ AnnotateLife.Views.ChaptersIndex = Backbone.CompositeView.extend({
       collection: this.collection 
     });
     this.addSubview(".chapter-form", newChapterForm) 
+  },
+  
+  removeChapter: function(subview) {
+    debugger
+    this.removeSubview(".chapters-list", subview);
   }
 });

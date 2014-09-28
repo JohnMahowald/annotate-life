@@ -24,6 +24,12 @@ AnnotateLife.Views.ChapterPlaceCard = Backbone.View.extend({
   
   deleteChapter: function(event) {
     event.preventDefault();
-    this.model.destroy();
+    var subview = this;
+    var collection = subview.model.collection
+    this.model.destroy({
+      success: function() {
+        collection.trigger("deleteChapter", subview);
+      }
+    });
   }
 });
