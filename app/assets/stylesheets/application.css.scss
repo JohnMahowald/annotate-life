@@ -51,8 +51,8 @@ body {
   height: 100%;
   width: 100%;
   padding: 2%;
-  opacity: 0;
-  transition: opacity .7s;
+/*  opacity: 0;*/
+  transition: opacity 1s;
 }
 
 #main:hover {
@@ -417,13 +417,13 @@ input#new-journal-submit {
 
 .sub-col-header {
   background-color: #cacaca;
-  height: 5%;
+  height: 10%;
   width: 100%;
-  transition: height .5s;
+  transition: height 1s;
 }
 
 .sub-col-header:hover {
-  height: 10%;
+  height: 20%;
 }
 
 .sub-col-header h2 {
@@ -482,17 +482,17 @@ input#new-journal-submit {
   margin: 20px auto;
 }
 
-.chapter-bottom {
-  background-color: #cacaca;
-  position: absolute;
-  bottom: 0;
-  height: 50px;
-  width: 100%;
-}
-
 .stories-list {
   display: block;
   height: 100%;
+  width: 100%;
+  overflow-y: auto;
+}
+
+.chapters-list {
+  display: block;
+  height: 100%;
+  width: 100%;
   overflow-y: auto;
 }
 
@@ -522,18 +522,26 @@ input#new-journal-submit {
   width: 100%;
 }
 
-.stories-bottom {
+.sub-col-bottom {
   background-color: #cacaca;
   position: absolute;
   bottom: 0;
-  height: 50px;
+  height: 10%;
   width: 100%;
+  transition: height .5s;
 }
+
+.sub-col-bottom:hover {
+  height: 15%;
+}
+
 
 /* Story Edit View */
 
 .story-form {
   height: 100%;
+  width: 100%;
+  position: relative;
 }
 
 #story-title {
@@ -593,6 +601,19 @@ input#new-journal-submit {
   height: 80%;
 }
 
+.publish-options {
+  background-color: #cacaca;
+  position: absolute;
+  width: 100%;
+  height: 10%;
+  bottom: 0;
+  transition: height .5s;
+}
+
+.publish-options:hover {
+  height: 15%;
+}
+
 .publish-options button {
-  margin: 10px;
+  margin: 0;
 }
