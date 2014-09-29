@@ -67,7 +67,7 @@ AnnotateLife.Views.JournalShow = Backbone.AnimatedView.extend({
 
   attachStoryShowView: function(storyShowView) {
     this.addSubview(".story-show", storyShowView);
-    this.enterStoryShowMode();
+    this.storyShowMode();
   },
 
   getChaptersStopOrder: function(event) {

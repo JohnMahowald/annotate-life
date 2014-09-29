@@ -30,12 +30,6 @@
 }
 
 /* Main Style */
-.tester {
-  height: 300px;
-  width: 300px;
-  background: red;
-}
-
 html {
   height: 100%;
 }
@@ -61,7 +55,7 @@ body {
   height: 100%;
   width: 100%;
   padding: 2%;
-  opacity: 0;
+/*  opacity: 0;*/
   transition: opacity 1s;
 }
 
@@ -373,7 +367,6 @@ input#new-journal-submit {
   border: 1px solid blue;
 }
 
-
 /* Journal Show Animations & Layouts */
 .journal-show {
   position: relative;
@@ -409,12 +402,12 @@ input#new-journal-submit {
 }
 
 .chapters-mid {
-  width: 40%;
+  width: 25%;
   float: left;  
 }
 
 .stories-lg {
-  width: 55%;
+  width: 72%;
   float: right;
   animation-duration: .3s;
 }
@@ -467,7 +460,7 @@ input#new-journal-submit {
   width: 100%;
   text-align: center;
   padding: 3%;
-  font-size: 1.5em;
+  font-size: 1em;
   transition: height .5s;
 }
 
@@ -543,7 +536,7 @@ input#new-journal-submit {
   border-radius: 3px;
   text-align: center;
   transition: background-color .5s;
-  height: 40px;
+  height: 100%;
   width: 90%;
   margin: 20px auto;
 }
@@ -551,7 +544,7 @@ input#new-journal-submit {
 .story-place-card {
   background-color: #28a956;
   opacity: .7;
-  border-radius: 3px;
+  border-radius: 5px;
   text-align: center;
   width: 90%;
   height: 250px;
