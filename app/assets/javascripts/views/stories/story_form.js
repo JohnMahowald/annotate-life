@@ -33,6 +33,8 @@ AnnotateLife.Views.StoryForm = Backbone.View.extend({
       success: function(story) {
         view.collection.add(story);
         view.clearInputs();
+        var $story = $('.story-place-card[data-id=' + story.id + ']')
+        $('.stories-list').scrollTo($story, 400)
       }
     });
   }

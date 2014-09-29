@@ -12,9 +12,10 @@
 //
 //= require jquery
 //= require bootstrap-sprockets
-//= require jquery.serializejson.min.js
+//= require jquery.serializejson.min
 //= require jquery_ujs
 //= require jquery.ui.sortable
+//= require jquery.scrollTo.min
 //= require underscore
 //= require backbone
 //= require annotate_life
