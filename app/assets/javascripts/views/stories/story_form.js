@@ -4,7 +4,13 @@ AnnotateLife.Views.StoryForm = Backbone.View.extend({
   attributes: { class: "story-form" },
   
   render: function() {
-    var content = this.template({ story: this.model });
+    var content;    
+    debugger
+    if (this.model.stories()) {
+      content = this.template();
+    } else {
+      content = this.template({ story: this.model })
+    }
     this.$el.html(content);
     return this;
   },
