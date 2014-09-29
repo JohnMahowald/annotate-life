@@ -4,13 +4,8 @@ AnnotateLife.Views.StoryForm = Backbone.View.extend({
   attributes: { class: "story-form" },
   
   render: function() {
-    var content;    
-    debugger
-    if (this.model.stories()) {
-      content = this.template();
-    } else {
-      content = this.template({ story: this.model })
-    }
+    var content;
+    content = this.template({ story: this.model })
     this.$el.html(content);
     return this;
   },
@@ -29,27 +24,16 @@ AnnotateLife.Views.StoryForm = Backbone.View.extend({
     var view = this;
     var title = $(event.delegateTarget).find('#story-title').val();
     var text = $(event.delegateTarget).find('#story-text').val();
-    var chapterId = this.model.id
-    
-    if (this.model.get('text')) {
-      this.model.save({
-        title: title,
-        text: text
-      }, {
-        success: function() {
-          view.clearInputs();
-        }
-      });
-    } else {
-      this.model.stories().create({
-        title: title,
-        text: text,
-        'chapter_id': chapterId
-      }, { 
-        success: function() {
-          view.clearInputs();
-        }
-      });
-    } 
+    var chapterId = this.collection.chapter.id
+    view.model.save({
+      title: title,
+      text: text,
+      "chapter_id": chapterId
+    }, {
+      success: function(story) {
+        view.collection.add(story);
+        view.clearInputs();
+      }
+    });
   }
 });

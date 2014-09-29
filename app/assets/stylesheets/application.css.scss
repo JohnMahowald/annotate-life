@@ -36,6 +36,10 @@
   background: red;
 }
 
+html {
+  height: 100%;
+}
+
 body {
   font-family: gotham, helvetica, sans-serif;
   background-color: #f0f0f0;
@@ -421,15 +425,20 @@ input#new-journal-submit {
 
 /* Journal Show */
 
+.sub-col {
+  position: relative;
+  height: 100%;
+}
+
 .sub-col-header {
   background-color: #cacaca;
-  height: 30px;
+  height: 8%;
   width: 100%;
   transition: height .3s;
 }
 
 .sub-col-header:hover {
-  height: 45px;
+  height: 10%;
 }
 
 .sub-col-header h2 {
@@ -438,6 +447,34 @@ input#new-journal-submit {
   margin: 0;
   padding: 1%;
   font-size: 1.3em;
+}
+
+.sub-col-list {
+  position: absolute;
+  display: block;
+  height: 100%;
+  width: 100%;
+  overflow-y: auto;
+}
+
+.sub-col-footer {
+  background-color: #cacaca;
+  position: absolute;
+  bottom: 0;
+  height: 10%;
+  width: 100%;
+  text-align: center;
+  padding: 3%;
+  font-size: 1.5em;
+  transition: height .5s;
+}
+
+.sub-col-footer:hover {
+/*  height: 15%;*/
+}
+
+.sub-col-bottom span {
+  font-size: .8em;
 }
 
 .chapter-place-card {
@@ -509,20 +546,6 @@ input#new-journal-submit {
   margin: 20px auto;
 }
 
-.stories-list {
-  display: block;
-  height: 100%;
-  width: 100%;
-  overflow-y: auto;
-}
-
-.chapters-list {
-  display: block;
-  height: 100%;
-  width: 100%;
-  overflow-y: auto;
-}
-
 .story-place-card {
   background-color: #28a956;
   opacity: .7;
@@ -558,26 +581,6 @@ input#new-journal-submit {
 .place-card-header h3 {
   margin: 0;
   transition: font-size .4s;
-}
-
-.sub-col-bottom {
-  background-color: #cacaca;
-  position: absolute;
-  bottom: 0;
-  height: 10%;
-  width: 100%;
-  text-align: center;
-  padding: 3%;
-  font-size: 1.5em;
-  transition: height .5s;
-}
-
-.sub-col-bottom:hover {
-/*  height: 15%;*/
-}
-
-.sub-col-bottom span {
-  font-size: .8em;
 }
 
 

@@ -1,19 +1,16 @@
-<% var title = story ? story.get('title') : '' %>
-<% var text = story ? story.get('text') : '' %>
-
 <div class='form-divider'>
   <input 
     type='text' 
     name='story[title]' 
     id='story-title' 
     placeholder="Title"
-    value="<%= title %>">
+    value="<%= story.get('title') %>">
 </div>
 <div class='form-textarea'>
   <textarea 
     name='story[text]' 
     id='story-text' 
-    placeholder="Tell Your Story..."><%= text %></textarea>
+    placeholder="Tell Your Story..."><%= story.get('text') %></textarea>
 </div>
 
 <div class='publish-options'>

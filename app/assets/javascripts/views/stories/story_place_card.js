@@ -27,7 +27,10 @@ AnnotateLife.Views.StoryPlaceCard = Backbone.View.extend({
   
   editStory: function(event) {
     event.preventDefault();
-    var storyForm = new AnnotateLife.Views.StoryForm({ model: this.model })
+    var storyForm = new AnnotateLife.Views.StoryForm({ 
+      model: this.model,
+      collection: this.model.collection
+    })
     this.model.collection.chapter.collection.trigger('storyEditView', storyForm);
   },
   

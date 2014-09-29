@@ -63,8 +63,10 @@ AnnotateLife.Views.StoriesIndex = Backbone.CompositeView.extend({
   },
   
   renderStoryForm: function() {
+    debugger
     var storyForm = new AnnotateLife.Views.StoryForm({
-      model: this.model
+      model: new AnnotateLife.Models.Story,
+      collection: this.model.stories()
     });
     
     this.model.collection.trigger('storyEditView', storyForm)
