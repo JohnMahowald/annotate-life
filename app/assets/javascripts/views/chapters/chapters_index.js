@@ -6,6 +6,16 @@ AnnotateLife.Views.ChaptersIndex = Backbone.CompositeView.extend({
     this.listenTo(this.collection, "deleteChapter", this.removeChapter);
   },
   
+  events: {
+    "click .new-chapter-form": "renderNewChapterForm"
+  },
+  
+  renderNewChapterForm: function() {
+    var chapterForm = new AnnotateLife.Views.ChapterForm({
+      model: this.model
+    })
+  },
+  
   attributes: { class: "sub-col" },
   
   template: JST['chapters/index'],

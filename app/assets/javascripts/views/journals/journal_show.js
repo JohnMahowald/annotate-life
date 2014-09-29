@@ -65,7 +65,7 @@ AnnotateLife.Views.JournalShow = Backbone.AnimatedView.extend({
   
   attachStoryShowView: function(storyShowView) {
     this.addSubview(".story-show", storyShowView);
-    this.storyShowMode();
+    this.enterStoryShowMode();
   },
   
   getChaptersStopOrder: function(event) {
@@ -91,51 +91,4 @@ AnnotateLife.Views.JournalShow = Backbone.AnimatedView.extend({
     
     journal.chapters.sort();
   },
-  
-  chapterSelectMode: function() {
-    $('.select-controller').addClass('chapter-select');
-  },
-  
-  storySelectMode: function() {
-    $('.chapters').addClass('chapters-mid');
-    $('.select-controller').css("width", '70%')
-    $('.select-controller').animate({ 
-      marginLeft: '0'
-    }, 200, function() {
-      $('.stories').removeClass('hidden');
-      $('.stories').addClass('stories-lg animated fadeIn');
-    });
-  },
-  
-  storyEditMode: function() {
-    $('.select-controller').addClass('story-edit-mode')
-    $('.story-edit').removeClass('hidden');
-    $('.story-edit').addClass('animated fadeIn'); 
-  },
-  
-  storyShowMode: function() {
-    $('.select-controller').animate({
-      marginLeft: '-100%'
-    }, 400, function() {
-      $('.select-controller').addClass('hidden');
-      $('.story-show').removeClass('hidden');
-      $('.story-show').addClass('animated fadeIn');      
-    });
-    
-    var view = this;
-    $("body").keydown(function(e) {
-      if(e.keyCode == 37) {
-        view.leaveStoryShowMode();
-      }
-    });
-  },
-  
-  leaveStoryShowMode: function() {
-    $('.story-show').addClass('animated fadeOut')
-    setTimeout(function() {
-      $('.select-controller').removeClass('hidden');
-      $('.select-controller').animate({ marginLeft: '0'}, 600);
-      $('.story-show').addClass('hidden');
-    });
-  }
 });
