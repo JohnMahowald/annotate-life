@@ -108,11 +108,27 @@ AnnotateLife.Views.JournalShow = Backbone.AnimatedView.extend({
   
   storyShowMode: function() {
     $('.select-controller').animate({
-      marginLeft: '-1000px'
+      marginLeft: '-100%'
     }, 400, function() {
       $('.select-controller').addClass('hidden');
       $('.story-show').removeClass('hidden');
       $('.story-show').addClass('animated fadeIn');      
+    });
+    
+    var view = this;
+    $("body").keydown(function(e) {
+      if(e.keyCode == 37) {
+        view.leaveStoryShowMode();
+      }
+    });
+  },
+  
+  leaveStoryShowMode: function() {
+    $('.story-show').addClass('animated fadeOut')
+    setTimeout(function() {
+      $('.select-controller').removeClass('hidden');
+      $('.select-controller').animate({ marginLeft: '0'}, 600);
+      $('.story-show').addClass('hidden');
     });
   }
 });
