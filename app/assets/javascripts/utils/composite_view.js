@@ -63,10 +63,4 @@ Backbone.CompositeView = Backbone.View.extend({
       return this._subviews[selector];
     }
   }
-  
-  // TODO: write onRender method for the boards index
-  // onRender: function () {
-  //   this.$('.journals-container').sortable({
-  //     // connectWith: ".card-wrapper"
-  //   });
 })

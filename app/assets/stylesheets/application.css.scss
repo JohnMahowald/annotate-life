@@ -43,6 +43,7 @@ html {
 body {
   font-family: gotham, helvetica, sans-serif;
   background-color: #f0f0f0;
+  height: 100%;
 }
 
 .main-background {
@@ -60,7 +61,7 @@ body {
   height: 100%;
   width: 100%;
   padding: 2%;
-/*  opacity: 0;*/
+  opacity: 0;
   transition: opacity 1s;
 }
 
@@ -243,13 +244,19 @@ div.navbar-brand.navbar-brand-centered:hover {
 /* Journal Index */
 
 .index-title-wrapper {
+  height: 50px;
+  width: 100%;
+}
+
+/*.index-title-wrapper {
+  background-color: red;
+  height: 30%;
   margin-top: 1%;
   font-family: caecilia, times, serif;
   text-align: center;
   font-size: 3em;
   color: #cacaca;
-  text-shadow: 0px 1px 0px rgba(0, 0, 0, .1); /* 50% white from bottom */
-}
+}*/
 
 .journals-container {
   height: 100%;
@@ -394,11 +401,6 @@ input#new-journal-submit {
 
 .chapter-select {
   width: 45%;
-}
-
-.story-select {
-  transition: margin 1s;
-  width: 70%;
 }
 
 .story-edit-mode {
@@ -660,7 +662,7 @@ input#new-journal-submit {
 }
 
 .publish-options:hover {
-  height: 15%;
+/*  height: 15%;*/
 }
 
 .publish-options button {

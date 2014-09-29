@@ -3,23 +3,24 @@
 AnnotateLife.Views.JournalShow = Backbone.AnimatedView.extend({
   template: JST["journals/show"],
   attributes: { class: 'journal-show'},
-  
+
   initialize: function() {
     this.chapters = this.model.chapters();
     this.attachChaptersIndex();
     this.listenTo(this.model, "sync", this.render);
     this.listenTo(this.chapters, "storiesReady", this.attachStoriesIndex);
     this.listenTo(this.chapters, "storyEditView", this.attachStoryEditView);
-    this.listenTo(this.chapters, "storyShowView", this.attachStoryShowView);  
+    this.listenTo(this.chapters, "storyShowView", this.attachStoryShowView);
+    this.listenTo(this.chapters, "exitStoryEditMode", this.exitStoryEditMode);
   },
-  
+
   events: {
     "sortstop .chapters-list": "getChaptersStopOrder",
     "click .chapter-show-link": "storySelectMode",
     "mouseover .hover-select-group": "storySelectMode",
     "mouseleave .hover-select-group": "storyEditMode"
   },
-  
+
   render: function() {
     var content = this.template({ journal: this.model });
     this.$el.html(content);
@@ -29,17 +30,17 @@ AnnotateLife.Views.JournalShow = Backbone.AnimatedView.extend({
     this.makeSortable();
     return this;
   },
-    
+
   makeSortable: function() {
     $('.chapters-list').sortable({
       placeholder: 'chapter-place-card-holder'
     });
   },
-  
+
   setCurrentJournalTitle: function() {
     $('#current-journal-title').html(this.model.escape('title'));
   },
-  
+
   attachChaptersIndex: function() {
     var chaptersIndex = new AnnotateLife.Views.ChaptersIndex({
       model: this.model,
@@ -47,7 +48,7 @@ AnnotateLife.Views.JournalShow = Backbone.AnimatedView.extend({
     });
     this.addSubview('.chapters', chaptersIndex);
   },
-  
+
   attachStoriesIndex: function(chapter) {
     $('.stories').empty();
     var storiesIndex = new AnnotateLife.Views.StoriesIndex({
@@ -61,23 +62,24 @@ AnnotateLife.Views.JournalShow = Backbone.AnimatedView.extend({
     $('.story-preview-thumbnails').addClass('hide-thumbs');
     this.addSubview(".story-edit", storyEditForm);
     this.storyEditMode();
+    this.onRender();
   },
-  
+
   attachStoryShowView: function(storyShowView) {
     this.addSubview(".story-show", storyShowView);
     this.enterStoryShowMode();
   },
-  
+
   getChaptersStopOrder: function(event) {
     var cardEndOrder = [];
     $cards = this.$('.chapter-place-card');
     $cards.each(function(index, card) {
       cardEndOrder.push($(card).data('id'));
     })
-    
+
     this.saveNewChapterOrder(cardEndOrder);
   },
-  
+
   saveNewChapterOrder: function(newOrder) {
     var journal = this;
     newOrder.forEach(function(id, index) {
@@ -88,7 +90,7 @@ AnnotateLife.Views.JournalShow = Backbone.AnimatedView.extend({
         chapter.save();
       }
     });
-    
+
     journal.chapters.sort();
-  },
+  }
 });
