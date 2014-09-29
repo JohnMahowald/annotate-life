@@ -58,8 +58,9 @@ AnnotateLife.Views.JournalShow = Backbone.AnimatedView.extend({
   },
 
   attachStoryEditView: function(storyEditForm) {
-    $('.story-preview-thumbnails').addClass('hide-thumbs')
+    $('.story-preview-thumbnails').addClass('hide-thumbs');
     this.addSubview(".story-edit", storyEditForm);
+    this.storyEditMode();
   },
   
   attachStoryShowView: function(storyShowView) {
@@ -104,6 +105,12 @@ AnnotateLife.Views.JournalShow = Backbone.AnimatedView.extend({
       $('.stories').removeClass('hidden');
       $('.stories').addClass('stories-lg animated fadeIn');
     });
+  },
+  
+  storyEditMode: function() {
+    $('.select-controller').addClass('story-edit-mode')
+    $('.story-edit').removeClass('hidden');
+    $('.story-edit').addClass('animated fadeIn'); 
   },
   
   storyShowMode: function() {

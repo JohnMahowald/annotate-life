@@ -62,22 +62,11 @@ AnnotateLife.Views.StoriesIndex = Backbone.CompositeView.extend({
     this.removeSubview(".stories-list", storySubview)
   },
   
-  renderStoryEdit: function() {
-    
-  },
-  
   renderStoryForm: function() {
     var storyForm = new AnnotateLife.Views.StoryForm({
       model: this.model
     });
     
     this.model.collection.trigger('storyEditView', storyForm)
-    this.enterStoryEdit();
-  },
-  
-  enterStoryEdit: function() {
-    $('.select-controller').addClass('story-edit-mode')
-    $('.story-edit').removeClass('hidden');
-    $('.story-edit').addClass('animated fadeIn'); 
   }
 });

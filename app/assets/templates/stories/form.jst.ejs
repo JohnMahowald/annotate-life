@@ -3,13 +3,14 @@
     type='text' 
     name='story[title]' 
     id='story-title' 
-    placeholder="Title"></input>
+    placeholder="Title"
+    value="<%= story.get('title') %>">
 </div>
 <div class='form-textarea'>
   <textarea 
     name='story[text]' 
     id='story-text' 
-    placeholder="Tell Your Story..."></textarea>
+    placeholder="Tell Your Story..."><%= story.get('text') %></textarea>
 </div>
 
 <div class='publish-options'>
