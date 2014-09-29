@@ -56,7 +56,7 @@ body {
   height: 100%;
   width: 100%;
   padding: 2%;
-/*  opacity: 0;*/
+  opacity: 0;
   transition: opacity 1s;
 }
 
@@ -365,6 +365,7 @@ input#new-journal-submit {
 
 /* Journal Show Animations & Layouts */
 .journal-show {
+  position: relative;
   width: 100%;
   height: 100%;
   opacity: .9;
@@ -659,4 +660,62 @@ input#new-journal-submit {
 
 .publish-options button {
   margin: 0;
+}
+
+/* Story Show Page */
+.story-show {
+  height: 100%;
+  width: 100%;
+}
+
+.story-show-view {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  color: white;
+}
+
+.story-show-title {
+  display: block;
+  width: 100%;
+  height: 10%;
+  text-align: center;
+  font-size: 1.8em;
+  padding: 2%;
+}
+
+.story-body {
+  position: relative;
+  height: 90%;
+  width: 100%;
+}
+
+.story-image-col {
+  position: relative;
+  display: inline-block;
+  height: 90%;
+  width: 50%;
+  padding: 3%;
+}
+
+.story-text-col {
+  position: absolute;
+  display: inline-block;
+  height: 90%;
+  width: 50%;
+  padding: 3%;
+}
+
+.story-img {
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+}
+
+.story-text {
+  background-color: #cacaca;
+  padding: 2%;
+  height: 100%;
+  width: 100%;
+  opacity: .9;
 }

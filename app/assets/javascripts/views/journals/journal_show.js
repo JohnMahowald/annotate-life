@@ -107,8 +107,12 @@ AnnotateLife.Views.JournalShow = Backbone.AnimatedView.extend({
   },
   
   storyShowMode: function() {
-    $('.chapters').addClass('hidden')
-    $('.stories').addClass('hidden')
-    $('.story-edit').addClass('hidden')
+    $('.select-controller').animate({
+      marginLeft: '-1000px'
+    }, 400, function() {
+      $('.select-controller').addClass('hidden');
+      $('.story-show').removeClass('hidden');
+      $('.story-show').addClass('animated fadeIn');      
+    });
   }
 });

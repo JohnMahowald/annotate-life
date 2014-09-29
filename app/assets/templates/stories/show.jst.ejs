@@ -1,1 +1,18 @@
-<h1>Hey, I'm the h1</h1>
+<div class='story-show-title'>
+  <%= story.escape('title') %>
+</div>
+
+<div class='story-body'>
+  <div class='story-image-col'>
+    <div 
+      class='story-img' 
+      style='background-image: url(<%= story.get('img_url') %>)'>
+    </div>
+  </div>
+  
+  <div class='story-text-col'>
+    <div class='story-text'>
+      <%= story.escape('text') %>
+    </div>
+  </div>
+</div>
