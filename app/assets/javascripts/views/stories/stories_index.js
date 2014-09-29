@@ -32,20 +32,6 @@ AnnotateLife.Views.StoriesIndex = Backbone.CompositeView.extend({
     this.saveNewStoriesOrder(cardEndOrder);
   },
   
-  saveNewChapterOrder: function(newOrder) {
-    var journal = this;
-    newOrder.forEach(function(id, index) {
-      chapterNum = index + 1
-      var chapter = journal.chapters.findWhere({ id: id })
-      if (chapter.get('chapter_num') !== chapterNum) {
-        chapter.set('chapter_num', chapterNum);
-        chapter.save();
-      }
-    });
-    
-    journal.chapters.sort();
-  },
-  
   saveNewStoriesOrder: function(newOrder) {
     var chapter = this;
     newOrder.forEach(function(id, index) {
@@ -74,6 +60,10 @@ AnnotateLife.Views.StoriesIndex = Backbone.CompositeView.extend({
   
   removeStory: function(storySubview) {
     this.removeSubview(".stories-list", storySubview)
+  },
+  
+  renderStoryEdit: function() {
+    
   },
   
   renderStoryForm: function() {

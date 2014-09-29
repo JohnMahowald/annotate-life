@@ -23,6 +23,11 @@ AnnotateLife.Views.StoryForm = Backbone.View.extend({
       title: title,
       text: text,
       'chapter_id': chapterId
+    }, {
+      success: function() {
+        $('#story-title').val('');
+        $('#story-text').val('');
+      }
     });
   }
 });

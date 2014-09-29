@@ -10,6 +10,7 @@ AnnotateLife.Views.StoryPlaceCard = Backbone.View.extend({
   events: {
     "click .delete-story": "deleteStory",
     "click .show-story": "showStory",
+    "click .edit-story": "editStory",
     "click .story-link": "showStory"
   },
   
