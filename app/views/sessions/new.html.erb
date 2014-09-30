@@ -1,3 +1,18 @@
+<div class='background-video'>
+     <video
+       loop="loop"
+       height="100%"
+       width="100%"
+       preload="auto"
+       autoplay="autoplay"
+
+       <source
+  src="https://s3-us-west-1.amazonaws.com/annotate-development/slow_down.mp4"
+         type="video/webm">
+
+     </video>
+</div>
+
 <div class="minimal-wrapper">
   <div class="bar-header"></div>
   
@@ -14,10 +29,10 @@
     <div class="signin">
       <%= render "shared/login", action: session_url, button: "Sign In"%>
     </div>
-  </div>
-  
-  <div class="content-switch">
-    <p>Don't have an account?</p>
-    <%= link_to "Create an account", new_user_url %>
+    
+    <div class="content-switch">
+      <p>Don't have an account?</p>
+      <%= link_to "Create an account", new_user_url %>
+    </div>
   </div>
 </div>

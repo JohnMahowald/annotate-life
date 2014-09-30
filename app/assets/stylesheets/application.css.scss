@@ -106,15 +106,23 @@ body {
 
 /* Login Pages */
 
-.bar-header {
-  background-color: #2dbe60;
+.background-video {
+  position: absolute;
+  top: 50px;
+  height: 100%;
   width: 100%;
-  height: 3px;
+}
+
+.bar-header {
+  background-color: #cacaca;
+  width: 100%;
+  height: 50px;
+  display: none;
 }
 
 .minimal-wrapper {
   position: absolute;
-  background-color: #f0f0f0;
+  opacity: .8;
   width: 100%;
   height: 100%;
 }
@@ -125,15 +133,21 @@ body {
   line-height: 36px;
   margin-bottom: 20px;
   color: #2dbe60;
+  opacity: .7;
 }
 
 .branding h1 {
-  font-size: 24pt;
+  font-size: 36pt;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
 }
 
 .branding h2 {
   font-size: 20pt;
   text-align: center;
+  margin: 0;
+  padding: 0;
 }
 
 .brand-image {
@@ -151,7 +165,7 @@ body {
   margin: auto;
   background-color: white;
   border: 1px solid #cacaca;  
-  border-radius: 2px;
+  border-radius: 5px;
   padding: 32px;
 }
 
