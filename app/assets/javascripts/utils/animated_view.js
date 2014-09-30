@@ -37,16 +37,19 @@ Backbone.AnimatedView = Backbone.CompositeView.extend({
   },
 
   leaveStoryShowMode: function() {
-    $('.story-show').fadeOut(200, function() {
-      $('.select-controller').removeClass('hidden');
-      $('.select-controller').animate({ marginLeft: '0'}, 400);
-      $('.story-show').addClass('hidden');
-      $('.story-show').removeClass('animated fadeIn');
+    var $storyShow = $('.story-show')
+    var $controller = $('.select-controller')
+    
+    $storyShow.fadeOut(200, function() {
+      $controller.removeClass('hidden');
+      $controller.animate({ marginLeft: '0'}, 400);
+      $storyShow.addClass('hidden');
+      $storyShow.empty();
     });
   },
 
   exitStoryEditMode: function() {
-    $('.story-edit').addClass('hidden');
+    $('.story-edit').empty();
     $('.select-controller').removeClass('story-edit-mode');
   }
 });
