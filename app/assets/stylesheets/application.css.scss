@@ -93,14 +93,14 @@ body {
   padding: 0;
   line-height: 1;
   letter-spacing: -5px;
-  font-size: 180px;
+  font-size: 13em;
   font-weight: bold;
   color: #fff;
 }
 
 .greet-string { 
-  font-size: 4em;
-  font-weight: bold;
+  text-align: center;
+  font-size: 3em;
 }
 
 /* Login Pages */
@@ -230,8 +230,15 @@ body {
 
 /* Header */
 
+.header {
+  min-height: 60px;
+  height: 60px;
+}
+
 nav.navbar {
   margin-bottom: 0;
+  height: 60px;
+  min-height: 60px;
 }
 
 .navbar-brand {
@@ -263,6 +270,12 @@ div.navbar-brand.navbar-brand-centered:hover {
 
 .header-brand-image {
   height: 23px;
+}
+
+.gravatar-img img {
+  height: 48px;
+  width: 48px;
+  border-radius: 50px;
 }
 
 #current-journal-title {
@@ -431,12 +444,12 @@ input#new-journal-submit {
 }
 
 .chapters-mid {
-  width: 25%;
+  width: 38%;
   float: left;  
 }
 
 .stories-lg {
-  width: 72%;
+  width: 56%;
   float: right;
   animation-duration: .3s;
 }
@@ -538,7 +551,6 @@ input#new-journal-submit {
 }
 
 .story-preview-thumbnails {
-  background-color: red;
 }
 
 .chapter-place-card-holder {
@@ -587,7 +599,7 @@ input#new-journal-submit {
   background-color: #cacaca;
   border-radius: 3px;
   height: 250px;
-  width: 48%;
+  width: 100%;
   margin: 1%;
 }
 
@@ -730,12 +742,16 @@ input#new-journal-submit {
 }
 
 .story-show-title {
+  height: 16%;
+  font-family: helvetica, arial, sans-serif;
   display: block;
   width: 100%;
-  height: 10%;
   text-align: center;
-  font-size: 1.8em;
-  padding: 2%;
+  font-size: 6em;
+  font-weight: bold;
+  letter-spacing: -2px;
+  color: white;
+  opacity: .7;
 }
 
 .story-body {

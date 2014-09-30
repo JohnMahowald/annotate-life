@@ -33,11 +33,16 @@
           </ul>
         </li>
         
+        <li class='gravatar-img'>
+          <%= gravatar_image_tag(current_user.email, alt: 'John') %>
+        </li>
+        
         <li class="dropdown">
           <a 
             href="#" 
             class="dropdown-toggle" 
-            data-toggle="dropdown">John Mahowald <span class="caret"></span>
+            data-toggle="dropdown">
+            <%= current_user.fname %> <%= current_user.lname %> <span class="caret"></span>
           </a>
           <ul class="dropdown-menu">
             <li><a href="#">Action</a></li>
