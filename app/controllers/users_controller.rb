@@ -9,6 +9,7 @@ class UsersController < ApplicationController
     
     if @user.update_attributes(user_params)
       login!(@user)
+      assign_background
       redirect_to root_url
     else
       flash.now[:notice] = @user.errors.full_messages

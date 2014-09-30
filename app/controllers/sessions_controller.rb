@@ -9,6 +9,7 @@ class SessionsController < ApplicationController
     
     if @user
       login!(@user)
+      assign_background
       redirect_to root_url
     else
       flash.now[:notice] = ["Invalid Username or Password"]

@@ -5,8 +5,8 @@ class ApplicationController < ActionController::Base
   
   private
   
-  def background_img_url
-    @background ||= Background.random_img
+  def assign_background
+    session[:background] = Background.random_img
   end
   
   def current_user

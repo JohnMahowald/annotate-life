@@ -46,9 +46,9 @@ Welcome.prototype.greeter = function () {
   
   if (hour < 4) {
     return 'Good Evening, ' + this.userName;
-  } else if (hour < 13) {
+  } else if (hour < 12) {
     return 'Good Morning, ' + this.userName;
-  } else if (hour < 6) {
+  } else if (hour < 18) {
     return 'Good Afternoon, ' + this.userName;
   } else {
     return 'Good Evening, ' + this.userName;
