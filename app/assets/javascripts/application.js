@@ -40,8 +40,8 @@ $(document).ready(function() {
   });
   
   $('#main').hover(function() {
-    $('.current-time').addClass('fade');
+    $('.greeting').addClass('fade');
   }, function() {
-    $('.current-time').removeClass('fade');
+    $('.greeting').removeClass('fade');
   });
 });

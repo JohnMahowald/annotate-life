@@ -8,8 +8,9 @@
     class='main-background' 
     style="background-image: url(<%= background_img_url %>);">
     
-    <div class='current-time'>
-      <div class='time-string'>23:46</div>
+    <div class='greeting'>
+      <div class='time-string'></div>
+      <div class='greet-string'></div>
     </div>
     
     <!-- <video
@@ -28,3 +29,11 @@
     
   </div>
 </div>
+
+<script>
+  $(document).ready(function(){
+    AnnotateLife.initialize({
+      user: '<%= current_user.email %>'
+    });
+  });
+</script>
