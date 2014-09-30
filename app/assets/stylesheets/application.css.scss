@@ -61,12 +61,12 @@ body {
   width: 100%;
   padding: 2%;
   opacity: 0;
-  transition: opacity 1s;
+  transition: opacity .7s, background-color .5s;
 }
 
 #main:hover {
   background-color: hsla(0, 0, 50%, .7);
-  opacity: 1;
+  opacity: .9;
 }
 
 .greeting {
@@ -300,29 +300,29 @@ div.navbar-brand.navbar-brand-centered:hover {
   text-align: center;
 }
 
-.place-card {
+.journal-place-card {
   display: inline-block;
   vertical-align: top;
   margin: 30px;
   height: 150px;
   width: 250px;
-  background-color: #28a956;
-  border-color: #1fae52;
+  background-color: #cacaca;
+  border-color: #cacaca;
   color: white;
   border-radius: 3px;
   transition: background-color .5s;
 }
 
-.place-card:hover {
-  background-color: #24984D;
+.journal-place-card:hover {
+  background-color: #A4A4A4;
 }
 
-.place-card h3 {
+.journal-place-card h3 {
   margin: 20px;
   text-align: left;
 }
 
-.place-card p {
+.journal-place-card p {
   padding: 20px;
   text-align: left;
 }
@@ -522,7 +522,7 @@ input#new-journal-submit {
 .chapter-place-card {
   height: 200px;
   width: 90%;  
-  background-color: #B2B2B2;
+  background-color: #cacaca;
   border-color: #1fae52;
   border-radius: 3px;
   margin: 6% auto;
@@ -541,7 +541,7 @@ input#new-journal-submit {
 }
 
 .chapter-place-card:hover {
-  background-color: #24984D;
+  background-color: #727272;
 }
 
 .chapter-card-menu {
@@ -587,7 +587,7 @@ input#new-journal-submit {
 
 .story-place-card {
   float: left;
-  background-color: #28a956;
+  background-color: #f8f8f8;
   opacity: .7;
   border-radius: 3px;
   text-align: center;
@@ -622,7 +622,7 @@ input#new-journal-submit {
 }
 
 .story-place-card:hover {
-  background-color: #909090; 
+  background-color: #5e5e5e; 
 }
 
 .story-card-menu {

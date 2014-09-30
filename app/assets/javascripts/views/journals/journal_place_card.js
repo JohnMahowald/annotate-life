@@ -7,7 +7,7 @@ AnnotateLife.Views.JournalPlaceCard = Backbone.View.extend({
     return this;
   },
   
-  attributes: { class: "place-card" },
+  attributes: { class: "journal-place-card" },
   
   events: {
     "click .dropdown-delete-journal": "removeJournal",

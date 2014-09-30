@@ -28,11 +28,11 @@ AnnotateLife.Views.StoryForm = Backbone.View.extend({
       'img_url': imgUrl
     }, {
       success: function(story) {
+        view.collection.chapter.collection.trigger('exitStoryEditMode');
         view.collection.add(story);
         view.clearInputs();
         var $story = $('.story-place-card[data-id=' + story.id + ']')
         $('.stories-list').scrollTo($story, 400)
-        view.collection.chapter.collection.trigger('exitStoryEditMode');
       }
     });
   },
