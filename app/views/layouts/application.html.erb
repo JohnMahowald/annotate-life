@@ -5,14 +5,16 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-  <script 
-    type="text/javascript"
-    src="//api.filepicker.io/v1/filepicker.js">
+  <script type="text/javascript">
+    var awsAccessKeyId = <%= ENV['aws_access_key_id'] %>
+    var awsSecretKey = <%= END['aws_secret_key'] %>
+    filepicker.setKey(<%= ENV['filepicker_key'] %>)
   </script>
-  <script>
-    filepicker.setKey('ADC7UgmAsTjC4kuHjrc0oz')
+  <script 
+    type="text/javascript" src="//api.filepicker.io/v1/filepicker.js">
   </script>
 </head>
+
 <body>
   <%= yield %>
 </body>
