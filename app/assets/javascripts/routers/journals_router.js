@@ -31,7 +31,7 @@ AnnotateLife.Routers.AppRouter = Backbone.Router.extend({
     this.currentView && this.currentView.remove();
     this.currentView = view
     this.$rootEl.html(view.render().$el)
-    $('.fader').hide();    
-    $('.fader').fadeIn('slow');
+    $('.transition').hide();    
+    $('.transition').fadeIn('slow');
   }
 });

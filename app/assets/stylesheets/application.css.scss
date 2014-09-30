@@ -41,9 +41,12 @@ body {
 }
 
 .main-background {
-  background: url("badlands.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   width: 100%;
   height: 100%;
+  top: 50px;
   position: absolute;
   transition: opacity .5s;
 }
@@ -55,7 +58,7 @@ body {
   height: 100%;
   width: 100%;
   padding: 2%;
-/*  opacity: 0;*/
+  opacity: 0;
   transition: opacity 1s;
 }
 
@@ -242,16 +245,6 @@ div.navbar-brand.navbar-brand-centered:hover {
   width: 100%;
 }
 
-/*.index-title-wrapper {
-  background-color: red;
-  height: 30%;
-  margin-top: 1%;
-  font-family: caecilia, times, serif;
-  text-align: center;
-  font-size: 3em;
-  color: #cacaca;
-}*/
-
 .journals-container {
   height: 100%;
   width: 100%;
@@ -296,20 +289,28 @@ div.navbar-brand.navbar-brand-centered:hover {
 }
 
 .journal-form-container {
-  height: 300px;
-  width: 250px;
+  border-radius: 3px;
+  height: 15%;
+  width: 28%;
   margin: 0 auto;
+  padding: 2%;
+  background-color: #cacaca;
+  opacity: .8;
 }
 
 .journal-form-wrapper {
-  height: 300px;
-  width: 250px;
+  height: 100%;
+  width: 100%;
+  margin: auto;
 }
 
 .journal-form-wrapper .close-form {
   float: right;
   color: #747474;
-  display: inline;
+}
+
+.close-form-button {
+  float: right;
 }
 
 .new-journal-container {
@@ -351,8 +352,6 @@ div.navbar-brand.navbar-brand-centered:hover {
 }
 
 input#new-journal-submit {
-  height: 45px;
-  margin: 30px auto 25px auto;
   background-color: #28a956;
   border-color: #1fae52;
   transition: background-color .5s;
@@ -419,7 +418,6 @@ input#new-journal-submit {
 }
 
 /* Journal Show */
-
 .sub-col {
   position: relative;
   height: 100%;
@@ -450,6 +448,7 @@ input#new-journal-submit {
   height: 82%;
   width: 100%;
   overflow-y: auto;
+  padding: 2%;
 }
 
 .sub-col-footer {
@@ -508,25 +507,23 @@ input#new-journal-submit {
   display: none;
 }
 
-.story-thumb {
-  height: 80px;
-  width: 80px;
-  margin: 2% auto;
+.story-preview-thumbnails {
   background-color: red;
-  display: inline-block;
-  margin: 0 auto;
 }
 
 .chapter-place-card-holder {
+  position: relative;
   color: white;
   background-color: #CCFFCC;
   border-color: #1fae52;
   border-radius: 3px;
-  text-align: center;
-  transition: background-color .5s;
   height: 40px;
   width: 90%;
-  margin: 20px auto;
+}
+
+.chapter-show-link {
+  height: 100%;
+  width: 100%;
 }
 
 .chapter-place-card-form {
@@ -542,14 +539,39 @@ input#new-journal-submit {
 }
 
 .story-place-card {
+  float: left;
   background-color: #28a956;
   opacity: .7;
-  border-radius: 5px;
+  border-radius: 3px;
   text-align: center;
-  width: 90%;
+  width: 48%;
   height: 250px;
-  margin: 6% auto;
+  margin: 1%;
+  background-repeat: none;
+  background-size: cover;
+  background-position: center;
   transition: background-color .5s;
+}
+
+.story-place-card-holder {
+  background-color: #cacaca;
+  border-radius: 3px;
+  height: 250px;
+  width: 48%;
+  margin: 1%;
+}
+
+.story-thumb {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80px;
+  width: 80px;
+  margin: 5%;
+  background-color: red;
+  display: inline-block;
+  margin: 0 auto;
+  border-radius: 3px;
 }
 
 .story-place-card:hover {
@@ -561,6 +583,8 @@ input#new-journal-submit {
 }
 
 .place-card-header {
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
   background-color: #cacaca;
   height: 20%;
   width: 100%;

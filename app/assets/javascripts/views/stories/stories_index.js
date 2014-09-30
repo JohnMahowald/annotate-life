@@ -47,7 +47,7 @@ AnnotateLife.Views.StoriesIndex = Backbone.CompositeView.extend({
   
   onRender: function() {
     $('.stories-list').sortable({
-      placeholder: 'story-place-card-placeholder'
+      placeholder: 'story-place-card-holder'
     });
   },
   
