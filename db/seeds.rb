@@ -48,3 +48,10 @@ final_project_chapter.stories.create!(title: "Implementing", text: "I've always
 been the type of person that enjoys making something come to pass. While
 intimidating, this has been a fun project to work on",
 img_url: "http://media-cache-ec0.pinimg.com/736x/d2/57/64/d25764e65caa564ad4b58d4203133081.jpg")
+
+Background.create(img_url: 'https://farm3.staticflickr.com/2943/15146540179_39312c7edd_k.jpg')
+Background.create(img_url: 'https://farm6.staticflickr.com/5557/15214857592_9707939a54_o.jpg')
+Background.create(img_url: 'https://farm4.staticflickr.com/3866/15391652342_8e327ad6cf_k.jpg')
+Background.create(img_url: 'https://farm8.staticflickr.com/7297/9896522255_8a8462435c_h.jpg')
+Background.create(img_url: 'https://farm8.staticflickr.com/7297/9896522255_8a8462435c_h.jpg')
+Background.create(img_url: 'https://farm4.staticflickr.com/3711/9169338154_ccf5aa74ef_h.jpg')

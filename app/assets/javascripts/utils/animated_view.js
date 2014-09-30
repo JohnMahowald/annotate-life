@@ -5,7 +5,7 @@ Backbone.AnimatedView = Backbone.CompositeView.extend({
 
   storySelectMode: function() {
     $('.chapters').addClass('chapters-mid');
-    $('.select-controller').css("width", '100%')
+    $('.select-controller').css("width", '70%')
     $('.select-controller').animate({
       marginLeft: '0'
     }, 200, function() {

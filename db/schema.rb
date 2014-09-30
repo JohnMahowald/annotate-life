@@ -11,10 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140926162247) do
+ActiveRecord::Schema.define(version: 20140930044148) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "backgrounds", force: true do |t|
+    t.string   "img_url",    null: false
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "backgrounds", ["img_url"], name: "index_backgrounds_on_img_url", using: :btree
 
   create_table "chapters", force: true do |t|
     t.string   "title",       null: false
