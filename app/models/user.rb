@@ -18,6 +18,7 @@ class User < ActiveRecord::Base
   validates :email, uniqueness: true
   
   has_many :journals
+  has_many :backgrounds
   
   attr_reader :password
   

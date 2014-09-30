@@ -11,6 +11,7 @@ AnnotateLife.Views.JournalShow = Backbone.AnimatedView.extend({
     this.listenTo(this.chapters, "storiesReady", this.attachStoriesIndex);
     this.listenTo(this.chapters, "storyEditView", this.attachStoryEditView);
     this.listenTo(this.chapters, "storyShowView", this.attachStoryShowView);
+    this.listenTo(this.chapters, "leaveStoryShowMode", this.leaveStoryShowMode);
     this.listenTo(this.chapters, "exitStoryEditMode", this.exitStoryEditMode);
   },
 

@@ -37,5 +37,11 @@ $(document).ready(function() {
     var $password = $("#password")
     $password.val("johnjohn")
     $("#login").click();
-  })
+  });
+  
+  $('#main').hover(function() {
+    $('.current-time').addClass('fade');
+  }, function() {
+    $('.current-time').removeClass('fade');
+  });
 });

@@ -1,11 +1,30 @@
 <div class='transition'>
+  
   <div class="header">
     <%= render partial: 'shared/header' %>
   </div>
   
-  <div 
+  <div
     class='main-background' 
-    style="background-image: url('https://farm9.staticflickr.com/8402/8686957036_a02c9de788_b.jpg');">
+    style="background-image: url(<%= background_img_url %>);">
+    
+    <div class='current-time'>
+      <div class='time-string'>23:46</div>
+    </div>
+    
+    <!-- <video
+      loop="loop"
+      preload="auto"
+      id="pretzel-video"
+      class="tc-videoHost video-playing">
+
+      <source
+        src="//a0.muscache.com/airbnb/static/Seoul-P1-4.webm"
+        type="video/webm">
+
+    </video> -->
+    
     <div id="main" class='clearfix'></div>
+    
   </div>
 </div>

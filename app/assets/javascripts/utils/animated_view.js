@@ -36,10 +36,6 @@ Backbone.AnimatedView = Backbone.CompositeView.extend({
     });
   },
 
-  prepareShowMode: function() {
-
-  },
-
   leaveStoryShowMode: function() {
     $('.story-show').fadeOut(200, function() {
       $('.select-controller').removeClass('hidden');

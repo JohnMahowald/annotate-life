@@ -7,5 +7,14 @@ AnnotateLife.Views.StoryShow = Backbone.View.extend({
     return this;
   },
   
-  attributes: { class: 'story-show-view' }
+  attributes: { class: 'story-show-view' },
+  
+  events: {
+    "click .exit-story-mode": "leaveStoryShowMode"
+  },
+  
+  leaveStoryShowMode: function(event) {
+    event.preventDefault();
+    this.model.collection.chapter.collection.trigger('leaveStoryShowMode');
+  }
 });

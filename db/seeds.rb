@@ -55,3 +55,6 @@ Background.create(img_url: 'https://farm4.staticflickr.com/3866/15391652342_8e32
 Background.create(img_url: 'https://farm8.staticflickr.com/7297/9896522255_8a8462435c_h.jpg')
 Background.create(img_url: 'https://farm8.staticflickr.com/7297/9896522255_8a8462435c_h.jpg')
 Background.create(img_url: 'https://farm4.staticflickr.com/3711/9169338154_ccf5aa74ef_h.jpg')
+Background.create(img_url: 'https://farm8.staticflickr.com/7365/9770925031_1dfce38eea_b.jpg')
+Background.create(img_url: 'https://farm2.staticflickr.com/1178/1350845804_d0984de002_b.jpg')
+Background.create(img_url: 'https://farm9.staticflickr.com/8041/7981860626_c71f94a72b_b.jpg')
