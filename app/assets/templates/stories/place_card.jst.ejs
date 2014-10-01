@@ -18,12 +18,16 @@
 
       </ul>
     </div>
-    <div class='story-link'>
-      <span class='story-place-card-title'><%= story.escape('title') %></span>
-    </div>
+    <div class='story-show-header-handler'>
+      <div class='story-link'>
+        <span class='story-place-card-title'><%= story.escape('title') %></span>
+      </div>
     
-    <div class='story-timestamp'>
-      <abbr class='timeago' title='<%= story.escape('created_at') %>'></abbr>
+      <div class='story-timestamp'>
+        <abbr class='timeago' title='<%= story.escape('created_at') %>'></abbr>
+      </div>
+      
+      <div class='story-show-body-handler'></div>
     </div>
   <div>
 </div>

@@ -39,9 +39,8 @@ AnnotateLife.Views.ChapterForm = Backbone.View.extend({
        $input.val('');
        view.revealNewChapterForm();
        view.collection.add(chapter);
-       var $chapter = $('.chapter-place-card[data-id=' + chapter.id + ']')
-       alert(chapter.id);
-       $('.chapters-list').scrollTo($chapter, 400)
+       // var $chapter = $('.chapter-place-card[data-id=' + chapter.id + ']')
+       // $('.chapters-list').scrollTo($chapter, 400)
       }
     });
   }

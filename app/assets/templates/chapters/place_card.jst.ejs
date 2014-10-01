@@ -7,15 +7,20 @@
                dropdown-toggle 
                glyphicon glyphicon-chevron-down"
         data-toggle="dropdown"></span>
+        
       <ul
         class="dropdown-menu dropdown-menu-right" 
         aria-labelledby="dropdownMenu1">
+        
         <li><a href="#" class='chapter-show-link'>show</a></li>
         <li class="divider"></li>
         <li><a href="#" class="delete-chapter">delete</a></li>
+        
       </ul>
     </div>
+    
     <span class='chapter-place-card-title'><%= chapter.escape("title") %></span>
+    
   </div>
 
   <div class="chapter-place-card-body">

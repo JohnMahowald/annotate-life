@@ -34,7 +34,13 @@ AnnotateLife.Views.JournalShow = Backbone.AnimatedView.extend({
 
   makeSortable: function() {
     $('.chapters-list').sortable({
-      placeholder: 'chapter-place-card'
+      placeholder: 'chapter-place-card',
+      start: function(event, ui) {
+        ui.item.addClass('tilt')
+      },
+      stop: function(event, ui) {
+        ui.item.removeClass('tilt')
+      }
     });
   },
 
@@ -60,7 +66,6 @@ AnnotateLife.Views.JournalShow = Backbone.AnimatedView.extend({
   },
 
   attachStoryEditView: function(storyEditForm) {
-    $('.story-preview-thumbnails').addClass('hide-thumbs');
     this.addSubview(".story-edit", storyEditForm);
     this.storyEditMode();
     this.onRender();

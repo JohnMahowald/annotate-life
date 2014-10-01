@@ -18,6 +18,9 @@ Backbone.AnimatedView = Backbone.CompositeView.extend({
     $('.select-controller').addClass('story-edit-mode')
     $('.story-edit').removeClass('hidden');
     $('.story-edit').addClass('animated fadeIn');
+    $('.chapter-place-card-title').addClass('chapter-font-reduce');
+    $('.story-preview-thumbnails').addClass('hide-thumbs');
+    $('.story-place-card-title').addClass('story-font-reduce');
   },
 
   storyShowMode: function() {
