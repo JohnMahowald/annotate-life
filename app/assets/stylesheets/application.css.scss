@@ -60,7 +60,7 @@ body {
   height: 100%;
   width: 100%;
   padding: 2%;
-  opacity: 0;
+/*  opacity: 0;*/
   transition: opacity .7s, background-color .5s;
 }
 
@@ -357,7 +357,11 @@ div.navbar-brand.navbar-brand-centered:hover {
   width: 28%;
   margin: 0 auto;
   padding: 2%;
-  background-color: rgba(255, 255, 255, 0.3);
+  transition: background-color .3s;
+}
+
+.journal-form-container-show {
+  background-color: rgba(255, 255, 255, .3);
 }
 
 .journal-form-wrapper {
@@ -383,6 +387,8 @@ div.navbar-brand.navbar-brand-centered:hover {
 #new-journal-button {
   width: 250px;
   margin: 0 auto;
+  background-color: #cacaca;
+  border: 1px solid #cacaca;
 }
 
 #new-journal-form {
@@ -422,10 +428,6 @@ input#new-journal-submit {
 
 #new-journal-submit:hover {
   background-color: #24984D;
-}
-
-.signout-button-container {
-  border: 1px solid blue;
 }
 
 /* Journal Show Animations & Layouts */

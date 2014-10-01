@@ -6,7 +6,6 @@ AnnotateLife.Views.JournalsIndexMenu = Backbone.View.extend({
   attributes: { id: 'current-journal-menu'},
   
   render: function() {
-    debugger
     var content = this.template({
       journals: this.collection
     })

@@ -11,11 +11,9 @@ AnnotateLife.Routers.AppRouter = Backbone.Router.extend({
   
   index: function() {
     this.collection.fetch();
-    
     var indexView = new AnnotateLife.Views.JournalsIndex({
       collection: this.collection
     })
-    
     this._swapView(indexView);
   },
   
