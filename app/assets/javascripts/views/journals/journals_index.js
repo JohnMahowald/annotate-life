@@ -21,9 +21,9 @@ AnnotateLife.Views.JournalsIndex = Backbone.CompositeView.extend({
     this.attachSubviews();
     return this;
   },  
-  
+
   setCurrentJournalTitle: function() {
-    $('#current-journal-title').html('Journals');
+    $('#current-journal-menu-pos').html('Override');
   },
 
   addJournal: function(journal) {

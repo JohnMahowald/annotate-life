@@ -20,10 +20,10 @@ AnnotateLife.Routers.AppRouter = Backbone.Router.extend({
   },
   
   show: function(id) {
+    this.collection.fetch();
     var showView = new AnnotateLife.Views.JournalShow({
       model: this.collection.getOrFetch(id)
     })
-    
     this._swapView(showView);
   },
   

@@ -45,7 +45,10 @@ AnnotateLife.Views.JournalShow = Backbone.AnimatedView.extend({
   },
 
   setCurrentJournalTitle: function() {
-    $('#current-journal-title').html(this.model.escape('title'));
+    var currentMenu = new AnnotateLife.Views.JournalsHeaderMenu({
+      model: this.model
+    })
+    $('#current-journal-menu-pos').html(currentMenu.render().$el);
   },
 
   attachChaptersIndex: function() {

@@ -9,6 +9,7 @@ AnnotateLife.Collections.Journals = Backbone.Collection.extend({
     if (!journal) {
       var journals = this;
       journal = new this.model({ id: id })
+      journal.collection = this;
       journal.fetch({
         success: function(journal) {
           journals.add(journal)
