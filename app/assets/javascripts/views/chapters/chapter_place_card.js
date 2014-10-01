@@ -10,12 +10,12 @@ AnnotateLife.Views.ChapterPlaceCard = Backbone.View.extend({
   events: {
     "click .delete-chapter": "deleteChapter",
     "click .chapter-show-link": "selectChapter",
-    "click .chapter-place-card-body": "selectChapter"
+    "click .story-preview-thumbnails": "selectChapter"
   },
   
   selectChapter: function(event) {
     event.preventDefault();
-    debugger
+    event.stopPropagation();
     var view = this;
     this.model.fetch({
       success: function() {

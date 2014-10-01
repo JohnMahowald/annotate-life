@@ -60,7 +60,7 @@ body {
   height: 100%;
   width: 100%;
   padding: 2%;
-/*  opacity: 0;*/
+  opacity: 0;
   transition: opacity .7s, background-color .5s;
 }
 
@@ -650,9 +650,9 @@ input#new-journal-submit {
   opacity: .7;
   border-radius: 3px;
   text-align: center;
-  width: 100%;
+  width: 98%;
   height: 250px;
-  margin: 2%;
+  margin: 3% auto;
   background-repeat: none;
   background-size: cover;
   background-position: center;

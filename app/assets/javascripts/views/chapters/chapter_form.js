@@ -19,11 +19,8 @@ AnnotateLife.Views.ChapterForm = Backbone.View.extend({
     });
   },
   
-  revealNewChapterForm: function() {
-    $('#new-chapter-form').fadeOut('100', function() {
-      $('#new-chapter-form').addClass('hidden');
-      $('.new-chapter-link').hide.removeClass('hidden').fadeIn(100);
-    })
+  resetChapterForm: function() {
+    $('')
   },
   
   createNewChapter: function(event) {

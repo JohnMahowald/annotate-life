@@ -12,13 +12,12 @@ AnnotateLife.Views.JournalShow = Backbone.AnimatedView.extend({
     this.listenTo(this.chapters, "storiesReady", this.attachStoriesIndex);
     this.listenTo(this.chapters, "storyEditView", this.attachStoryEditView);
     this.listenTo(this.chapters, "storyShowView", this.attachStoryShowView);
-    this.listenTo(this.chapters, "leaveStoryShowMode", this.leaveStoryShowMode);
+    this.listenTo(this.chapters, "exitStoryShowMode", this.exitStoryShowMode);
     this.listenTo(this.chapters, "exitStoryEditMode", this.exitStoryEditMode);
   },
 
   events: {
     "sortstop .chapters-list": "getChaptersStopOrder",
-    "click .chapter-show-link": "storySelectMode",
     "mouseover .hover-select-group": "storySelectMode",
     "mouseleave .hover-select-group": "storyEditMode"
   },
@@ -67,6 +66,7 @@ AnnotateLife.Views.JournalShow = Backbone.AnimatedView.extend({
     });
     this.addSubview('.stories', storiesIndex);
     this.onRender();
+    this.storySelectMode();
   },
 
   attachStoryEditView: function(storyEditForm) {

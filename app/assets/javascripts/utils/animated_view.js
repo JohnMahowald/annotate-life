@@ -31,15 +31,18 @@ Backbone.AnimatedView = Backbone.CompositeView.extend({
       $('.select-controller').addClass('hidden');
       $('.story-show').hide().removeClass('hidden').fadeIn(200);
     });
-
-    $("body").keydown(function(e) {
-      if(e.keyCode == 37) {
-        view.leaveStoryShowMode();
-      }
-    });
+    
+    $('body').keydown( function(event) {
+      if (event.keyCode == 37) { view.exitStoryShowMode() }
+    })
+  },
+  
+  remove: function() {
+    Backbone.CompositeView.prototype.remove.call(this);
+    $('body').off('keypress')
   },
 
-  leaveStoryShowMode: function() {
+  exitStoryShowMode: function() {
     var $storyShow = $('.story-show')
     var $controller = $('.select-controller')
     
