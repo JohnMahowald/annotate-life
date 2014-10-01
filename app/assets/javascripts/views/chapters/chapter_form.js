@@ -32,17 +32,19 @@ AnnotateLife.Views.ChapterForm = Backbone.View.extend({
     var $input = $(event.currentTarget).find('#chapter-title')
     var title = $input.val();
     var view = this;
-    view.collection.create({
-      title: title,
+    var chapter = new AnnotateLife.Models.Chapter({
+      title: title, 
       journal_id: this.model.id
-    }, { 
+    })
+    
+    view.collection.create(chapter, { 
       success: function(chapter) {
-       $input.val('');
-       view.resetChapterForm();
-       view.collection.add(chapter);
-       alert('Chapter Id' + chapter.id)
-       var $chapter = $('.chapter-place-card[data-id=' + chapter.id + ']')
-       $('.chapters-list').scrollTo($chapter, 400)
+        $input.val('');
+        view.resetChapterForm();
+        var $chapter = $('.chapter-place-card:last')
+        setTimeout(function() {
+          $('.chapters-list').scrollTo($chapter, 400) 
+        }, 0)
       }
     });
   }

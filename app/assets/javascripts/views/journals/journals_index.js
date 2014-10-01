@@ -1,19 +1,16 @@
 AnnotateLife.Views.JournalsIndex = Backbone.CompositeView.extend({
+  template: JST['journals/index'],
+  attributes: { class: "journal-index" },
+  
   initialize: function() {
     this.collection.each(this.addJournal.bind(this));
     this.listenTo(this.collection, 'sync', this.render)
     this.listenTo(this.collection, "add", this.addJournal);
+    this.listenTo(this.collection, "remove", this.removeJournal);
     this.listenTo(this.collection, "journalDestroy", this.removeView);
+    this.listenTo(this.collection, "modalReady", this.renderModal)
     this.attachJournalForm();
   },
-  
-  attributes: { class: "journal-index" },
-  
-  removeView: function(subview) {
-    this.removeSubview(".journals-container", subview);
-  },
-  
-  template: JST['journals/index'],
   
   render: function() {
     var content = this.template();
@@ -21,7 +18,15 @@ AnnotateLife.Views.JournalsIndex = Backbone.CompositeView.extend({
     this.setJournalsMenu();
     this.attachSubviews();
     return this;
-  },  
+  },
+  
+  events: {
+    "click .dropdown-delete-journal": "confirmDelete"
+  },
+  
+  removeView: function(subview) {
+    this.removeSubview(".journals-container", subview);
+  },
 
   setJournalsMenu: function() {
     var menu = new AnnotateLife.Views.JournalsIndexMenu({
@@ -36,6 +41,7 @@ AnnotateLife.Views.JournalsIndex = Backbone.CompositeView.extend({
       collection: this.collection
     });
     
+    this.listenTo(placeCardView, 'remove', this.removeView.bind(this));
     this.addSubview(".journals-container", placeCardView);
   },
   

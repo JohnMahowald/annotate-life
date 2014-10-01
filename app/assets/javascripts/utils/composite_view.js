@@ -62,5 +62,10 @@ Backbone.CompositeView = Backbone.View.extend({
       this._subviews[selector] = this._subviews[selector] || [];
       return this._subviews[selector];
     }
+  },
+  
+  renderModal: function(view) {
+    $('body').append(view.render().$el)
+    $('#myModal').modal('show')
   }
 })

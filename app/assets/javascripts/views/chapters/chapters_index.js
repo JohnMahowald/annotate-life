@@ -32,6 +32,7 @@ AnnotateLife.Views.ChaptersIndex = Backbone.CompositeView.extend({
     var chapterView = new AnnotateLife.Views.ChapterPlaceCard({
       model: chapter
     })
+    this.listenTo(chapterView, 'sync', this.render.bind(this))
     this.addSubview(".chapters-list", chapterView);
   },
   

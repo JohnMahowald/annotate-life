@@ -1,4 +1,8 @@
 AnnotateLife.Views.ChapterPlaceCard = Backbone.View.extend({
+  initialize: function() {
+    this.listenTo(this.model, "sync", this.render);
+  },
+  
   template: JST['chapters/place_card'],
   
   render: function() {
