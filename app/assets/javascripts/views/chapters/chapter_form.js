@@ -3,7 +3,8 @@ AnnotateLife.Views.ChapterForm = Backbone.View.extend({
   
   events: {
     "submit #new-chapter-form": "createNewChapter",
-    "click .new-chapter-link": "renderNewChapterForm"
+    "click .new-chapter-link": "renderNewChapterForm",
+    "click .close-form": "resetChapterForm"
   },
   
   render: function() {
@@ -20,7 +21,10 @@ AnnotateLife.Views.ChapterForm = Backbone.View.extend({
   },
   
   resetChapterForm: function() {
-    $('')
+    $('#new-chapter-form').fadeOut(100, function() {
+      $('#new-chapter-form').addClass('hidden');
+      $('.new-chapter-link').hide().removeClass('hidden').fadeIn(100);
+    })
   },
   
   createNewChapter: function(event) {
@@ -34,10 +38,11 @@ AnnotateLife.Views.ChapterForm = Backbone.View.extend({
     }, { 
       success: function(chapter) {
        $input.val('');
-       view.revealNewChapterForm();
+       view.resetChapterForm();
        view.collection.add(chapter);
-       // var $chapter = $('.chapter-place-card[data-id=' + chapter.id + ']')
-       // $('.chapters-list').scrollTo($chapter, 400)
+       alert('Chapter Id' + chapter.id)
+       var $chapter = $('.chapter-place-card[data-id=' + chapter.id + ']')
+       $('.chapters-list').scrollTo($chapter, 400)
       }
     });
   }

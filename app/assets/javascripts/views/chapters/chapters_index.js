@@ -2,6 +2,7 @@ AnnotateLife.Views.ChaptersIndex = Backbone.CompositeView.extend({
   initialize: function(options) {
     this.collection.each(this.addChapter.bind(this));
     this.attachNewChapterForm();
+    this.listenTo(this.collection, 'sync', this.render);
     this.listenTo(this.collection, "add", this.addChapter);
     this.listenTo(this.collection, "deleteChapter", this.removeChapter);
   },

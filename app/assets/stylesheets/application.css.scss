@@ -60,7 +60,7 @@ body {
   height: 100%;
   width: 100%;
   padding: 2%;
-  opacity: 0;
+/*  opacity: 0;*/
   transition: opacity .7s, background-color .5s;
 }
 
@@ -536,6 +536,11 @@ input#new-journal-submit {
   font-size: .8em;
 }
 
+.new-story-link {
+  font-size: 1.2em;
+  margin-top: 9px;
+}
+
 .chapter-place-card {
   position: relative;
   width: 100%;
@@ -561,6 +566,8 @@ input#new-journal-submit {
 }
 
 .chapter-place-card-title {
+  white-space: no-wrap;
+  text-overflow: ellipsis;
   font-size: 1.8em;
   display: inline-block;
   margin-left: 10%;
@@ -631,15 +638,35 @@ input#new-journal-submit {
   margin: 20px auto;
 }
 
+.new-chapter-link {
+  margin-top: 9px;
+  font-size: 1.2em;
+}
+
+#new-chapter-form {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+
+#new-chapter-form .close-form {
+  padding: 2%;
+}
+
+#new-chapter-submit {
+  float: right;
+  padding: 2%;
+}
+
 #chapter-title {
-  display: block;
+  display: inline-block;
   width: 60%;
-  margin: 0px auto;
+  margin: 0px 5%;
   height: 40px;
   border-radius: 3px;
   border: 1px solid #cacaca;
-  line-height: 1.2;
-  font-size: 1.3em;
+  line-height: 1.1;
+  font-size: 1.1em;
   color: #3b3b3b;
   padding: 10px;
   text-align: center;
@@ -664,7 +691,7 @@ input#new-journal-submit {
 }
 
 .tilt {
-  transform: rotate(-2deg);
+  transform: rotate(-3deg);
   transition: rotate .3s;
 }
 
