@@ -21,13 +21,13 @@ Welcome.prototype.greeter = function () {
   var hour = this.currentTime().getHours();
   
   if (hour < 4) {
-    return 'Good Evening, ' + this.userName;
+    return 'Good Evening, ' + this.userName + ".";
   } else if (hour < 12) {
-    return 'Good Morning, ' + this.userName;
+    return 'Good Morning, ' + this.userName + ".";
   } else if (hour < 18) {
-    return 'Good Afternoon, ' + this.userName;
+    return 'Good Afternoon, ' + this.userName + ".";
   } else {
-    return 'Good Evening, ' + this.userName;
+    return 'Good Evening, ' + this.userName + ".";
   }
 }
 

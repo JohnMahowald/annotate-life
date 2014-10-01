@@ -53,7 +53,10 @@ Backbone.AnimatedView = Backbone.CompositeView.extend({
   exitStoryEditMode: function() {
     $('.story-edit').fadeOut('slow', function() {
       $('.story-edit').empty();
-      $('.select-controller').removeClass('story-edit-mode');
     })
+    $('.select-controller').removeClass('story-edit-mode');
+    $('.chapter-place-card-title').removeClass('chapter-font-reduce');
+    $('.story-preview-thumbnails').removeClass('hide-thumbs');
+    $('.story-place-card-title').removeClass('story-font-reduce');
   }
 });
