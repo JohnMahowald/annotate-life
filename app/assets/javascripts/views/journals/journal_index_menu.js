@@ -1,9 +1,12 @@
 AnnotateLife.Views.JournalsIndexMenu = Backbone.View.extend({
   template: JST['journals/index_menu'],
   
-  tagName: 'a',
+  tagName: 'li',
   
-  attributes: { id: 'current-journal-menu'},
+  attributes: { 
+    id: 'current-journal-menu',
+    class: 'dropdown'
+  },
   
   render: function() {
     var content = this.template({
