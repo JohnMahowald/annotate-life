@@ -878,15 +878,19 @@ input#new-journal-submit {
   background-size: cover;
 }
 
-.story-text {
-  font-family: gotham, helvetica, sans-serif;
-  font-size: 1.2em;
+.story-text-wrapper {
   background-color: #cacaca;
   padding: 4%;
   height: 100%;
   width: 100%;
   opacity: .9;
   border-radius: 3px;
+  overflow-y: auto;
+}
+
+.story-text {
+  font-family: gotham, helvetica, sans-serif;
+  font-size: 1.2em;
 }
 
 .exit-story-mode {
