@@ -3,7 +3,7 @@
   data-id='<%= story.id %>'
   style="background-image: url(<%= story.escape('img_url') %>)">
   
-  <div class='place-card-header'>
+  <div class='story-place-card-header'>
     <div class="dropdown story-card-menu">
       <span 
         class="story-card-menu dropdown-toggle glyphicon glyphicon-chevron-down"
@@ -19,7 +19,11 @@
       </ul>
     </div>
     <div class='story-link'>
-      <h3><%= story.escape('title') %></h3>
+      <span class='story-place-card-title'><%= story.escape('title') %></span>
+    </div>
+    
+    <div class='story-timestamp'>
+      <abbr class='timeago' title='<%= story.escape('created_at') %>'></abbr>
     </div>
   <div>
 </div>

@@ -19,6 +19,13 @@ AnnotateLife.Views.ChapterForm = Backbone.View.extend({
     });
   },
   
+  revealNewChapterForm: function() {
+    $('#new-chapter-form').fadeOut('100', function() {
+      $('#new-chapter-form').addClass('hidden');
+      $('.new-chapter-link').hide.removeClass('hidden').fadeIn(100);
+    })
+  },
+  
   createNewChapter: function(event) {
     event.preventDefault();
     var $input = $(event.currentTarget).find('#chapter-title')
@@ -28,17 +35,14 @@ AnnotateLife.Views.ChapterForm = Backbone.View.extend({
       title: title,
       journal_id: this.model.id
     }, { 
-      success: function() {
+      success: function(chapter) {
        $input.val('');
        view.revealNewChapterForm();
+       view.collection.add(chapter);
+       var $chapter = $('.chapter-place-card[data-id=' + chapter.id + ']')
+       alert(chapter.id);
+       $('.chapters-list').scrollTo($chapter, 400)
       }
     });
-  },
-
-  revealNewChapterForm: function() {
-    $('#new-chapter-form').fadeOut('100', function() {
-      $('#new-chapter-form').addClass('hidden');
-      $('.new-chapter-link').hide.removeClass('hidden').fadeIn(100);
-    })
   }
 });

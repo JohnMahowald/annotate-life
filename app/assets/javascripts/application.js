@@ -16,6 +16,7 @@
 //= require jquery_ujs
 //= require jquery.ui.sortable
 //= require jquery.scrollTo.min
+//= require jquery.timeago
 //= require underscore
 //= require backbone
 //= require annotate_life

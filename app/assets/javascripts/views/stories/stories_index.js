@@ -49,6 +49,7 @@ AnnotateLife.Views.StoriesIndex = Backbone.CompositeView.extend({
     $('.stories-list').sortable({
       placeholder: 'story-place-card-holder'
     });
+    $('abbr.timeago').timeago();
   },
   
   addStory: function(story) {

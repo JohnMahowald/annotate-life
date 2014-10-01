@@ -5,5 +5,6 @@ json.stories @chapter.stories.order(:ord).each do |story|
   json.title story.title
   json.text story.text
   json.img_url story.img_url
+  json.created_at story.created_at
   json.ord story.ord
 end
