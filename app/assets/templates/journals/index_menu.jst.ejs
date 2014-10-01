@@ -1,0 +1,19 @@
+<a
+  href='#'
+  class="dropdown-toggle"
+  id="current-journal-dropdown-menu" 
+  data-toggle="dropdown">Journals <span class="caret"></span>
+</a>
+
+<ul 
+  class="dropdown-menu" 
+  role="menu" 
+  aria-labelledby="current-journal-dropdown-menu">
+  <% journals.each( function (journal) { %>
+    <li role='presentation'>
+      <a role='menuitem' tabindex='-1' href='#/journals/<%= journal.id %>'>
+        <%= journal.escape('title')%>
+      </a>
+    </li>
+  <% })%>
+</ul>
