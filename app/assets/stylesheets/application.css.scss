@@ -863,10 +863,11 @@ input#new-journal-submit {
 
 .chapter-font-reduce {
   font-size: 1.2em;
+  white-space: nowrap;
 }
 
 .story-font-reduce {
-  font-size: .8em;
+  font-size: .7em;
 }
 
 /* Story Show Page */
@@ -937,6 +938,7 @@ input#new-journal-submit {
 .story-text {
   font-family: gotham, helvetica, sans-serif;
   font-size: 1.2em;
+  white-space: pre-wrap;
 }
 
 .exit-story-mode {
@@ -953,6 +955,11 @@ input#new-journal-submit {
 }
 
 /* Delete Journal Modal */
+
+.modal {
+  margin-top: 6%;
+}
+
 #delete-journal {
   background-color: #CC0000;
   border: 1px solid #B80000;

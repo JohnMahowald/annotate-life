@@ -65,7 +65,7 @@ Backbone.CompositeView = Backbone.View.extend({
   },
   
   renderModal: function(view) {
-    $('body').append(view.render().$el)
-    $('#myModal').modal('show')
+    $('#modal-attachment').html(view.render().$el)
+    $('.modal').modal('show')
   }
 })

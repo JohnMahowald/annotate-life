@@ -1,6 +1,8 @@
 AnnotateLife.Collections.Journals = Backbone.Collection.extend({
   model: AnnotateLife.Models.Journal,
   
+  comparator: 'ord',
+  
   url: "/api/journals",
   
   getOrFetch: function(id) {

@@ -1,4 +1,4 @@
-json.(@journal, :id, :title, :description)
+json.(@journal, :id, :title, :description, :ord)
 
 json.chapters @journal.chapters.order(:chapter_num) do |chapter|
   json.id chapter.id

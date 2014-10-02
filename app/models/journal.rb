@@ -11,7 +11,14 @@
 #
 
 class Journal < ActiveRecord::Base
+  after_initialize :ensure_ord
   validates :title, :user_id, presence: true
   belongs_to :user
   has_many :chapters, dependent: :destroy
+  
+  private
+  
+  def ensure_ord
+    self.ord ||= Journal.all.length
+  end
 end

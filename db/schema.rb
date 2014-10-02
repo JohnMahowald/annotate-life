@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140930174816) do
+ActiveRecord::Schema.define(version: 20141002041006) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -43,8 +43,10 @@ ActiveRecord::Schema.define(version: 20140930174816) do
     t.integer  "user_id",     null: false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "ord",         null: false
   end
 
+  add_index "journals", ["ord"], name: "index_journals_on_ord", using: :btree
   add_index "journals", ["title"], name: "index_journals_on_title", using: :btree
   add_index "journals", ["user_id"], name: "index_journals_on_user_id", using: :btree
 

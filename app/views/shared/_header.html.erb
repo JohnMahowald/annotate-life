@@ -44,10 +44,13 @@
             <%= current_user.fname %> <span class="caret"></span>
           </a>
           <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li class="divider"></li>
+            <!-- <li>
+              <a href="#"
+                 id='change-background-button'>Change Background</a>
+            </li>
+
+            <li><a href="#">Update Name</a></li>
+            <li class="divider"></li> -->
             <li><%= link_to 'Sign Out', session_url, method: :delete %></li>
           </ul>
         </li>
