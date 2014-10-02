@@ -16,8 +16,7 @@ Backbone.AnimatedView = Backbone.CompositeView.extend({
   
   storyEditMode: function() {
     $('.select-controller').addClass('story-edit-mode')
-    $('.story-edit').removeClass('hidden');
-    $('.story-edit').addClass('animated fadeIn');
+    $('.story-edit').removeClass('hidden').addClass('animated fadeIn');
     $('.chapter-place-card-title').addClass('chapter-font-reduce');
     $('.story-preview-thumbnails').addClass('hide-thumbs');
     $('.story-place-card-title').addClass('story-font-reduce');
@@ -54,12 +53,16 @@ Backbone.AnimatedView = Backbone.CompositeView.extend({
   },
 
   exitStoryEditMode: function() {
-    $('.story-edit').fadeOut('slow', function() {
-      $('.story-edit').empty();
-    })
+    $('.story-edit').addClass('animated fadeOut')
+      .empty()
+      .removeClass('animated fadeIn')
+      .addClass('hidden');
     $('.select-controller').removeClass('story-edit-mode');
     $('.chapter-place-card-title').removeClass('chapter-font-reduce');
     $('.story-preview-thumbnails').removeClass('hide-thumbs');
     $('.story-place-card-title').removeClass('story-font-reduce');
+    setTimeout( function () {
+      $('.story-edit').removeClass('animated fadeOut')
+    }, 0);
   }
 });

@@ -14,6 +14,7 @@ AnnotateLife.Views.StoriesIndex = Backbone.CompositeView.extend({
     var content = this.template({ collection: this.collection })
     this.$el.html(content);
     this.attachSubviews();
+    this.onRender();
     return this;
   },
   
@@ -63,6 +64,7 @@ AnnotateLife.Views.StoriesIndex = Backbone.CompositeView.extend({
       model: story
     })
     this.addSubview(".stories-list", storyView);
+    this.render();
   },
   
   removeStory: function(storySubview) {
