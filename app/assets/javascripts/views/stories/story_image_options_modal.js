@@ -5,5 +5,14 @@ AnnotateLife.Views.StoryImageOptionsModal = Backbone.View.extend({
     var content = this.template();
     this.$el.html(content);
     return this;
+  },
+  
+  events: {
+    "click .filepicker-upload": "renderFilepicker"
+    "click ."
+  },
+  
+  renderFilepicker: function() {
+    
   }
 });
