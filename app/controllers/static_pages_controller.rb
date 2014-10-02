@@ -1,9 +1,9 @@
 class StaticPagesController < ApplicationController
-  before_action :require_login, only: [:root]
-  
   def root
-  end
-  
-  def landing
+    if current_user
+      render :root
+    else
+      render :landing
+    end
   end
 end

@@ -16,10 +16,12 @@
     class="btn btn-primary login-button" 
     id="login" 
     value="<%= button %>">
-    
+  
+  <% if guest %>  
     <input 
       type="submit" 
       class="btn btn-primary login-button"
       id="demo-user-login" 
       value="Preview Site">
+  <% end %>
 </form>

@@ -3,7 +3,7 @@
   
   <div class="minimal-brand-frame">
     <div class="branding">
-      <h1>Annotate</h1>
+      <h1><a href='/'>Annotate</a></h1>
       
       <%= image_tag(("feather-small.gif"), class: "brand-image") %>
       
@@ -13,7 +13,7 @@
 
   <div class="minimal-login-wrapper">
     <div class="signin">
-      <%= render "shared/login", action: users_url, button: "Create User"%>
+      <%= render "shared/login", action: users_url, button: "Create User", guest: false%>
     </div>
   </div>
   
