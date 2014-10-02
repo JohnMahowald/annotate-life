@@ -966,6 +966,43 @@ input#new-journal-submit {
   border: 1px solid #B80000;
 }
 
+/* Upload Options Modal */
+
+#story-image-url .modal-header {
+  font-weight: bold;
+}
+
+.modal-body {
+  background-color: #f0f0f0;
+}
+
+.upload-options {
+  width: 50%;
+  height: 100%;
+  float: left;
+  text-align: center;
+}
+
+.upload-options:hover {
+  background-color: white;
+}
+
+.url-upload {
+  border-right: 1px solid #e5e5e5;  
+}
+
+.upload-thumb {
+  display: block;
+  margin: 0 auto;
+}
+
+.url-upload img {
+  margin-bottom: 2%;
+}
+
+.filepicker-upload img {
+  margin-bottom: 6%;
+}
 /* Landing Page */
 
 video {
@@ -995,7 +1032,6 @@ video {
   height: 100%;
   width: 100%;
   text-align: center;
-/*  background-color: red;*/
 }
 
 .landing-brand-image {

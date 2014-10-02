@@ -39,7 +39,10 @@ AnnotateLife.Views.StoryForm = Backbone.View.extend({
   },
   
   promptUpload: function() {
-    
+    var optionsModal = new AnnotateLife.Views.StoryImageOptionsModal({
+      model: this.model
+    })
+    this.collection.chapter.collection.trigger('modalReady', optionsModal)
   },
   
   clearInputs: function() {
