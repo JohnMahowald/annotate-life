@@ -11,7 +11,8 @@ AnnotateLife.Views.StoryForm = Backbone.View.extend({
   },
   
   events: {
-    "click .publish": "publishStory"
+    "click .publish": "publishStory",
+    "click .upload": "promptUpload"
   },
   
   publishStory: function(event) {
@@ -35,6 +36,10 @@ AnnotateLife.Views.StoryForm = Backbone.View.extend({
         $('.stories-list').scrollTo($story, 400)
       }
     });
+  },
+  
+  promptUpload: function() {
+    
   },
   
   clearInputs: function() {

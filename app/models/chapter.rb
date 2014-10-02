@@ -13,6 +13,7 @@
 class Chapter < ActiveRecord::Base
   after_initialize :ensure_chapter_num
   validates :title, :chapter_num, :journal_id, presence: true  
+  validates :title, length: { minimum: 1 }
   belongs_to :journal
   has_many :stories, dependent: :destroy
   

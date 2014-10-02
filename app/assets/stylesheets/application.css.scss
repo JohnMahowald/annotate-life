@@ -537,7 +537,7 @@ input#new-journal-submit {
   text-align: center;
   padding: 2%;
   font-size: 1em;
-  transition: height .5s;
+  transition: height .3s;
 }
 
 .sub-col-footer:hover {
@@ -661,18 +661,22 @@ input#new-journal-submit {
   text-align: center;
 }
 
-#new-chapter-form .close-form {
-  padding: 2%;
+.chapter-button {
+  margin: 1%;
+  width: 20%;
 }
 
 #new-chapter-submit {
-  float: right;
-  padding: 2%;
+  display: inline-block;
+}
+
+.close-chapter-form {
+  display: inline-block;
 }
 
 #chapter-title {
   display: inline-block;
-  width: 60%;
+  width: 80%;
   margin: 0px 5%;
   height: 40px;
   border-radius: 3px;
