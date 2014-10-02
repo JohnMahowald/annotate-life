@@ -5,6 +5,7 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <%= favicon_link_tag 'favicon.ico' %>
   <script type="text/javascript">
     var awsAccessKeyId = "<%= ENV['aws_access_key_id'] %>"
     var awsSecretKey = "<%= ENV['aws_secret_key'] %>"
