@@ -34,7 +34,6 @@ AnnotateLife.Views.JournalShow = Backbone.AnimatedView.extend({
   },
 
   makeSortable: function() {
-
     $('.chapters-list').sortable({
       placeholder: 'chapter-place-card-holder',
       start: function (event, ui) {
