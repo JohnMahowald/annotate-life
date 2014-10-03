@@ -21,12 +21,11 @@ AnnotateLife.Views.StoryForm = Backbone.View.extend({
     var title = $(event.delegateTarget).find('#story-title').val();
     var text = $(event.delegateTarget).find('#story-text').val();
     var chapterId = this.collection.chapter.id
-    var imgUrl = $(event.delegateTarget).find('#img-url').val();
     view.model.save({
       title: title,
       text: text,
       "chapter_id": chapterId,
-      'img_url': imgUrl
+      "img_url": this.model.img_url
     }, {
       success: function(story) {
         view.collection.chapter.collection.trigger('exitStoryEditMode');
@@ -40,7 +39,8 @@ AnnotateLife.Views.StoryForm = Backbone.View.extend({
   
   promptUpload: function() {
     var optionsModal = new AnnotateLife.Views.StoryImageOptionsModal({
-      model: this.model
+      model: this.model,
+      collection: this.collection
     })
     this.collection.chapter.collection.trigger('modalReady', optionsModal)
   },
@@ -48,10 +48,5 @@ AnnotateLife.Views.StoryForm = Backbone.View.extend({
   clearInputs: function() {
     $("#story-title").val("");
     $("#story-text").val("");
-  },
-  
-  onRender: function() {
-    $filepickerInput = $('input[type=filepicker]');
-    filepicker.constructWidget($filepickerInput[0]);
   }
 });
