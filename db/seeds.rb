@@ -67,4 +67,9 @@ Texture.create(img_url: "https://farm6.staticflickr.com/5568/14644908370_ac264b6
 Texture.create(img_url: "https://farm4.staticflickr.com/3852/15053665197_2908ba70f4_z.jpg")
 Texture.create(img_url: "https://farm4.staticflickr.com/3875/15205952686_0426ab0d44_z.jpg")
 Texture.create(img_url: "https://farm4.staticflickr.com/3858/15161795991_3884658a3f_z.jpg")
+Texture.create(img_url: "https://farm4.staticflickr.com/3838/15212800529_6b03bc0a2e_z.jpg")
+Texture.create(img_url: "https://farm6.staticflickr.com/5561/15310551171_901cda4ee6_z.jpg")
+Texture.create(img_url: "https://farm4.staticflickr.com/3865/15016557100_5280f88e18_z.jpg")
+Texture.create(img_url: "https://farm4.staticflickr.com/3849/15081337010_020907cf5c_z.jpg")
+Texture.create(img_url: "https://farm4.staticflickr.com/3882/14643777647_9e42796ddd_z.jpg")
 

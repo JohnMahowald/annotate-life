@@ -13,11 +13,15 @@
 #
 
 class Story < ActiveRecord::Base
-  after_initialize :ensure_ord
+  after_initialize :ensure_ord, :ensure_image
   validates :title, :text, :chapter_id, presence: true  
   belongs_to :chapter
   
   private
+  
+  def ensure_image
+    self.img_url ||= Texture.select_random
+  end
   
   def ensure_ord
     return if self.ord
