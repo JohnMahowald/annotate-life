@@ -13,7 +13,6 @@ Background.create(img_url: 'https://farm8.staticflickr.com/7365/9770925031_1dfce
 Background.create(img_url: 'https://farm2.staticflickr.com/1178/1350845804_d0984de002_b.jpg')
 Background.create(img_url: 'https://farm9.staticflickr.com/8041/7981860626_c71f94a72b_b.jpg')
 Background.create(img_url: 'https://farm9.staticflickr.com/8323/8079071366_f6c7d5eafa_b.jpg')
-Background.create(img_url: 'https://farm4.staticflickr.com/3908/14850610665_20552e830a_b.jpg')
 
 Texture.create(img_url: "https://farm6.staticflickr.com/5565/15171002702_cceab5478b.jpg")
 Texture.create(img_url: "https://farm4.staticflickr.com/3862/14781229294_356807431d_c.jpg")
