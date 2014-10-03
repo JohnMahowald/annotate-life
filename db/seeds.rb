@@ -55,3 +55,16 @@ Background.create(img_url: 'https://farm2.staticflickr.com/1178/1350845804_d0984
 Background.create(img_url: 'https://farm9.staticflickr.com/8041/7981860626_c71f94a72b_b.jpg')
 Background.create(img_url: 'https://farm9.staticflickr.com/8323/8079071366_f6c7d5eafa_b.jpg')
 Background.create(img_url: 'https://farm4.staticflickr.com/3908/14850610665_20552e830a_b.jpg')
+
+Texture.create(img_url: "https://farm6.staticflickr.com/5565/15171002702_cceab5478b.jpg")
+Texture.create(img_url: "https://farm4.staticflickr.com/3862/14781229294_356807431d_c.jpg")
+Texture.create(img_url: "https://farm3.staticflickr.com/2946/15164838499_0f1ccf2fea_z.jpg")
+Texture.create(img_url: "https://farm4.staticflickr.com/3911/15207604796_1a4ef9ef81_z.jpg")
+Texture.create(img_url: "https://farm6.staticflickr.com/5558/15165610296_c21f13d3a5_z.jpg")
+Texture.create(img_url: "https://farm3.staticflickr.com/2944/15218028989_8a71034eea_z.jpg")
+Texture.create(img_url: "https://farm4.staticflickr.com/3873/15134164379_69da6af994_z.jpg")
+Texture.create(img_url: "https://farm6.staticflickr.com/5568/14644908370_ac264b6b7b_z.jpg")
+Texture.create(img_url: "https://farm4.staticflickr.com/3852/15053665197_2908ba70f4_z.jpg")
+Texture.create(img_url: "https://farm4.staticflickr.com/3875/15205952686_0426ab0d44_z.jpg")
+Texture.create(img_url: "https://farm4.staticflickr.com/3858/15161795991_3884658a3f_z.jpg")
+
