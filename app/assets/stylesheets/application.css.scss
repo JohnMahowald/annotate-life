@@ -664,6 +664,10 @@ input#new-journal-submit {
   display: none;
 }
 
+.story-edit-resizer:hover .hide-thumbs {
+  display: block;
+}
+
 .chapter-place-card-holder {
   position: relative;
   width: 100%;

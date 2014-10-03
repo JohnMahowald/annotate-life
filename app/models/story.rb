@@ -14,13 +14,15 @@
 
 class Story < ActiveRecord::Base
   after_initialize :ensure_ord, :ensure_image
-  validates :title, :text, :chapter_id, presence: true  
+  validates :title, :text, :chapter_id, :img_url, presence: true  
   belongs_to :chapter
   
   private
   
   def ensure_image
     self.img_url ||= Texture.select_random
+    return if self.img_url.length > 1
+    self.img_url = Texture.select_random
   end
   
   def ensure_ord

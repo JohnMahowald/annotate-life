@@ -1,4 +1,6 @@
 AnnotateLife.Views.JournalForm = Backbone.View.extend({
+  buttonTemplate: JST["journals/form_button"],
+  formTemplate: JST["journals/form"],
   template: JST["journals/form"],
   
   render: function() {

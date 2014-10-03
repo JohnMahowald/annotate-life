@@ -29,7 +29,7 @@ Backbone.AnimatedView = Backbone.CompositeView.extend({
   },
   
   storySelectToggleOff: function() {
-    $('.story-edit').addClass('story-edit-resizer')    
+    $('.story-edit').addClass('story-edit-resizer')
   },
 
   storyShowMode: function() {

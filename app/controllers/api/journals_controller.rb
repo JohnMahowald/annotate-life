@@ -1,6 +1,6 @@
 class Api::JournalsController < ApplicationController  
   def index
-    journals = current_user.journals
+    journals = current_user.journals.order(:ord)
     render json: journals
   end
   
