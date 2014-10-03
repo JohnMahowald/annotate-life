@@ -1,6 +1,4 @@
 AnnotateLife.Views.JournalForm = Backbone.View.extend({
-  buttonTemplate: JST["journals/form_button"],
-  formTemplate: JST["journals/form"],
   template: JST["journals/form"],
   
   render: function() {
@@ -29,8 +27,8 @@ AnnotateLife.Views.JournalForm = Backbone.View.extend({
   },
   
   createJournal: function(event) {
-    var view = this;
     event.preventDefault();
+    var view = this;
     var formData = $(event.currentTarget).serializeJSON();
     this.collection.create(formData['journal'], {
       success: function() { 

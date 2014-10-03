@@ -4,12 +4,13 @@ AnnotateLife.Views.JournalsIndex = Backbone.CompositeView.extend({
   
   initialize: function() {
     this.collection.each(this.addJournal.bind(this));
-    this.listenTo(this.collection, 'sync', this.render);
+    this.listenTo(this.collection, 'sync', this.render);  
     this.listenTo(this.collection, "add", this.addJournal);
     this.listenTo(this.collection, "remove", this.removeJournal);
     this.listenTo(this.collection, "journalDestroy", this.removeView);
     this.listenTo(this.collection, "modalReady", this.renderModal)
     this.attachJournalForm();
+    this.attachJournalModal();
   },
   
   render: function() {
@@ -50,5 +51,13 @@ AnnotateLife.Views.JournalsIndex = Backbone.CompositeView.extend({
       collection: this.collection
     });
     this.addSubview(".journal-form-container", journalFormView);
+  },
+  
+  attachJournalModal: function() {
+    var newJournalModal = new AnnotateLife.Views.JournalModalForm({
+      collection: this.collection
+    })
+    
+    $("#new-journal-modal").html(newJournalModal.render().$el);
   }
 });

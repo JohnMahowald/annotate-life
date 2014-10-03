@@ -787,7 +787,7 @@ input#new-journal-submit {
   height: 18%;
   width: 100%;
   padding: 3%;
-  font-size: 1.5em;
+  font-size: 1.3em;
   transition: height .3s;
   z-index: 9;
   white-space: no-wrap;
@@ -1135,4 +1135,28 @@ video {
 
 .navbar-fixed-bottom .navbar-nav > li > a, .navbar-fixed-bottom .navbar-nav > li > a:hover {
   color: $color-primary-0;
+}
+
+/* Journal Form Modal */
+#new-journal-modal-form {
+  text-align: center;
+  margin: 0 auto;
+}
+
+#new-journal-modal-form #journal-title, #new-journal-modal-form #journal-description {
+  display: block;
+  width: 60%;
+  margin: 0 auto;
+  height: 40px;
+  border-radius: 3px;
+  border: 1px solid #cacaca;
+  line-height: 1;
+  font-size: 1.3em;
+  color: #3b3b3b;
+  padding: 10px;
+  text-align: center; 
+}
+
+#new-journal-modal-form #journal-description {
+  height: 150px;
 }

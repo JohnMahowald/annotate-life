@@ -11,7 +11,7 @@ AnnotateLife.Views.StoriesIndex = Backbone.CompositeView.extend({
   template: JST['stories/index'],
   
   render: function() {
-    var content = this.template({ collection: this.collection })
+    var content = this.template({ story: this.model })
     this.$el.html(content);
     this.attachSubviews();
     this.onRender();
