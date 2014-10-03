@@ -12,7 +12,13 @@ AnnotateLife.Views.StoryForm = Backbone.View.extend({
   
   events: {
     "click .publish": "publishStory",
-    "click .upload": "promptUpload"
+    "click .upload": "promptUpload",
+    "click .discard": "resetForm"
+  },
+  
+  resetForm: function() {
+    this.collection.chapter.collection.trigger('exitStoryEditMode');
+    this.clearInputs();
   },
   
   publishStory: function(event) {

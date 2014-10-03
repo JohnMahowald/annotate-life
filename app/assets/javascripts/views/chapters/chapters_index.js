@@ -45,5 +45,17 @@ AnnotateLife.Views.ChaptersIndex = Backbone.CompositeView.extend({
   
   removeChapter: function(subview) {
     this.removeSubview(".chapters-list", subview);
+  },
+  
+  onRender: function() {
+    $('.chapters-list').sortable({
+      placeholder: 'chapter-place-card-holder',
+      start: function(event, ui) {
+        ui.item.addClass('tilt');
+      },
+      stop: function(event, ui) {
+        ui.item.removeClass('tilt')
+      }
+    });
   }
 });

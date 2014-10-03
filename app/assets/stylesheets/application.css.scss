@@ -650,12 +650,16 @@ input#new-journal-submit {
 
 .chapter-place-card-holder {
   position: relative;
-  color: white;
-  background-color: #CCFFCC;
+  width: 100%;
+  height: 150px;
+  background-color: $darktext;
   border-color: #1fae52;
   border-radius: 3px;
-  height: 40px;
-  width: 90%;
+  margin: 3% auto;
+  text-align: center;
+  color: white;
+  opacity: .7;
+  transition: background-color .5s;
 }
 
 .chapter-show-link {
@@ -688,7 +692,6 @@ input#new-journal-submit {
 }
 
 .chapter-button {
-  color: white;
   margin: 2%;
   width: 30%;
 }
@@ -698,6 +701,7 @@ input#new-journal-submit {
 }
 
 .close-chapter-form {
+  background-color: $lightgrey;
   display: inline-block;
 }
 
@@ -898,6 +902,14 @@ input#new-journal-submit {
   font-size: .7em;
 }
 
+.publish {
+  text-align: center;
+}
+
+.upload {
+  float: right;
+}
+
 /* Story Show Page */
 .story-show {
   height: 100%;
@@ -969,6 +981,7 @@ input#new-journal-submit {
   background-color: $color-primary-2;
   border-radius: 3px;
   opacity: .7;
+  padding: 2%;
 }
 
 .story-text {

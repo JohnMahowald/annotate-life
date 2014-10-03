@@ -35,12 +35,12 @@ AnnotateLife.Views.JournalShow = Backbone.AnimatedView.extend({
 
   makeSortable: function() {
     $('.chapters-list').sortable({
-      placeholder: 'chapter-place-card',
-      start: function(event, ui) {
-        ui.item.addClass('tilt')
+      placeholder: 'chapter-place-card-holder',
+      start: function (event, ui) {
+        ui.item.addClass('tilt');
       },
-      stop: function(event, ui) {
-        ui.item.removeClass('tilt')
+      stop: function (event, ui) {
+        ui.item.removeClass('tilt');
       }
     });
   },
@@ -101,6 +101,7 @@ AnnotateLife.Views.JournalShow = Backbone.AnimatedView.extend({
         chapter.save();
       }
     });
+    this.makeSortable();
 
     journal.chapters.sort();
   }
