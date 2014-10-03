@@ -5,29 +5,40 @@ Backbone.AnimatedView = Backbone.CompositeView.extend({
 
   storySelectMode: function() {
     $('.chapters').addClass('chapters-mid');
-    $('.select-controller').css("width", '70%')
-    $('.select-controller').animate({
-      marginLeft: '0'
-    }, 200, function() {
-      $('.stories').removeClass('hidden');
-      $('.stories').addClass('stories-lg animated fadeIn');
-    });
+    $('.select-controller').addClass('story-select-mode')
+      .removeClass('chapter-select')
+      .animate({
+        marginLeft: '0'
+      }, 200, function() {
+        $('.stories').removeClass('hidden');
+        $('.stories').addClass('stories-lg animated fadeIn');
+      })
   },
   
   storyEditMode: function() {
-    $('.select-controller').addClass('story-edit-mode')
+    $('.select-controller').removeClass('story-select-mode')
+      .addClass('story-edit-mode story-select-toggle');
     $('.story-edit').removeClass('hidden').addClass('animated fadeIn');
     $('.chapter-place-card-title').addClass('chapter-font-reduce');
     $('.story-preview-thumbnails').addClass('hide-thumbs');
     $('.story-place-card-title').addClass('story-font-reduce');
   },
+  
+  storySelectToggleOn: function() {
+    $('.story-edit').removeClass('story-edit-resizer')
+  },
+  
+  storySelectToggleOff: function() {
+    $('.story-edit').addClass('story-edit-resizer')    
+  },
 
   storyShowMode: function() {
+    var $selectController = $('.select-controller')
     var view = this;
-    $('.select-controller').animate({
+    $selectController.animate({
       marginLeft: '-100%'
     }, 400, function() {
-      $('.select-controller').addClass('hidden');
+      $selectController.addClass('hidden').removeClass('story-select-toggle');
       $('.story-show').hide().removeClass('hidden').fadeIn(200);
     });
     
@@ -44,7 +55,6 @@ Backbone.AnimatedView = Backbone.CompositeView.extend({
   exitStoryShowMode: function() {
     var $storyShow = $('.story-show')
     var $controller = $('.select-controller')
-    
     $storyShow.fadeOut(200, function() {
       $controller.removeClass('hidden');
       $controller.animate({ marginLeft: '0'}, 400);
@@ -53,16 +63,18 @@ Backbone.AnimatedView = Backbone.CompositeView.extend({
   },
 
   exitStoryEditMode: function() {
-    $('.story-edit').addClass('animated fadeOut')
+    var $storyEdit = $('.story-edit')
+    $storyEdit.addClass('animated fadeOut')
       .empty()
-      .removeClass('animated fadeIn')
+      .removeClass('animated fadeIn story-edit-resizer')
       .addClass('hidden');
-    $('.select-controller').removeClass('story-edit-mode');
+    $('.select-controller').removeClass('story-edit-mode story-select-toggle')
+      .addClass('story-select-mode');
     $('.chapter-place-card-title').removeClass('chapter-font-reduce');
     $('.story-preview-thumbnails').removeClass('hide-thumbs');
     $('.story-place-card-title').removeClass('story-font-reduce');
     setTimeout( function () {
-      $('.story-edit').removeClass('animated fadeOut')
+      $storyEdit.removeClass('animated fadeOut')
     }, 0);
   }
 });

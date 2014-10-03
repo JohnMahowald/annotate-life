@@ -498,8 +498,8 @@ input#new-journal-submit {
 }
 
 .story-edit-mode {
-  float: left !important;
-  width: 40% !important;
+  float: left;
+  width: 40%;
 }
 
 .chapters-mid {
@@ -514,9 +514,25 @@ input#new-journal-submit {
 }
 
 .story-edit {
-  width: 57%;
+  width: 38%;
   float: right;
   height: 90%;
+}
+
+.story-select-mode {
+  width: 70%;
+}
+
+.story-select-toggle {
+  width: 40%;
+}
+
+.story-select-toggle:hover {
+  width: 58%;
+}
+
+.story-edit-resizer {
+  width: 58%;
 }
 
 /* Journal Show */
@@ -925,15 +941,20 @@ input#new-journal-submit {
 
 .story-show-title {
   height: 16%;
-  font-family: helvetica, arial, sans-serif;
   display: block;
   width: 100%;
-  text-align: center;
-  font-size: 6em;
-  font-weight: bold;
-  letter-spacing: -2px;
   color: white;
   opacity: .7;
+}
+
+.story-show-title-span {
+  font-family: helvetica, arial, sans-serif;
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 5em;
+  font-weight: bold;
+  letter-spacing: -2px;
 }
 
 .story-body {
