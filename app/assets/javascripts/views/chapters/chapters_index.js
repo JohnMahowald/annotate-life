@@ -50,11 +50,11 @@ AnnotateLife.Views.ChaptersIndex = Backbone.CompositeView.extend({
   onRender: function() {
     $('.chapters-list').sortable({
       placeholder: 'chapter-place-card-holder',
-      start: function(event, ui) {
+      start: function (event, ui) {
         ui.item.addClass('tilt');
       },
-      stop: function(event, ui) {
-        ui.item.removeClass('tilt')
+      stop: function (event, ui) {
+        ui.item.removeClass('tilt');
       }
     });
   }

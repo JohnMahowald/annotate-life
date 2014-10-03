@@ -767,7 +767,7 @@ input#new-journal-submit {
   height: 18%;
   width: 100%;
   padding: 3%;
-  font-size: 1.7em;
+  font-size: 1.5em;
   transition: height .3s;
   z-index: 9;
   white-space: no-wrap;
@@ -960,8 +960,10 @@ input#new-journal-submit {
 
 .story-img {
   height: 100%;
-  width: 100%;
+  width: auto;
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   border-radius: 3px;
 }
 
@@ -978,16 +980,17 @@ input#new-journal-submit {
 .story-text-box {
   height: 100%;
   width: 100%;
-  background-color: $color-primary-2;
   border-radius: 3px;
   opacity: .7;
-  padding: 2%;
 }
 
 .story-text {
   font-family: gotham, helvetica, sans-serif;
   font-size: 1.2em;
   white-space: pre-wrap;
+  padding: 2%;
+  background-color: $color-primary-2;
+  border-radius: 3px;
 }
 
 .exit-story-mode {
