@@ -32,7 +32,8 @@ AnnotateLife.Views.JournalModalForm = Backbone.View.extend({
     });
   },
   
-  renderModal: function() {
+  renderModal: function(event) {
+    event.preventDefault();
     $('#new-journal-modal-form').modal('show');
   }
 });
