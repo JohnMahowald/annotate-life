@@ -13,11 +13,11 @@ Annotate is a project I built to refine my backbone.js an Ruby on Rails skills. 
 
 I personally developed the design for the entire project. I began by creating wireframes for each of the primary views before writing any code:
 
-![alt planning1](/app/assets/images/planning1.png)
-![alt planning2](/app/assets/images/planning2.png)
-![alt planning3](/app/assets/images/planning3.png)
-![alt planning4](/app/assets/images/planning4.png)
-![alt planning5](/app/assets/images/planning5.png)
+![alt wireframe1](/app/assets/images/wireframe1.png "Login")
+![alt wireframe2](/app/assets/images/wireframe2.png "Journals Index")
+![alt wireframe3](/app/assets/images/wireframe3.png "Journal Show")
+![alt wireframe4](/app/assets/images/wireframe4.png "Journal Show")
+![alt wireframe5](/app/assets/images/wireframe5.png "Story Edit")
 
 ## Implementation:
 
