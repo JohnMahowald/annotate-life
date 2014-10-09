@@ -1,6 +1,6 @@
 # Annotate-Life
 
-Annotate is a project I built to refine my backbone.js an Ruby on Rails skills. The backend is built on Rails with a Postgres DB using a custom built BCrypt authentication. After login, Rails serves up a static page for backbone anchor content. By creating a custom Animated View and Composite View JavaScript class, subviews are recursively rendered on screen without triggering a refresh. AJAX requests are quietly handled ensuring client content is always updated without refresh. The result is a clean, performant website 
+Annotate is a project I built to refine my backbone.js and Ruby on Rails skills. The backend is built on Rails with a Postgres DB using a custom built BCrypt authentication. After login, Rails serves up a static page for backbone anchor content. By creating a custom Animated View and Composite View JavaScript class, subviews are recursively rendered on screen without triggering a refresh. AJAX requests are quietly handled ensuring client content is always updated without refresh. The result is a clean, performant website 
 
 ## Key Features:
 
