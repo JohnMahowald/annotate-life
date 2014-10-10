@@ -2,6 +2,19 @@
 
 Annotate is a project I built to refine my backbone.js and Ruby on Rails skills. The backend is built on Rails with a Postgres DB using a custom built BCrypt authentication. After login, Rails serves up a static page for backbone anchor content. By creating a custom Animated View and Composite View JavaScript class, subviews are recursively rendered on screen without triggering a refresh. AJAX requests are quietly handled ensuring client content is always updated without refresh. The result is a clean, performant website 
 
+<a href='www.annotate.life'>
+  <button
+   style='
+     background-color: #428bca;
+     border-color: #357ebd;
+     color: white;
+     heigth: 30px;
+     width: 100px;
+     border-radius: 3px;'>
+     Live Demo
+   </button>
+ </a>
+
 ## Key Features:
 
 1. Extends Backbone's View class to manage composite views that recursively render subviews within their parent.
