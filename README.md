@@ -11,7 +11,7 @@ Annotate is a project I built to refine my backbone.js and Ruby on Rails skills.
      heigth: 30px;
      width: 100px;
      border-radius: 3px;'>
-     Live Demo
+     <strong'>Live Demo</strong>
    </button>
  </a>
 
