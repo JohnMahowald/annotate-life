@@ -11,15 +11,15 @@ Annotate is a project I built to refine my backbone.js and Ruby on Rails skills.
      heigth: 30px;
      width: 100px;
      border-radius: 3px;'>
-     <strong'>Live Demo</strong>
+     <strong>Live Demo</strong>
    </button>
  </a>
 
 ## Key Features:
 
-1. Extends Backbone's View class to manage composite views that recursively render subviews within their parent.
-2. Creates an Animated View class to manage collections of jQuery and CSS methods making clean UI animation possible.
-3. Clean RESTful Rails API renders JSON for backbone models and collections with custom jbuilder responses and singular database queries.
+1. Creates a Composite View class by extending Backbone's View class to recursively render subviews within their parent.
+2. Clean RESTful Rails API renders JSON for backbone models and collections with custom jbuilder responses and optimized database queries.
+3. Creates an Animated View class to manage collections of jQuery and CSS methods making clean UI animation possible.
 4. Creates personalized welcome message that changes throughout the day & assigns new background image with url stored in users session.
 
 ## Design:
