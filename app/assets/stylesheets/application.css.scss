@@ -228,7 +228,7 @@ body {
 
 .login-button {
   height: 45px;
-  transition: background-color .5s;
+  transition: all .5s;
 }
 
 #login {
@@ -1160,3 +1160,4 @@ video {
 #new-journal-modal-form #journal-description {
   height: 150px;
 }
+

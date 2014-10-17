@@ -17,6 +17,7 @@
 //= require jquery.ui.sortable
 //= require jquery.scrollTo.min
 //= require jquery.timeago
+//= require typed
 //= require welcome
 //= require underscore
 //= require backbone
@@ -32,13 +33,30 @@
 //= require_tree .
 
 $(document).ready(function() {
-  $("#demo-user-login").on("click", function(event) {
-    event.preventDefault();
-    var $email = $("#email")
-    $email.val("john.mahowald@gmail.com")
-    var $password = $("#password")
-    $password.val("johnjohn")
-    $("#login").click();
+  $("#demo-user-login").click( function(e) {
+    e.preventDefault();
+    
+    $('#email').typed({
+      strings: ["john.mahowald@gmail.com"],
+      typeSpped: 0,
+      showCursor: false,
+      attr: "value",
+      callback: function() {
+        typePassword();
+      }
+    })
+    
+    function typePassword() {
+      $('#password').typed({
+        strings: ["johnjohn"],
+        typeSpped: 0,
+        showCursor: false,
+        attr: "value",
+        callback: function() {
+          $('#login').click();
+        }
+      })
+    }
   });
   
   $('#main').hover(function() {
