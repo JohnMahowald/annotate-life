@@ -1,4 +1,4 @@
-AnnotateLife.Models.Journal = Backbone.Model.extend({
+ AnnotateLife.Models.Journal = Backbone.Model.extend({
   urlRoot: '/api/journals/',
   
   chapters: function() {
