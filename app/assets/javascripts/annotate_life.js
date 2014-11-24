@@ -21,3 +21,4 @@ window.AnnotateLife = {
     Backbone.history.start();
   }
 };
+
