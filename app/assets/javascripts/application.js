@@ -14,7 +14,7 @@
 //= require bootstrap-sprockets
 //= require jquery.serializejson.min
 //= require jquery_ujs
-//= require jquery.ui.sortable
+//= require jquery-ui
 //= require jquery.scrollTo.min
 //= require jquery.timeago
 //= require typed

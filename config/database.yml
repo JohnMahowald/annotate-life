@@ -3,7 +3,7 @@ development:
   encoding: unicode
   database: annotate-life_development
   pool: 5
-  username: John
+  username: jmahowald
   password:
 
 test:
@@ -11,5 +11,5 @@ test:
   encoding: unicode
   database: annotate-life_test
   pool: 5
-  username: John
+  username: jmahowald
   password:

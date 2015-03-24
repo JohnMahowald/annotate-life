@@ -1095,8 +1095,10 @@ input#new-journal-submit {
 
 video {
   position: relative;
-  width: 100%;
   height: auto;
+  width: auto;
+  min-width: 100%;
+  min-height: 100%;
 }
 
 .landing-brand-wrapper {
