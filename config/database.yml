@@ -3,13 +3,14 @@ development:
   encoding: unicode
   database: annotate-life_development
   pool: 5
-  username: jmahowald
-  password:
+  username: postgres
+  password: postgres
+  host: 0.0.0.0
 
 test:
   adapter: postgresql
   encoding: unicode
   database: annotate-life_test
   pool: 5
-  username: jmahowald
-  password:
+  username: postgres
+  password: postgres

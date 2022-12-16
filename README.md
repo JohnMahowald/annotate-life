@@ -49,3 +49,6 @@ My project was built in four stages using the agile development methodology.
 ## About:
 
 To learn more about me and my work as a developer, please visit my website at: [www.johnmahowald.com](http://www.johnmahowald.com)
+
+## Getting Started:
+This project uses Ruby 2.2.0, and Bundler 1.5.0

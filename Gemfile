@@ -2,9 +2,9 @@ source 'https://rubygems.org'
 
 gem 'annotate'
 gem 'autoprefixer-rails'
-gem 'backbone-on-rails'
+gem 'backbone-on-rails', git: 'https://github.com/meleyal/backbone-on-rails', tag: 'v1.1.2.0'
 gem 'bcrypt', '~> 3.1.7'
-gem 'bootstrap-sass', '~> 3.2.0'
+gem 'bootstrap-sass', git: 'https://github.com/twbs/bootstrap-sass', tag: 'v3.3.3'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'figaro'
 gem 'gravatar_image_tag'
@@ -17,8 +17,8 @@ gem 'aws-sdk'
 gem 'pg'
 gem 'rails', '4.1.5'
 gem 'sass-rails', '~> 4.0.3'
-gem 'sdoc', '~> 0.4.0',          group: :doc
-gem 'spring',        group: :development
+gem 'sdoc', '~> 0.4.0', group: :doc
+gem 'spring', group: :development
 gem 'thin'
 gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
